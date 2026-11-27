@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ha-polish-context-voice"
+version = "0.10.0b30"
+description = "Deterministic Polish semantic voice control for Home Assistant"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = []
+
+[project.optional-dependencies]
+service = ["aiohttp>=3.11,<4"]
+dev = ["pytest>=8,<10", "pytest-asyncio>=0.24,<2", "ruff>=0.9,<1", "aiohttp>=3.11,<4"]
+morphology = ["morfeusz2>=1.99.9,<2"]
+
+[tool.setuptools.packages.find]
+include = ["custom_components*", "service*"]
+
+[tool.setuptools.package-data]
+"custom_components.polish_context_voice" = ["manifest.json", "strings.json", "services.yaml", "translations/*.json", "frontend/*.js", "brand/*.png"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = [".ha-venv", ".ha-lab"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

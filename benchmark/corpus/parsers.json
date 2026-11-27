@@ -1,0 +1,1763 @@
+[
+  {
+    "id": "CAL-001",
+    "split": "regression",
+    "family": "calendar.overview.default",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Co jest w moim kalendarzu?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "title": "",
+            "when": "dzis",
+            "calendar": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-002",
+    "split": "regression",
+    "family": "calendar.overview.default",
+    "category": "paraphrase",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Co mamy w naszych kalendarzach?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "title": "",
+            "when": "dzis",
+            "calendar": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-003",
+    "split": "regression",
+    "family": "calendar.overview.day",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Co mamy jutro w kalendarzu?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "title": "",
+            "when": "jutro",
+            "calendar": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-004",
+    "split": "regression",
+    "family": "calendar.overview.plans",
+    "category": "paraphrase",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jakie mam dzisiaj plany?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "title": "",
+            "when": "dzisiaj",
+            "calendar": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-005",
+    "split": "regression",
+    "family": "calendar.overview.plans",
+    "category": "paraphrase",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jaki jest plan na pojutrze?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "title": "",
+            "when": "na pojutrze",
+            "calendar": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-006",
+    "split": "regression",
+    "family": "calendar.overview.planned",
+    "category": "paraphrase",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Co mam zaplanowane na jutro?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "title": "",
+            "when": "na jutro",
+            "calendar": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-007",
+    "split": "regression",
+    "family": "calendar.overview.fronted_day",
+    "category": "paraphrase",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Co jutro mam w planie?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "title": "",
+            "when": "jutro",
+            "calendar": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-008",
+    "split": "regression",
+    "family": "calendar.overview.week",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Co mamy w przyszłym tygodniu?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "title": "",
+            "when": "w przyszłym tygodniu",
+            "calendar": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-009",
+    "split": "regression",
+    "family": "calendar.overview.week",
+    "category": "paraphrase",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Co jest w planie w tym tygodniu?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "title": "",
+            "when": "w tym tygodniu",
+            "calendar": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-010",
+    "split": "regression",
+    "family": "calendar.overview.weekday",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jakie mamy plany w środę?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "title": "",
+            "when": "w środę",
+            "calendar": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-011",
+    "split": "regression",
+    "family": "calendar.overview.selector",
+    "category": "configuration",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Co jest jutro w kalendarzu Wyprawy?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "title": "",
+            "when": "jutro",
+            "calendar": "Wyprawy"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-012",
+    "split": "regression",
+    "family": "calendar.overview.selector",
+    "category": "paraphrase",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Co jest w kalendarzu Wyprawy jutro?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "title": "",
+            "when": "jutro",
+            "calendar": "Wyprawy"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-013",
+    "split": "regression",
+    "family": "calendar.overview.selector_preposition",
+    "category": "configuration",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Co mam w kalendarzu Po pracy?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "title": "",
+            "when": "dzis",
+            "calendar": "Po pracy"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-014",
+    "split": "regression",
+    "family": "calendar.overview.selector_unknown",
+    "category": "configuration",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jakie mam jutro plany w kalendarzu Nieistniejący?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "when": "jutro",
+            "calendar": "Nieistniejący"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-015",
+    "split": "regression",
+    "family": "calendar.overview.literal_date",
+    "category": "unsupported",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jaki jest plan na 31.02.2026?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "when": "na 31.02.2026",
+            "calendar": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-016",
+    "split": "regression",
+    "family": "calendar.add.trailing_day",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Dodaj warsztat ceramiki na jutro o piętnastej, na godzinę",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "add",
+            "title": "warsztat ceramiki",
+            "when": "jutro o piętnastej",
+            "duration": 60,
+            "all_day": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-017",
+    "split": "regression",
+    "family": "calendar.add.leading_day",
+    "category": "paraphrase",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Dodaj jutro Warsztat ceramiki o piętnastej",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "add",
+            "title": "Warsztat ceramiki",
+            "when": "jutro o piętnastej",
+            "duration": null
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-018",
+    "split": "regression",
+    "family": "calendar.add.leading_clock",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapisz w środę o dwudziestej drugiej Próbę chóru",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "add",
+            "title": "Próbę chóru",
+            "when": "w środę o dwudziestej drugiej"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-019",
+    "split": "regression",
+    "family": "calendar.add.duration",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Dodaj Wyprawę w piątek o 15:30 na dwie godziny",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "add",
+            "title": "Wyprawę",
+            "when": "w piątek o 15:30",
+            "duration": 120
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-020",
+    "split": "regression",
+    "family": "calendar.add.duration_half",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapisz Trening jutro o 16 na pół godziny",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "add",
+            "title": "Trening",
+            "when": "jutro o 16",
+            "duration": 30
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-021",
+    "split": "regression",
+    "family": "calendar.add.all_day",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapisz wydarzenie Wędrówka jutro cały dzień",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "add",
+            "title": "Wędrówka",
+            "when": "jutro",
+            "all_day": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-022",
+    "split": "regression",
+    "family": "calendar.add.selector",
+    "category": "configuration",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Dodaj Próba żurawia jutro o 15:30 na dwie godziny do kalendarza Wyprawy",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "add",
+            "title": "Próba żurawia",
+            "when": "jutro o 15:30",
+            "calendar": "Wyprawy",
+            "duration": 120
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-023",
+    "split": "regression",
+    "family": "calendar.add.incomplete_time",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Dodaj wydarzenie Próba chóru",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "add",
+            "title": "Próba chóru",
+            "when": "",
+            "duration": null
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-024",
+    "split": "regression",
+    "family": "calendar.find.named",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Kiedy jest próba chóru?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "title": "próba chóru",
+            "when": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-025",
+    "split": "regression",
+    "family": "calendar.find.leading_day",
+    "category": "paraphrase",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Kiedy jest jutro Próba chóru?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "title": "Próba chóru",
+            "when": "jutro"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-026",
+    "split": "regression",
+    "family": "calendar.find.selector",
+    "category": "configuration",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Kiedy mamy Trening w kalendarzu Sport?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "find",
+            "title": "Trening",
+            "calendar": "Sport"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-027",
+    "split": "regression",
+    "family": "calendar.cancel.leading_day",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odwołaj jutro Próbę chóru",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "cancel",
+            "title": "Próbę chóru",
+            "when": "jutro"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-028",
+    "split": "regression",
+    "family": "calendar.cancel.trailing_day",
+    "category": "paraphrase",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odwołaj Próbę chóru w czwartek",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "cancel",
+            "title": "Próbę chóru",
+            "when": "w czwartek"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-029",
+    "split": "regression",
+    "family": "calendar.cancel.event_prefix",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Usuń wydarzenie jutro Warsztat",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "cancel",
+            "title": "Warsztat",
+            "when": "jutro"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-030",
+    "split": "regression",
+    "family": "calendar.cancel.clock",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odwołaj jutro Warsztat o piętnastej",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "cancel",
+            "title": "Warsztat",
+            "when": "jutro o piętnastej"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-031",
+    "split": "regression",
+    "family": "calendar.cancel.literal_date",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Anuluj 21.10.2026 Próbę żurawia",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "cancel",
+            "title": "Próbę żurawia",
+            "when": "21.10.2026"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-032",
+    "split": "regression",
+    "family": "calendar.change.leading_day",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Przełóż jutro Warsztat na piątek o 16",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "change",
+            "title": "Warsztat",
+            "when": "jutro",
+            "new_when": "piątek o 16"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-033",
+    "split": "regression",
+    "family": "calendar.change.adjective",
+    "category": "paraphrase",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Przełóż jutrzejszą Próbę chóru na szesnastą",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "change",
+            "title": "Próbę chóru",
+            "when": "jutro",
+            "new_when": "szesnastą"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-034",
+    "split": "regression",
+    "family": "calendar.change.destination_only",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Przesuń Trening na jutro o 18",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "change",
+            "title": "Trening",
+            "when": "",
+            "new_when": "jutro o 18"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-035",
+    "split": "regression",
+    "family": "calendar.show.day",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Pokaż kalendarz",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "show",
+            "when": "dzis",
+            "view": "day"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-036",
+    "split": "regression",
+    "family": "calendar.show.week",
+    "category": "command",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Pokaż mi kalendarze na przyszły tydzień",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "show",
+            "view": "week"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-037",
+    "split": "regression",
+    "family": "calendar.title.date_word_boundary",
+    "category": "configuration",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odwołaj Jutrofon w kalendarzu Warsztaty",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "cancel",
+            "title": "Jutrofon",
+            "when": "",
+            "calendar": "Warsztaty"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-038",
+    "split": "regression",
+    "family": "calendar.unrelated.control",
+    "category": "unsupported",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz światła",
+          "dry_run": true
+        },
+        "expected": {
+          "command": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-039",
+    "split": "regression",
+    "family": "calendar.unrelated.timer",
+    "category": "unsupported",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz dwie minuty",
+          "dry_run": true
+        },
+        "expected": {
+          "command": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-040",
+    "split": "regression",
+    "family": "calendar.unrelated.shopping",
+    "category": "unsupported",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Dodaj mleko do listy zakupów",
+          "dry_run": true
+        },
+        "expected": {
+          "command": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-041",
+    "split": "regression",
+    "family": "calendar.unrelated.music",
+    "category": "unsupported",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Graj muzykę",
+          "dry_run": true
+        },
+        "expected": {
+          "command": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-042",
+    "split": "regression",
+    "family": "calendar.negated.write",
+    "category": "negation",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Nie dodaj Warsztat jutro o 15",
+          "dry_run": true
+        },
+        "expected": {
+          "command": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-043",
+    "split": "regression",
+    "family": "calendar.negated.cancel",
+    "category": "negation",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Nie odwołaj jutro Treningu",
+          "dry_run": true
+        },
+        "expected": {
+          "command": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-044",
+    "split": "regression",
+    "family": "calendar.overview.unsupported_clock",
+    "category": "unsupported",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Co jest w moim kalendarzu jutro o 15?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "help",
+            "error": "overview_syntax",
+            "when": "",
+            "calendar": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-045",
+    "split": "regression",
+    "family": "calendar.overview.multiple_days",
+    "category": "correction",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jakie mam dzisiaj plany jutro?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "help",
+            "error": "overview_syntax",
+            "when": "",
+            "calendar": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-046",
+    "split": "regression",
+    "family": "calendar.overview.compound",
+    "category": "compound",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Co jest w kalendarzu jutro i wyłącz światła?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "help",
+            "error": "overview_syntax"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-047",
+    "split": "regression",
+    "family": "calendar.overview.compound",
+    "category": "background",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jakie mam jutro plany? Wyłącz światła",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "help",
+            "error": "overview_syntax"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-048",
+    "split": "regression",
+    "family": "calendar.overview.unsupported_period",
+    "category": "unsupported",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Co jest w kalendarzu za trzy dni?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "help",
+            "error": "overview_syntax"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-049",
+    "split": "regression",
+    "family": "calendar.overview.other_plan",
+    "category": "unsupported",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jaki jest plan ogrzewania na dziś?",
+          "dry_run": true
+        },
+        "expected": {
+          "command": {
+            "operation": "help",
+            "error": "overview_syntax"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAL-050",
+    "split": "regression",
+    "family": "calendar.cancel.missing_selector",
+    "category": "unsupported",
+    "layer": "calendar_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odwołaj jutrofon",
+          "dry_run": true
+        },
+        "expected": {
+          "command": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-001",
+    "split": "regression",
+    "family": "timer.prefix.single_unit",
+    "category": "background",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz dziesięć sekund. Herbata stygnie.",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [
+            "Odlicz dziesięć sekund"
+          ],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-002",
+    "split": "regression",
+    "family": "timer.prefix.single_unit",
+    "category": "background",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz dwie minuty. Obiad jest gotowy.",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [
+            "Odlicz dwie minuty"
+          ],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-003",
+    "split": "regression",
+    "family": "timer.prefix.single_unit",
+    "category": "background",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz godzinę. Pies zasnął.",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [
+            "Odlicz godzinę"
+          ],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-004",
+    "split": "regression",
+    "family": "timer.prefix.composite",
+    "category": "background",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz minutę i trzydzieści sekund. Herbata stygnie.",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [
+            "Odlicz minutę i trzydzieści sekund"
+          ],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-005",
+    "split": "regression",
+    "family": "timer.prefix.composite",
+    "category": "background",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Uruchom minutnik na godzinę i pięć minut. Obiad już gotowy.",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [
+            "Uruchom minutnik na godzinę i pięć minut"
+          ],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-006",
+    "split": "regression",
+    "family": "timer.prefix.polite",
+    "category": "background",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Proszę odlicz mi dwie minuty. Herbata stygnie.",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [
+            "Proszę odlicz mi dwie minuty"
+          ],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-007",
+    "split": "regression",
+    "family": "timer.prefix.explicit_minutnik",
+    "category": "background",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw minutnik na 10 sekund. Herbata jest gotowa.",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [
+            "Ustaw minutnik na 10 sekund"
+          ],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-008",
+    "split": "regression",
+    "family": "timer.prefix.explicit_minutnik",
+    "category": "background",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Nastaw minutnik na trzy minuty. Zupa już gotowa.",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [
+            "Nastaw minutnik na trzy minuty"
+          ],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-009",
+    "split": "regression",
+    "family": "timer.prefix.clean_complete",
+    "category": "command",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz dziesięć sekund",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-010",
+    "split": "regression",
+    "family": "timer.prefix.negated",
+    "category": "negation",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Nie odlicz dziesięć sekund. Herbata stygnie.",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-011",
+    "split": "regression",
+    "family": "timer.prefix.reported_speech",
+    "category": "background",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Powiedziałem odlicz dziesięć sekund. Herbata stygnie.",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-012",
+    "split": "regression",
+    "family": "timer.prefix.embedded",
+    "category": "background",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Rozmawialiśmy o tym, żeby odlicz minutę. Herbata stygnie.",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-013",
+    "split": "regression",
+    "family": "timer.prefix.correction",
+    "category": "correction",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz 10 sekund nie jednak 20 sekund",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-014",
+    "split": "regression",
+    "family": "timer.prefix.correction",
+    "category": "correction",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz 10 sekund, jednak nie",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-015",
+    "split": "regression",
+    "family": "timer.prefix.correction",
+    "category": "correction",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz 10 sekund, zamiast tego dwie minuty",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-016",
+    "split": "regression",
+    "family": "timer.prefix.alternative",
+    "category": "correction",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz 10 sekund albo 20",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-017",
+    "split": "regression",
+    "family": "timer.prefix.alternative",
+    "category": "correction",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz minutę lub dwie",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-018",
+    "split": "regression",
+    "family": "timer.prefix.compound",
+    "category": "compound",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz 10 sekund i włącz światła",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-019",
+    "split": "regression",
+    "family": "timer.prefix.compound",
+    "category": "compound",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz minutę. Anuluj minutnik",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-020",
+    "split": "regression",
+    "family": "timer.prefix.compound",
+    "category": "compound",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz minutę. Przerwij odliczanie",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-021",
+    "split": "regression",
+    "family": "timer.prefix.compound",
+    "category": "compound",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz minutę. Wstrzymaj minutnik",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-022",
+    "split": "regression",
+    "family": "timer.prefix.compound",
+    "category": "compound",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz minutę. Ustaw temperaturę",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-023",
+    "split": "regression",
+    "family": "timer.prefix.compound",
+    "category": "compound",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz minutę. Otwórz rolety",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-024",
+    "split": "regression",
+    "family": "timer.prefix.compound",
+    "category": "compound",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz minutę. Zamknij okno",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-025",
+    "split": "regression",
+    "family": "timer.prefix.named",
+    "category": "configuration",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Odlicz 10 sekund o nazwie herbata",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-026",
+    "split": "regression",
+    "family": "timer.prefix.named",
+    "category": "configuration",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw minutnik na minutę nazwany herbata",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-027",
+    "split": "regression",
+    "family": "timer.prefix.unsupported_duration",
+    "category": "unsupported",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Nastaw minutnik na kwadrans. Herbata stygnie.",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-028",
+    "split": "regression",
+    "family": "timer.routing.unrelated_delay",
+    "category": "unsupported",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz światła za 10 sekund",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-029",
+    "split": "regression",
+    "family": "timer.routing.lifecycle",
+    "category": "command",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Przerwij odliczanie",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "TMR-030",
+    "split": "regression",
+    "family": "timer.routing.unrelated_speech",
+    "category": "unsupported",
+    "layer": "timer_prefix",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Herbata jest już gotowa",
+          "dry_run": true
+        },
+        "expected": {
+          "candidates": [],
+          "is_timer_request": false
+        }
+      }
+    ]
+  }
+]

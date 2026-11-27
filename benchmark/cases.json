@@ -1,0 +1,412 @@
+[
+  {
+    "id": "living_on",
+    "text": "zapal światła",
+    "area": "living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_main"
+    ],
+    "service": "turn_on"
+  },
+  {
+    "id": "living_off",
+    "text": "wyłącz światła",
+    "area": "living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_ambient",
+      "light.living_room_main",
+      "light.living_room_table"
+    ],
+    "service": "turn_off"
+  },
+  {
+    "id": "kitchen_override",
+    "text": "włącz światła w kuchni",
+    "area": "living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.kitchen_main"
+    ],
+    "service": "turn_on"
+  },
+  {
+    "id": "satellite",
+    "text": "zapal światła",
+    "satellite": "assist_satellite.living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_main"
+    ],
+    "service": "turn_on"
+  },
+  {
+    "id": "satellite_override",
+    "text": "zapal światła w kuchni",
+    "satellite": "assist_satellite.living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.kitchen_main"
+    ],
+    "service": "turn_on"
+  },
+  {
+    "id": "device",
+    "text": "zapal światła",
+    "device": "satellite_device_living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_main"
+    ],
+    "service": "turn_on"
+  },
+  {
+    "id": "polite_on",
+    "text": "Czy mógłbyś mi zapalić światła?",
+    "area": "living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_main"
+    ],
+    "service": "turn_on"
+  },
+  {
+    "id": "polite_off",
+    "text": "Mógłbyś mi zgasić lampki w salonie?",
+    "area": "kitchen",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_ambient",
+      "light.living_room_main",
+      "light.living_room_table"
+    ],
+    "service": "turn_off"
+  },
+  {
+    "id": "diacritics",
+    "text": "wlacz swiatla",
+    "area": "living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_main"
+    ],
+    "service": "turn_on"
+  },
+  {
+    "id": "office_morphology",
+    "text": "włącz światła w biurze",
+    "area": "living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.office_main"
+    ],
+    "service": "turn_on"
+  },
+  {
+    "id": "named_lamp",
+    "text": "zapal lampę przy stole",
+    "area": "living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_table"
+    ],
+    "service": "turn_on"
+  },
+  {
+    "id": "named_global",
+    "text": "zapal lampę przy stole",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_table"
+    ],
+    "service": "turn_on"
+  },
+  {
+    "id": "ambient",
+    "text": "włącz nastrojowe światła",
+    "area": "living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_ambient"
+    ],
+    "service": "turn_on"
+  },
+  {
+    "id": "main_off_only",
+    "text": "wyłącz główne światła",
+    "area": "living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_main"
+    ],
+    "service": "turn_off"
+  },
+  {
+    "id": "brightness",
+    "text": "ustaw światła na 30%",
+    "area": "living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_main"
+    ],
+    "service": "turn_on",
+    "data": {
+      "brightness_pct": 30.0
+    }
+  },
+  {
+    "id": "safe_all",
+    "text": "wyłącz wszystko",
+    "area": "living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_ambient",
+      "light.living_room_main",
+      "light.living_room_table"
+    ],
+    "service": "turn_off"
+  },
+  {
+    "id": "temperature",
+    "text": "jaka jest temperatura",
+    "area": "living_room",
+    "status": "answered",
+    "targets": [
+      "sensor.living_room_temperature"
+    ],
+    "speech_contains": "około 22 stopni"
+  },
+  {
+    "id": "climate",
+    "text": "ustaw temperaturę na 21,5 stopni w salonie",
+    "area": "kitchen",
+    "status": "confirm",
+    "targets": [
+      "climate.living_room"
+    ],
+    "service": "set_temperature",
+    "data": {
+      "temperature": 21.5
+    }
+  },
+  {
+    "id": "blind",
+    "text": "zamknij rolety",
+    "area": "living_room",
+    "status": "confirm",
+    "targets": [
+      "cover.blind"
+    ],
+    "service": "close_cover"
+  },
+  {
+    "id": "tv",
+    "text": "włącz telewizor",
+    "area": "living_room",
+    "status": "confirm",
+    "targets": [
+      "media_player.tv"
+    ],
+    "service": "turn_on"
+  },
+  {
+    "id": "explicit_floor",
+    "text": "zapal światła na parterze",
+    "area": "office",
+    "status": "dry_run",
+    "targets": [
+      "light.kitchen_main",
+      "light.living_room_main"
+    ],
+    "service": "turn_on"
+  },
+  {
+    "id": "unknown_area",
+    "text": "zapal światła w piwnicy",
+    "area": "living_room",
+    "status": "clarify",
+    "targets": []
+  },
+  {
+    "id": "no_source",
+    "text": "zapal światła",
+    "status": "clarify",
+    "targets": []
+  },
+  {
+    "id": "unknown_satellite",
+    "text": "zapal światła",
+    "satellite": "assist_satellite.unknown",
+    "status": "clarify",
+    "targets": []
+  },
+  {
+    "id": "ambiguous_lamp",
+    "text": "zapal lampę",
+    "area": "living_room",
+    "status": "clarify",
+    "targets": []
+  },
+  {
+    "id": "hidden",
+    "text": "włącz ukryte światło",
+    "area": "living_room",
+    "status": "clarify",
+    "targets": []
+  },
+  {
+    "id": "negation",
+    "text": "nie włącz światła",
+    "area": "living_room",
+    "status": "unsupported",
+    "targets": []
+  },
+  {
+    "id": "compound",
+    "text": "włącz światła i wyłącz telewizor",
+    "area": "living_room",
+    "status": "unsupported",
+    "targets": []
+  },
+  {
+    "id": "schedule",
+    "text": "zapal światła za 10 minut",
+    "area": "living_room",
+    "status": "unsupported",
+    "targets": []
+  },
+  {
+    "id": "semantic_no_llm",
+    "text": "jest za ciemno",
+    "area": "living_room",
+    "status": "unsupported",
+    "targets": []
+  },
+  {
+    "id": "security",
+    "text": "otwórz bramę",
+    "area": "kitchen",
+    "status": "blocked",
+    "targets": [
+      "cover.garage"
+    ]
+  },
+  {
+    "id": "range",
+    "text": "ustaw światła na 150%",
+    "area": "living_room",
+    "status": "blocked",
+    "targets": [
+      "light.living_room_main"
+    ]
+  },
+  {
+    "id": "unrequested_confirm",
+    "text": "potwierdzam",
+    "area": "living_room",
+    "status": "clarify",
+    "targets": []
+  },
+  {
+    "id": "cancel",
+    "text": "anuluj",
+    "area": "living_room",
+    "status": "cancelled",
+    "targets": []
+  },
+  {
+    "id": "verb_last",
+    "text": "Światła w salonie włącz",
+    "area": "living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_main"
+    ],
+    "service": "turn_on",
+    "data": {}
+  },
+  {
+    "id": "area_first",
+    "text": "W salonie zapal światła",
+    "area": "living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_main"
+    ],
+    "service": "turn_on",
+    "data": {}
+  },
+  {
+    "id": "area_middle",
+    "text": "Zapal w salonie światła",
+    "area": "living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_main"
+    ],
+    "service": "turn_on",
+    "data": {}
+  },
+  {
+    "id": "polite_middle",
+    "text": "Zapal proszę światła",
+    "area": "living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_main"
+    ],
+    "service": "turn_on",
+    "data": {}
+  },
+  {
+    "id": "spoken_percent",
+    "text": "Ustaw światła na czterdzieści procent",
+    "area": "living_room",
+    "status": "dry_run",
+    "targets": [
+      "light.living_room_main"
+    ],
+    "service": "turn_on",
+    "data": {
+      "brightness_pct": 40.0
+    }
+  },
+  {
+    "id": "front_unknown",
+    "text": "W piwnicy zapal światła",
+    "area": "living_room",
+    "status": "clarify",
+    "targets": []
+  },
+  {
+    "id": "number_words_range",
+    "text": "Ustaw światła na sto jeden procent",
+    "area": "living_room",
+    "status": "blocked",
+    "targets": [
+      "light.living_room_main"
+    ]
+  },
+  {
+    "id": "pronoun_no_context",
+    "text": "Zgaś je",
+    "area": "living_room",
+    "status": "clarify",
+    "targets": []
+  },
+  {
+    "id": "area_ellipsis_no_context",
+    "text": "A w kuchni?",
+    "area": "living_room",
+    "status": "clarify",
+    "targets": []
+  },
+  {
+    "id": "front_negation",
+    "text": "W salonie nie zapalaj świateł",
+    "area": "living_room",
+    "status": "unsupported",
+    "targets": []
+  }
+]

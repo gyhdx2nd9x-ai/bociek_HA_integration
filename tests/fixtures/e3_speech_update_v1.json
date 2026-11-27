@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "introduced_in": "0.10.0b9",
+  "scope": "One spoken response at Engine.process only. Original policy, plans and frozen fixture remain unchanged.",
+  "original_fixture_sha256": "b130f0c177cfcfb1a55ab746679c95df16d8f01430620bdac8675b3c83fe5317",
+  "engine": {
+    "temperature_other_area": {
+      "field": "speech",
+      "before": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "after": "Nie mogę teraz sprawdzić temperatury."
+    }
+  }
+}

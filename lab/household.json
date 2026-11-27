@@ -1,0 +1,17 @@
+{
+  "description": "Generic synthetic household fixture. No names, IDs, inventory or counts are copied from a user's Home Assistant.",
+  "floors": [
+    {"id": "ground_floor", "name": "Ground floor", "aliases": ["parter", "parterze"]},
+    {"id": "first_floor", "name": "First Floor", "aliases": ["piętro", "pierwszym piętrze", "pierwsze piętro"]}
+  ],
+  "areas": [
+    {"id": "living_room", "name": "Living Room", "floor_id": "ground_floor", "aliases": ["salon"], "devices": 8},
+    {"id": "kitchen", "name": "Kitchen", "floor_id": "ground_floor", "aliases": ["kuchnia", "aneks"], "devices": 6},
+    {"id": "front_door", "name": "Front Door", "floor_id": "ground_floor", "aliases": ["wejście", "wejściu", "drzwi wejściowe"], "devices": 2},
+    {"id": "bedroom", "name": "Bedroom", "floor_id": "first_floor", "aliases": ["sypialnia", "sypialni"], "devices": 4},
+    {"id": "office", "name": "Office", "floor_id": "first_floor", "aliases": ["biuro"], "devices": 5},
+    {"id": "guest_room", "name": "Guest Room", "floor_id": "first_floor", "aliases": ["pokój gościnny", "pokoju gościnnego"], "devices": 7},
+    {"id": "bathroom", "name": "Bathroom", "floor_id": "first_floor", "aliases": ["łazienka", "łazience"], "devices": 3},
+    {"id": "hallway", "name": "Hallway", "floor_id": null, "aliases": ["korytarz", "korytarzu", "przedpokój", "przedpokoju"], "devices": 5}
+  ]
+}

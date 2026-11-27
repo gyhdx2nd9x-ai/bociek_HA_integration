@@ -1,0 +1,3972 @@
+{
+  "source": "0.10.0b5 policy and Engine, captured before E3 extraction",
+  "policy": {
+    "brightness_mode_0_value_0": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_0_value_1": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_0_value_2": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_0_value_3": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_0_value_4": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_0_value_5": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_0_value_6": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_0_value_7": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_1_value_0": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_1_value_1": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_1_value_2": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_1_value_3": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_1_value_4": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_1_value_5": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_1_value_6": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_1_value_7": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_2_value_0": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_2_value_1": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_2_value_2": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_2_value_3": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_2_value_4": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_2_value_5": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_2_value_6": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_2_value_7": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_3_value_0": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_3_value_1": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_3_value_2": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 0.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_3_value_3": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 30.5
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_3_value_4": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 100.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_3_value_5": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_3_value_6": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_3_value_7": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_4_value_0": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_4_value_1": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_4_value_2": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 0.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_4_value_3": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 30.5
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_4_value_4": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 100.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_4_value_5": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_4_value_6": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_4_value_7": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_5_value_0": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_5_value_1": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_5_value_2": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 0.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_5_value_3": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 30.5
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_5_value_4": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 100.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_5_value_5": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_5_value_6": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_5_value_7": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_6_value_0": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_6_value_1": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_6_value_2": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 0.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_6_value_3": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 30.5
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_6_value_4": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 100.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_6_value_5": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_6_value_6": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_6_value_7": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_7_value_0": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_7_value_1": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_7_value_2": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 0.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_7_value_3": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 30.5
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_7_value_4": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 100.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_7_value_5": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_7_value_6": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_mode_7_value_7": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_fast_confidence_0": {
+      "status": "clarify",
+      "speech": "Powtórz dokładnie polecenie.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.84,
+      "confidence_class": "low",
+      "risk": "low",
+      "route": "fast",
+      "reason": "confidence",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_fast_confidence_0": {
+      "status": "clarify",
+      "speech": "Powtórz dokładnie polecenie.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.84,
+      "confidence_class": "low",
+      "risk": "low",
+      "route": "fast",
+      "reason": "confidence",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_llm_confidence_0": {
+      "status": "clarify",
+      "speech": "Powtórz dokładnie polecenie.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.84,
+      "confidence_class": "low",
+      "risk": "low",
+      "route": "llm",
+      "reason": "confidence",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_llm_confidence_0": {
+      "status": "clarify",
+      "speech": "Powtórz dokładnie polecenie.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.84,
+      "confidence_class": "low",
+      "risk": "low",
+      "route": "llm",
+      "reason": "confidence",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_fast_confidence_1": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 35.0
+          }
+        }
+      ],
+      "confidence": 0.85,
+      "confidence_class": "medium",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_fast_confidence_1": {
+      "status": "answered",
+      "speech": "Jest około 22 stopni.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.85,
+      "confidence_class": "medium",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_llm_confidence_1": {
+      "status": "confirm",
+      "speech": "Czy ustawić jasność 35.0%: Światło testowe? Powiedz „potwierdzam” lub „anuluj”.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 35.0
+          }
+        }
+      ],
+      "confidence": 0.85,
+      "confidence_class": "medium",
+      "risk": "low",
+      "route": "llm",
+      "reason": "confirmation_required",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_llm_confidence_1": {
+      "status": "answered",
+      "speech": "Jest około 22 stopni.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.85,
+      "confidence_class": "medium",
+      "risk": "low",
+      "route": "llm",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_fast_confidence_2": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 35.0
+          }
+        }
+      ],
+      "confidence": 0.96,
+      "confidence_class": "medium",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_fast_confidence_2": {
+      "status": "answered",
+      "speech": "Jest około 22 stopni.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.96,
+      "confidence_class": "medium",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_llm_confidence_2": {
+      "status": "confirm",
+      "speech": "Czy ustawić jasność 35.0%: Światło testowe? Powiedz „potwierdzam” lub „anuluj”.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 35.0
+          }
+        }
+      ],
+      "confidence": 0.96,
+      "confidence_class": "medium",
+      "risk": "low",
+      "route": "llm",
+      "reason": "confirmation_required",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_llm_confidence_2": {
+      "status": "answered",
+      "speech": "Jest około 22 stopni.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.96,
+      "confidence_class": "medium",
+      "risk": "low",
+      "route": "llm",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_fast_confidence_3": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 35.0
+          }
+        }
+      ],
+      "confidence": 0.97,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_fast_confidence_3": {
+      "status": "answered",
+      "speech": "Jest około 22 stopni.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.97,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_llm_confidence_3": {
+      "status": "confirm",
+      "speech": "Czy ustawić jasność 35.0%: Światło testowe? Powiedz „potwierdzam” lub „anuluj”.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 35.0
+          }
+        }
+      ],
+      "confidence": 0.97,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "llm",
+      "reason": "confirmation_required",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_llm_confidence_3": {
+      "status": "answered",
+      "speech": "Jest około 22 stopni.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.97,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "llm",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_fast_confidence_4": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 35.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_fast_confidence_4": {
+      "status": "answered",
+      "speech": "Jest około 22 stopni.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_llm_confidence_4": {
+      "status": "confirm",
+      "speech": "Czy ustawić jasność 35.0%: Światło testowe? Powiedz „potwierdzam” lub „anuluj”.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 35.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "llm",
+      "reason": "confirmation_required",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_llm_confidence_4": {
+      "status": "answered",
+      "speech": "Jest około 22 stopni.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "llm",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_fast_confidence_5": {
+      "status": "clarify",
+      "speech": "Powtórz dokładnie polecenie.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": "NaN",
+      "confidence_class": "low",
+      "risk": "low",
+      "route": "fast",
+      "reason": "confidence",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_fast_confidence_5": {
+      "status": "clarify",
+      "speech": "Powtórz dokładnie polecenie.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": "NaN",
+      "confidence_class": "low",
+      "risk": "low",
+      "route": "fast",
+      "reason": "confidence",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_llm_confidence_5": {
+      "status": "clarify",
+      "speech": "Powtórz dokładnie polecenie.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": "NaN",
+      "confidence_class": "low",
+      "risk": "low",
+      "route": "llm",
+      "reason": "confidence",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_llm_confidence_5": {
+      "status": "clarify",
+      "speech": "Powtórz dokładnie polecenie.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": "NaN",
+      "confidence_class": "low",
+      "risk": "low",
+      "route": "llm",
+      "reason": "confidence",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_domain_light": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 35.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_domain_switch": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "switch.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "medium",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_domain_sensor": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_domain_climate": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "climate.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "medium",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_domain_lock": {
+      "status": "blocked",
+      "speech": "Sterowanie zabezpieczeniami nie jest obsługiwane w MVP.",
+      "targets": [
+        "lock.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "high",
+      "route": "fast",
+      "reason": "high_risk_disabled",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_restriction_voice_confirm": {
+      "status": "confirm",
+      "speech": "Czy ustawić jasność 35.0%: Światło testowe? Powiedz „potwierdzam” lub „anuluj”.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.test"
+          ],
+          "data": {
+            "brightness_pct": 35.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "confirmation_required",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_restriction_voice_high_risk": {
+      "status": "blocked",
+      "speech": "Sterowanie zabezpieczeniami nie jest obsługiwane w MVP.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "high",
+      "route": "fast",
+      "reason": "high_risk_disabled",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_domain_light": {
+      "status": "blocked",
+      "speech": "To nie jest czujnik temperatury.",
+      "targets": [
+        "light.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_domain_switch": {
+      "status": "blocked",
+      "speech": "To nie jest czujnik temperatury.",
+      "targets": [
+        "switch.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "medium",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_domain_sensor": {
+      "status": "answered",
+      "speech": "Jest około 22.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_domain_climate": {
+      "status": "blocked",
+      "speech": "To nie jest czujnik temperatury.",
+      "targets": [
+        "climate.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "medium",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_domain_lock": {
+      "status": "blocked",
+      "speech": "Sterowanie zabezpieczeniami nie jest obsługiwane w MVP.",
+      "targets": [
+        "lock.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "high",
+      "route": "fast",
+      "reason": "high_risk_disabled",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_restriction_voice_confirm": {
+      "status": "answered",
+      "speech": "Jest około 22.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_restriction_voice_high_risk": {
+      "status": "blocked",
+      "speech": "Sterowanie zabezpieczeniami nie jest obsługiwane w MVP.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "high",
+      "route": "fast",
+      "reason": "high_risk_disabled",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_0_unit_0": {
+      "status": "answered",
+      "speech": "Jest około 0 stopni.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_0_unit_1": {
+      "status": "answered",
+      "speech": "Jest około 0 stopni Fahrenheita.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_0_unit_2": {
+      "status": "answered",
+      "speech": "Jest około 0 K.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_0_unit_3": {
+      "status": "answered",
+      "speech": "Jest około 0.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_1_unit_0": {
+      "status": "answered",
+      "speech": "Jest około -2 stopni.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_1_unit_1": {
+      "status": "answered",
+      "speech": "Jest około -2 stopni Fahrenheita.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_1_unit_2": {
+      "status": "answered",
+      "speech": "Jest około -2 K.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_1_unit_3": {
+      "status": "answered",
+      "speech": "Jest około -2.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_2_unit_0": {
+      "status": "answered",
+      "speech": "Jest około 22 stopni.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_2_unit_1": {
+      "status": "answered",
+      "speech": "Jest około 22 stopni Fahrenheita.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_2_unit_2": {
+      "status": "answered",
+      "speech": "Jest około 22 K.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_2_unit_3": {
+      "status": "answered",
+      "speech": "Jest około 22.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_3_unit_0": {
+      "status": "answered",
+      "speech": "Jest około 0 stopni.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_3_unit_1": {
+      "status": "answered",
+      "speech": "Jest około 0 stopni Fahrenheita.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_3_unit_2": {
+      "status": "answered",
+      "speech": "Jest około 0 K.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_3_unit_3": {
+      "status": "answered",
+      "speech": "Jest około 0.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_4_unit_0": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_4_unit_1": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_4_unit_2": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_4_unit_3": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_5_unit_0": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_5_unit_1": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_5_unit_2": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_5_unit_3": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_6_unit_0": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_6_unit_1": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_6_unit_2": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_6_unit_3": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_7_unit_0": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_7_unit_1": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_7_unit_2": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_7_unit_3": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_8_unit_0": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_8_unit_1": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_8_unit_2": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_8_unit_3": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_9_unit_0": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_9_unit_1": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_9_unit_2": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_state_9_unit_3": {
+      "status": "clarify",
+      "speech": "Czujnik nie ma poprawnego odczytu.",
+      "targets": [
+        "sensor.test"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "invalid_state",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_resolution_no_targets": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "no_targets",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_resolution_no_targets": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "no_targets",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_resolution_ambiguous_target": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "ambiguous_target",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_resolution_ambiguous_target": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "ambiguous_target",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_resolution_unknown_location": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "unknown_location",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_resolution_unknown_location": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "unknown_location",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_resolution_missing_area": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "missing_area",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_resolution_missing_area": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "missing_area",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_resolution_ineligible_target": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "ineligible_target",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_resolution_ineligible_target": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "ineligible_target",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_resolution_cross_area_group": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "cross_area_group",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_resolution_cross_area_group": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "cross_area_group",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_resolution_selection_changed": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "selection_changed",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "temperature_resolution_selection_changed": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "selection_changed",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_multiple_confirm_False_compatible_False": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.first",
+        "light.second"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_multiple_confirm_False_compatible_True": {
+      "status": "ready",
+      "speech": "Gotowe.",
+      "targets": [
+        "light.first",
+        "light.second"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.first"
+          ],
+          "data": {
+            "brightness_pct": 35.0
+          }
+        },
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.second"
+          ],
+          "data": {
+            "brightness_pct": 35.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_multiple_confirm_True_compatible_False": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.first",
+        "light.second"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    },
+    "brightness_multiple_confirm_True_compatible_True": {
+      "status": "confirm",
+      "speech": "Czy ustawić jasność 35.0%: Światło testowe, Światło testowe? Powiedz „potwierdzam” lub „anuluj”.",
+      "targets": [
+        "light.first",
+        "light.second"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.first"
+          ],
+          "data": {
+            "brightness_pct": 35.0
+          }
+        },
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.second"
+          ],
+          "data": {
+            "brightness_pct": 35.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "confirmation_required",
+      "area_ids": [
+        "test_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": null,
+      "continue_conversation": false
+    }
+  },
+  "engine": {
+    "brightness_default": {
+      "status": "dry_run",
+      "speech": "Plan gotowy; urządzenia nie zostały zmienione.",
+      "targets": [
+        "light.living_room_main"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.living_room_main"
+          ],
+          "data": {
+            "brightness_pct": 35.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "living_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": {
+        "interpretation": {
+          "action": "brightness",
+          "kind": "light",
+          "location": null,
+          "value": 35.0,
+          "target_source": "utterance",
+          "confidence_source": "proposal_score_not_probability"
+        }
+      },
+      "continue_conversation": false
+    },
+    "brightness_named": {
+      "status": "dry_run",
+      "speech": "Plan gotowy; urządzenia nie zostały zmienione.",
+      "targets": [
+        "light.living_room_table"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.living_room_table"
+          ],
+          "data": {
+            "brightness_pct": 35.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "living_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": {
+        "interpretation": {
+          "action": "brightness",
+          "kind": "named",
+          "location": null,
+          "value": 35.0,
+          "target_source": "utterance",
+          "confidence_source": "proposal_score_not_probability"
+        }
+      },
+      "continue_conversation": false
+    },
+    "brightness_explicit_area": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "no_targets",
+      "area_ids": [
+        "living_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": {
+        "interpretation": {
+          "action": "brightness",
+          "kind": "named",
+          "location": null,
+          "value": 35.0,
+          "target_source": "utterance",
+          "confidence_source": "proposal_score_not_probability"
+        }
+      },
+      "continue_conversation": false
+    },
+    "brightness_zero": {
+      "status": "dry_run",
+      "speech": "Plan gotowy; urządzenia nie zostały zmienione.",
+      "targets": [
+        "light.living_room_main"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.living_room_main"
+          ],
+          "data": {
+            "brightness_pct": 0.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "living_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": {
+        "interpretation": {
+          "action": "brightness",
+          "kind": "light",
+          "location": null,
+          "value": 0.0,
+          "target_source": "utterance",
+          "confidence_source": "proposal_score_not_probability"
+        }
+      },
+      "continue_conversation": false
+    },
+    "brightness_hundred": {
+      "status": "dry_run",
+      "speech": "Plan gotowy; urządzenia nie zostały zmienione.",
+      "targets": [
+        "light.living_room_main"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.living_room_main"
+          ],
+          "data": {
+            "brightness_pct": 100.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "living_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": {
+        "interpretation": {
+          "action": "brightness",
+          "kind": "light",
+          "location": null,
+          "value": 100.0,
+          "target_source": "utterance",
+          "confidence_source": "proposal_score_not_probability"
+        }
+      },
+      "continue_conversation": false
+    },
+    "brightness_range": {
+      "status": "blocked",
+      "speech": "Jasność musi wynosić od 0 do 100 procent.",
+      "targets": [
+        "light.living_room_main"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "range",
+      "area_ids": [
+        "living_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": {
+        "interpretation": {
+          "action": "brightness",
+          "kind": "light",
+          "location": null,
+          "value": 101.0,
+          "target_source": "utterance",
+          "confidence_source": "proposal_score_not_probability"
+        }
+      },
+      "continue_conversation": false
+    },
+    "brightness_unsupported": {
+      "status": "blocked",
+      "speech": "To światło nie obsługuje jasności.",
+      "targets": [
+        "light.office_main"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "capability",
+      "area_ids": [
+        "office"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": {
+        "interpretation": {
+          "action": "brightness",
+          "kind": "light",
+          "location": null,
+          "value": 35.0,
+          "target_source": "utterance",
+          "confidence_source": "proposal_score_not_probability"
+        }
+      },
+      "continue_conversation": false
+    },
+    "brightness_unknown_area": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "no_targets",
+      "area_ids": [
+        "living_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": {
+        "interpretation": {
+          "action": "brightness",
+          "kind": "named",
+          "location": null,
+          "value": 35.0,
+          "target_source": "utterance",
+          "confidence_source": "proposal_score_not_probability"
+        }
+      },
+      "continue_conversation": false
+    },
+    "brightness_no_area": {
+      "status": "clarify",
+      "speech": "W którym pomieszczeniu?",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "missing_area",
+      "area_ids": [],
+      "completed": [],
+      "native_intent": null,
+      "response_data": {
+        "interpretation": {
+          "action": "brightness",
+          "kind": "light",
+          "location": null,
+          "value": 35.0,
+          "target_source": "utterance",
+          "confidence_source": "proposal_score_not_probability"
+        }
+      },
+      "continue_conversation": true
+    },
+    "brightness_satellite": {
+      "status": "dry_run",
+      "speech": "Plan gotowy; urządzenia nie zostały zmienione.",
+      "targets": [
+        "light.living_room_main"
+      ],
+      "calls": [
+        {
+          "domain": "light",
+          "service": "turn_on",
+          "entity_ids": [
+            "light.living_room_main"
+          ],
+          "data": {
+            "brightness_pct": 35.0
+          }
+        }
+      ],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "living_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": {
+        "interpretation": {
+          "action": "brightness",
+          "kind": "light",
+          "location": null,
+          "value": 35.0,
+          "target_source": "utterance",
+          "confidence_source": "proposal_score_not_probability"
+        }
+      },
+      "continue_conversation": false
+    },
+    "temperature_primary": {
+      "status": "answered",
+      "speech": "Jest około 22 stopni.",
+      "targets": [
+        "sensor.living_room_temperature"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "living_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": {
+        "interpretation": {
+          "action": "temperature",
+          "kind": "sensor",
+          "location": null,
+          "value": null,
+          "target_source": "utterance",
+          "confidence_source": "proposal_score_not_probability"
+        }
+      },
+      "continue_conversation": false
+    },
+    "temperature_other_area": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "no_targets",
+      "area_ids": [
+        "kitchen"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": {
+        "interpretation": {
+          "action": "temperature",
+          "kind": "sensor",
+          "location": "kuchni",
+          "value": null,
+          "target_source": "utterance",
+          "confidence_source": "proposal_score_not_probability"
+        }
+      },
+      "continue_conversation": false
+    },
+    "temperature_no_area": {
+      "status": "clarify",
+      "speech": "W którym pomieszczeniu?",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "missing_area",
+      "area_ids": [],
+      "completed": [],
+      "native_intent": null,
+      "response_data": {
+        "interpretation": {
+          "action": "temperature",
+          "kind": "sensor",
+          "location": null,
+          "value": null,
+          "target_source": "utterance",
+          "confidence_source": "proposal_score_not_probability"
+        }
+      },
+      "continue_conversation": true
+    },
+    "temperature_unknown_area": {
+      "status": "clarify",
+      "speech": "Doprecyzuj pomieszczenie lub nazwę urządzenia. Sprawdź też role głosowe i dostępność encji.",
+      "targets": [],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "unknown_location",
+      "area_ids": [],
+      "completed": [],
+      "native_intent": null,
+      "response_data": {
+        "interpretation": {
+          "action": "temperature",
+          "kind": "sensor",
+          "location": "piwnicy",
+          "value": null,
+          "target_source": "utterance",
+          "confidence_source": "proposal_score_not_probability"
+        }
+      },
+      "continue_conversation": false
+    },
+    "temperature_satellite": {
+      "status": "answered",
+      "speech": "Jest około 22 stopni.",
+      "targets": [
+        "sensor.living_room_temperature"
+      ],
+      "calls": [],
+      "confidence": 0.99,
+      "confidence_class": "high",
+      "risk": "low",
+      "route": "fast",
+      "reason": "",
+      "area_ids": [
+        "living_room"
+      ],
+      "completed": [],
+      "native_intent": null,
+      "response_data": {
+        "interpretation": {
+          "action": "temperature",
+          "kind": "sensor",
+          "location": null,
+          "value": null,
+          "target_source": "utterance",
+          "confidence_source": "proposal_score_not_probability"
+        }
+      },
+      "continue_conversation": false
+    }
+  }
+}

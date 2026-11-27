@@ -1,0 +1,629 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "HA Polish Context Voice",
+        "description": "Lokalny polski asystent kontekstowy. Pozostaw pola puste, aby wyłączyć opcjonalny fallback LLM.",
+        "data": {
+          "llm_endpoint": "Opcjonalny adres API zgodnego z OpenAI, zakończony /v1",
+          "llm_model": "Opcjonalna nazwa modelu"
+        }
+      }
+    },
+    "error": {
+      "invalid_endpoint": "Podaj adres HTTP(S) bez danych logowania i parametrów oraz nazwę modelu albo pozostaw adres pusty.",
+      "invalid_quiet_time": "Podaj godziny w formacie HH:MM, np. 20:00 i 08:00."
+    },
+    "abort": {
+      "already_configured": "Integracja jest już skonfigurowana."
+    }
+  },
+  "options": {
+    "step": {
+      "general": {
+        "title": "Komunikacja, przegląd urządzeń i LLM",
+        "description": "Tryb cichy pomija potwierdzenie poprawnie wykonanych świateł w pokoju satelity. Błędy, pytania i minutniki nadal są słyszalne. Puste Areas oznaczają wszystkie pokoje; dowolny sygnał on włącza ciszę także poza godzinami. Pusty adres wyłącza LLM. Przegląd serwisowy obejmuje udostępnione encje całego domu, chyba że podasz pomieszczenie. Próg dotyczy procentowych czujników baterii.",
+        "data": {
+          "llm_endpoint": "Adres API zgodnego z OpenAI, zakończony /v1",
+          "llm_model": "Nazwa modelu",
+          "quiet_ack_enabled": "Bez słownego potwierdzenia lokalnych świateł w ciszy",
+          "quiet_start": "Początek ciszy HH:MM, czas lokalny HA",
+          "quiet_end": "Koniec ciszy HH:MM (ta sama godzina wyłącza harmonogram)",
+          "quiet_areas": "Pomieszczenia trybu cichego (puste = wszystkie)",
+          "quiet_signals": "Opcjonalne sygnały ciszy (on = cicho)",
+          "maintenance_battery_threshold": "Próg słabej baterii (1–50%)",
+          "back": "Wróć (tryb zgodności)"
+        },
+        "data_description": {
+          "back": "Jeśli nie ma przycisku Wróć u dołu, odśwież stronę HA. Awaryjnie zaznacz to pole i kliknij Dalej."
+        }
+      },
+      "init": {
+        "title": "Ustawienia asystenta",
+        "description": "**Zacznij od ról głosowych**, aby wybrać urządzenia reagujące na polecenia. Muzyka i sposób odpowiadania mają osobne ustawienia.",
+        "menu_options": {
+          "voice_roles": "Skonfiguruj urządzenia i światła",
+          "music_shortcuts": "Dodaj muzykę i playlisty",
+          "music_rooms": "Wybierz głośniki do muzyki",
+          "general": "Ustaw odpowiedzi i tryb cichy",
+          "calendar": "Kalendarz — wydarzenia",
+          "calendar_kiosk": "Kalendarz — ekrany Kiosk",
+          "self_test": "Test diagnostyczny i raport",
+          "content": "Treści — Stoic i wyszukiwanie mediów",
+          "voice_trial": "Wypróbuj polecenie"
+        },
+        "menu_option_descriptions": {
+          "voice_roles": "Pokój po pokoju: co włączać, co wyłączać i jakie role nadać.",
+          "music_shortcuts": "Nadaj nazwy i aliasy ulubionym treściom z HA lub Music Assistant.",
+          "music_rooms": "Ustal, gdzie gra muzyka po poleceniu w danym pomieszczeniu.",
+          "general": "Godziny ciszy, próg baterii i opcjonalny model językowy.",
+          "calendar": "Wybierz kalendarz domyślny, czas trwania i możliwość zapisu. Zmiany wymagają potwierdzenia.",
+          "calendar_kiosk": "Opcjonalnie połącz satelitę z ekranem, na którym pokażesz dzień lub tydzień.",
+          "self_test": "Sprawdź program i konfigurację domu bez sterowania urządzeniami, potem pobierz jeden plik wyników.",
+          "content": "Wskaż sensor Daily Stoic i ustaw wyszukiwanie muzyki oraz audiobooków przez MA.",
+          "voice_trial": "Wpisz polecenie sterujące i sprawdź, co Bociek z niego zrozumie."
+        }
+      },
+      "music_shortcuts": {
+        "title": "Skróty muzyczne",
+        "description": "Wybierz zapisany skrót, aby go zmienić, albo dodaj nowy. Skrót łączy Twoją nazwę (np. „moja muzyka”) z konkretnymi treściami w HA lub Music Assistant.",
+        "data": {
+          "shortcut": "Skrót",
+          "back": "Wróć (tryb zgodności)"
+        },
+        "data_description": {
+          "back": "Jeśli nie ma przycisku Wróć u dołu, odśwież stronę HA. Awaryjnie zaznacz to pole i kliknij Dalej."
+        }
+      },
+      "music_shortcut": {
+        "title": "Skrót muzyczny",
+        "description": "Wybierz działającą treść z przeglądarki mediów. Wpisz dowolną nazwę i dodatkowe aliasy, po jednym w wierszu, np. moja playlista YouTube oraz moja muzyka YouTube. Odtwarzacz w przeglądarce służy do wyboru treści; miejsce grania określa pokój. Bibliotekę Plex skonfiguruj w Music Assistant. Sam link do strony YouTube nie jest strumieniem audio.",
+        "data": {
+          "name": "Nazwa",
+          "aliases": "Dodatkowe nazwy — jedna w wierszu",
+          "backend": "System odtwarzania",
+          "media": "Treść do odtworzenia",
+          "delete": "Usuń ten skrót",
+          "back": "Wróć (tryb zgodności)"
+        },
+        "data_description": {
+          "back": "Jeśli nie ma przycisku Wróć u dołu, odśwież stronę HA. Awaryjnie zaznacz to pole i kliknij Dalej."
+        }
+      },
+      "music_rooms": {
+        "title": "Głośnik dla pokoju",
+        "data": {
+          "area": "Pomieszczenie",
+          "back": "Wróć (tryb zgodności)"
+        },
+        "description": "Wybierz pokój, a następnie głośnik, który ma w nim odtwarzać muzykę. Może być inny niż satelita głosowy.",
+        "data_description": {
+          "area": "W kolejnym kroku wybierzesz odtwarzacz i opcjonalną domyślną playlistę.",
+          "back": "Jeśli nie ma przycisku Wróć u dołu, odśwież stronę HA. Awaryjnie zaznacz to pole i kliknij Dalej."
+        }
+      },
+      "music_room": {
+        "title": "Głośnik i domyślna muzyka",
+        "description": "**Pomieszczenie: {area}.**\n\nWybierz pojedynczy głośnik przypisany w HA do tego pokoju i udostępniony Assist. Dla Music Assistant wybierz jego encję MA. Domyślny skrót uruchomi „puść muzykę”. Bez niego podaj nazwę skrótu. Ustawienia nie zmieniają głośnika odpowiedzi TTS.",
+        "data": {
+          "player": "Głośnik muzyki",
+          "default_shortcut": "Domyślny skrót",
+          "delete": "Usuń przypisanie tego pokoju",
+          "back": "Wróć (tryb zgodności)"
+        },
+        "data_description": {
+          "back": "Jeśli nie ma przycisku Wróć u dołu, odśwież stronę HA. Awaryjnie zaznacz to pole i kliknij Dalej."
+        }
+      },
+      "voice_roles": {
+        "title": "Krok 1 z 3 — wybierz pomieszczenie",
+        "description": "Skonfiguruj jeden pokój, a potem przejdź do następnego. **Nie musisz etykietować wszystkiego.** Wczytamy obecne ustawienia; zapis nastąpi dopiero po podsumowaniu.",
+        "data": {
+          "area": "Pomieszczenie do konfiguracji",
+          "include_hidden": "Pokaż także urządzenia nieudostępnione asystentowi",
+          "back": "Wróć (tryb zgodności)"
+        },
+        "data_description": {
+          "area": "Wybierz własne pomieszczenie HA. Listy zakupów i podobne encje mogą być w „Bez przypisanego pomieszczenia”.",
+          "include_hidden": "Zaznacz tylko, jeśli brakuje czegoś na liście. Ta opcja niczego nie udostępnia — dostęp głosowy ustawiasz w Assist.",
+          "back": "Jeśli nie ma przycisku Wróć u dołu, odśwież stronę HA. Awaryjnie zaznacz to pole i kliknij Dalej."
+        }
+      },
+      "voice_room": {
+        "title": "Pomieszczenie — wybierz kategorię",
+        "description": "**Pomieszczenie: {room}.**\n\nWidoczne encje: {count}. Światła włączane domyślnie: {on_count}; wyłączane razem: {off_count}.\n\nWybierz kategorię lub wróć do ustawień asystenta.",
+        "menu_options": {
+          "voice_lighting": "Światła i zestawy zachowań",
+          "voice_entity": "Pozostałe urządzenia i uprawnienia",
+          "voice_roles": "← Wstecz — wybierz inne pomieszczenie",
+          "init": "← Ustawienia główne asystenta",
+          "voice_done": "Zakończ konfigurację"
+        },
+        "menu_option_descriptions": {
+          "voice_lighting": "Włączanie, wyłączanie i trzy kategorie: główne, robocze oraz dekoracyjne i nastrojowe.",
+          "voice_entity": "Role czujników, list, pogody i innych encji; blokady oraz potwierdzenia.",
+          "voice_roles": "Zmień pokój lub widoczność encji na liście.",
+          "init": "Wróć do muzyki, głośników i komunikacji.",
+          "voice_done": "Zachowaj wcześniej zapisane zmiany i zamknij."
+        }
+      },
+      "voice_lights": {
+        "title": "Krok 2 z 3 — wybierz światła",
+        "description": "**Pomieszczenie: {room}.**\n\nZaznacz lampy dla każdego polecenia. Obecne wybory są już wczytane. **Włączanie i wyłączanie mogą obejmować różne lampy.**",
+        "data": {
+          "voice_default_on": "Co włączyć po „zapal światła”?",
+          "voice_all_off": "Co zgasić po „wyłącz światła”?",
+          "action": "Następny krok"
+        },
+        "data_description": {
+          "voice_default_on": "Wybierz np. główne oświetlenie. Puste pole wyłącza domyślne włączanie widocznych lamp.",
+          "voice_all_off": "Wybierz wszystkie lampy, które mają gasnąć razem, także nastrojowe. Puste pole usuwa je z tego zestawu.",
+          "action": "Wybierz podsumowanie lub najpierw dodaj podpowiedzi. Przycisk Wróć odrzuca szkic."
+        }
+      },
+      "voice_entity": {
+        "title": "Krok 2 z 3 — wybierz encję",
+        "description": "Jedno urządzenie może mieć kilka elementów w HA, np. lampę i czujnik baterii. **Wybierz element, którego działanie głosowe chcesz zmienić.**",
+        "data": {
+          "entity": "Urządzenie / encja",
+          "back": "Wróć (tryb zgodności)"
+        },
+        "data_description": {
+          "entity": "Dalej zobaczysz tylko role odpowiednie dla tego typu encji oraz już przypisane role.",
+          "back": "Jeśli nie ma przycisku Wróć u dołu, odśwież stronę HA. Awaryjnie zaznacz to pole i kliknij Dalej."
+        }
+      },
+      "voice_entity_roles": {
+        "title": "Krok 2 z 3 — role encji",
+        "description": "**{entity}**\n\n{exposure}. Zaznaczone role są już przypisane. Odznacz rolę, aby ją usunąć.\n\n**Ograniczenia z urządzenia lub pokoju:**\n{inherited}",
+        "data": {
+          "roles": "Jaką rolę ma pełnić?",
+          "back": "Wróć (tryb zgodności)"
+        },
+        "data_description": {
+          "roles": "Wybierz tylko potrzebne role. Brak roli nie wyłącza dostępu Assist. Ograniczenia odziedziczone zmienia się w ustawieniach urządzenia lub pokoju.",
+          "back": "Jeśli nie ma przycisku Wróć u dołu, odśwież stronę HA. Awaryjnie zaznacz to pole i kliknij Dalej."
+        }
+      },
+      "voice_review": {
+        "title": "Krok 3 z 3 — sprawdź i zapisz",
+        "description": "**Jeszcze niczego nie zapisano.** Sprawdź poniżej, co się zmieni.\n\n{changes}\n\nPozostałe etykiety i dostęp Assist pozostają bez zmian. Ten krok nie uruchamia urządzeń.",
+        "data": {
+          "action": "Co zrobić z tymi zmianami?"
+        },
+        "data_description": {
+          "action": "Wybierz „Zapisz pokazane zmiany”, aby je zastosować. Możesz też wrócić do edycji lub odrzucić szkic."
+        }
+      },
+      "voice_saved": {
+        "title": "Gotowe — zmiany zapisane",
+        "description": "**Zaktualizowane encje:**\n{completed}\n\nRole są już aktywne. Możesz skonfigurować następne urządzenia albo zakończyć.",
+        "data": {
+          "action": "Co dalej?"
+        },
+        "data_description": {
+          "action": "Aby bez sterowania urządzeniami sprawdzić cele polecenia, użyj akcji polish_context_voice.preview."
+        }
+      },
+      "voice_empty": {
+        "title": "Brak pasujących encji",
+        "description": "W tym widoku nie ma encji do skonfigurowania. Wróć do wyboru pokoju i sprawdź jego zakres lub zaznacz pokazywanie encji poza Assist. Możesz pominąć ten pokój."
+      },
+      "voice_lighting": {
+        "title": "Światła — wybierz sposób konfiguracji",
+        "description": "**Pomieszczenie: {room}.**\n\nMożesz ustawić każdą rolę osobno albo użyć gotowego zestawu. Główne oświetlenie i domyślne „zapal światła” to osobne role; zestaw może je połączyć.",
+        "menu_options": {
+          "voice_lights": "Polecenia „zapal / wyłącz światła”",
+          "voice_light_types": "Główne, robocze oraz dekoracyjne i nastrojowe",
+          "voice_preset": "Zastosuj gotowy zestaw do wybranych lamp",
+          "voice_profiles": "Edytuj zestawy i reguły tego pokoju",
+          "voice_room": "← Wstecz — kategorie pomieszczenia",
+          "init": "← Ustawienia główne asystenta"
+        },
+        "menu_option_descriptions": {
+          "voice_lights": "Wybierz dwa niezależne zestawy lamp.",
+          "voice_light_types": "Przypisz kategorie oświetlenia bez zmieniania zestawów ON/OFF.",
+          "voice_preset": "Np. „Główne”: główne + domyślne włączanie + wspólne wyłączanie.",
+          "voice_profiles": "Zmień etykiety przypisywane przez zestawy. Istniejące lampy pozostaną bez zmian.",
+          "voice_room": "Wróć do innych urządzeń w tym pokoju.",
+          "init": "Wróć do menu integracji."
+        }
+      },
+      "voice_light_types": {
+        "title": "Kategorie świateł",
+        "description": "**Pomieszczenie: {room}.**\n\nWybierz światła główne, robocze oraz dekoracyjne i nastrojowe. Dekoracja i nastrój to jedna kategoria. Jedna lampa może mieć kilka ról. Ustawienia zapalania i wspólnego gaszenia pozostają bez zmian. Stare oznaczenia dekoracyjne są wczytywane do wspólnej kategorii; ich zamiana będzie widoczna w podsumowaniu.",
+        "data": {
+          "back": "Wróć (tryb zgodności)",
+          "voice_main": "Światła główne",
+          "voice_task": "Światła robocze",
+          "voice_ambient": "Dekoracyjne i nastrojowe"
+        },
+        "data_description": {
+          "back": "Jeśli nie ma przycisku Wróć u dołu, odśwież stronę HA. Awaryjnie zaznacz to pole i kliknij Dalej.",
+          "voice_main": "Reagują na „włącz główne światła”. Ta kategoria sama nie dodaje domyślnego włączania.",
+          "voice_task": "Oświetlenie do pracy, np. biurko lub blat.",
+          "voice_ambient": "Dekoracja, nastrój i odpoczynek — jeden wspólny zestaw."
+        }
+      },
+      "voice_preset": {
+        "title": "Wybierz zestaw zachowań",
+        "description": "**Pomieszczenie: {room}.**\n\nGotowy zestaw przypisze kilka ról naraz wskazanym przez Ciebie lampom. Nic nie zostanie zapisane przed podsumowaniem.",
+        "data": {
+          "back": "Wróć (tryb zgodności)",
+          "profile": "Zestaw"
+        },
+        "data_description": {
+          "back": "Jeśli nie ma przycisku Wróć u dołu, odśwież stronę HA. Awaryjnie zaznacz to pole i kliknij Dalej.",
+          "profile": "Trzy zestawy: główne, robocze oraz dekoracyjne i nastrojowe."
+        }
+      },
+      "voice_profiles": {
+        "title": "Edytuj zestaw tego pokoju",
+        "description": "**Pomieszczenie: {room}.**\n\nZestaw to przepis przypisania etykiet. Zmiana przepisu nie przepisuje automatycznie istniejących lamp. Każdy pokój może mieć własne ustawienia.",
+        "data": {
+          "back": "Wróć (tryb zgodności)",
+          "profile": "Zestaw"
+        },
+        "data_description": {
+          "back": "Jeśli nie ma przycisku Wróć u dołu, odśwież stronę HA. Awaryjnie zaznacz to pole i kliknij Dalej.",
+          "profile": "Trzy zestawy: główne, robocze oraz dekoracyjne i nastrojowe."
+        }
+      },
+      "voice_preset_apply": {
+        "title": "Wybierz lampy dla zestawu",
+        "description": "**Pomieszczenie: {room}. Zestaw: {profile}.**\n\nZestaw przypisze: {roles}. Wybierz lampy; w kolejnym kroku sprawdzisz dokładny wynik.",
+        "data": {
+          "back": "Wróć (tryb zgodności)",
+          "entities": "Lampy objęte zestawem",
+          "replace": "Zastąp dotychczasowe role oświetlenia"
+        },
+        "data_description": {
+          "back": "Jeśli nie ma przycisku Wróć u dołu, odśwież stronę HA. Awaryjnie zaznacz to pole i kliknij Dalej.",
+          "entities": "Wybierz co najmniej jedną lampę lub istniejącą grupę light. Pozostałe encje nie będą zmieniane.",
+          "replace": "Domyślnie tylko dodajemy brakujące role. Po zaznaczeniu zastąpimy dotychczasowe role oświetlenia na wybranych lampach. Blokady, potwierdzenia i własne etykiety zostaną zachowane."
+        }
+      },
+      "voice_profile_edit": {
+        "title": "Etykiety przypisywane przez zestaw",
+        "description": "**Pomieszczenie: {room}. Zestaw: {profile}.**\n\nWybierz role dla następnego zastosowania zestawu w tym pokoju. Zapis dotyczy wyłącznie przepisu — nie uruchamia ani nie zmienia obecnych lamp.",
+        "data": {
+          "back": "Wróć (tryb zgodności)",
+          "roles": "Role w zestawie",
+          "reset": "Przywróć domyślny przepis"
+        },
+        "data_description": {
+          "back": "Jeśli nie ma przycisku Wróć u dołu, odśwież stronę HA. Awaryjnie zaznacz to pole i kliknij Dalej.",
+          "roles": "Wybierz co najmniej jedną rolę. Uprawnienia i zabezpieczenia zmienisz w edycji pojedynczej encji.",
+          "reset": "Usuwa tylko nadpisanie tego zestawu w tym pokoju. Nie zmienia żadnych etykiet encji."
+        }
+      },
+      "voice_profile_saved": {
+        "title": "Przepis zestawu zapisany",
+        "description": "Zapisano zestaw **{profile}** dla **{room}**. Istniejące lampy nie zostały zmienione. Aby użyć nowych reguł, wybierz lampy i zatwierdź podsumowanie.",
+        "menu_options": {
+          "voice_preset": "Zastosuj zestaw do lamp",
+          "voice_profiles": "Edytuj inny zestaw",
+          "voice_lighting": "← Wstecz — światła",
+          "init": "← Ustawienia główne asystenta"
+        },
+        "menu_option_descriptions": {
+          "voice_preset": "Wybierz konkretne lampy i obejrzyj podsumowanie.",
+          "voice_profiles": "Dostosuj kolejny przepis tego pokoju.",
+          "voice_lighting": "Wróć do kategorii świateł.",
+          "init": "Wróć do menu integracji."
+        }
+      },
+      "calendar": {
+        "title": "Kalendarz — wydarzenia",
+        "description": "Kalendarze pochodzą z HA i muszą być udostępnione Assist. **Ogólne pytania sprawdzają wszystkie dostępne kalendarze.** Nazwa lub alias w poleceniu ogranicza odczyt do jednego kalendarza. Domyślny kalendarz służy do dodawania, przekładania i odwoływania wydarzeń bez podania nazwy. Każdą zmianę potwierdzisz głosowo. Ustawienia nie zmieniają wydarzeń.",
+        "data": {
+          "back": "Wróć",
+          "calendar_default": "Domyślny kalendarz zmian",
+          "calendar_write_enabled": "Zezwalaj na zmiany wydarzeń po potwierdzeniu",
+          "calendar_default_duration": "Domyślny czas trwania wydarzenia"
+        },
+        "data_description": {
+          "back": "Wróć bez zapisywania ustawień.",
+          "calendar_default": "Dla poleceń dodawania, przenoszenia i odwoływania. Przy pustym polu: jedna encja, rola voice_primary lub pytanie o wybór. Ogólny przegląd nadal obejmuje wszystkie kalendarze dostępne dla Assist.",
+          "calendar_write_enabled": "Wyłączone domyślnie. Dostawca musi obsługiwać daną zmianę; ekspozycja Assist i uprawnienia HA nadal obowiązują.",
+          "calendar_default_duration": "Gdy nie podasz długości, asystent użyje jej i poda ją w pytaniu potwierdzającym."
+        }
+      },
+      "calendar_kiosk": {
+        "title": "Kalendarz — ekrany Kiosk",
+        "description": "Opcjonalny ekran Kiosk Satellite. Wybierz satelitę i wpisz **dokładną, unikalną nazwę Kiosk** z ustawień aplikacji (Device name). Nie zostawiamy pustego adresata i nie wysyłamy zapisów kalendarza do kiosków. Działa „pokaż kalendarz na przyszły tydzień”. Po zapisie wydarzenia ekran nie otwiera się sam. Do tego mechanizmu Kiosk wymaga połączenia HA z tokenem administratora. **Istniejące przypisania:**\n\n{mappings}\n\nWybierz ponownie tego samego satelitę, aby zmienić lub usunąć przypisanie.",
+        "data": {
+          "back": "Wróć",
+          "satellite": "Satelita, do którego mówisz",
+          "kiosk_name": "Nazwa urządzenia w Kiosk Satellite",
+          "delete": "Usuń przypisanie tego satelity"
+        },
+        "data_description": {
+          "back": "Wróć bez zapisu.",
+          "satellite": "Wybierz właściwy assist_satellite, a nie odtwarzacz muzyki.",
+          "kiosk_name": "Nazwy kiosków nie powinny się zawierać: np. Kuchnia oraz Kuchnia 2 mogą odpowiadać równocześnie.",
+          "delete": "Wydarzenia i konfiguracja Kiosk pozostaną bez zmian."
+        }
+      },
+      "self_test": {
+        "title": "Test diagnostyczny Boćka",
+        "description": "**Kliknij Dalej, aby uruchomić bezpieczny zestaw prób.**\n\nTest sprawdzi polskie komendy i kontekst na sztucznym domu oraz gotowość konfiguracji Twojego HA. Nie zmieni urządzeń ani ustawień, nie uruchomi minutników, LLM, muzyki ani odczytu wydarzeń. Nie sprawdza mikrofonu i STT/TTS.\n\nPo zakończeniu zobaczysz podsumowanie i instrukcję pobrania jednego pliku. Ostatni raport jest przechowywany do przeładowania integracji lub restartu HA. Wróć pozwala wyjść bez testu.",
+        "data": {
+          "back": "Wstecz (tryb zgodności)"
+        },
+        "data_description": {
+          "back": "Użyj przycisku Wróć u dołu, aby wrócić bez uruchamiania testu."
+        }
+      },
+      "self_test_result": {
+        "title": "Test zakończony — pobierz raport",
+        "description": "**Zaliczone: {pass} · Błędy: {fail} · Ostrzeżenia: {warn} · Pominięte: {skip}.**\n\nOstrzeżenia dotyczą konfiguracji domu; pominięcia oznaczają brak opcjonalnego źródła. Zaliczenie nie potwierdza reakcji fizycznych urządzeń ani jakości rozpoznawania mowy.\n\n**Jak przekazać wyniki:** zamknij to okno, w menu ⋮ przy wpisie integracji wybierz **Pobierz diagnostykę** i przekaż pobrany plik JSON w rozmowie o Boćku. Zawiera test, wersje i pomiary, bez transkrypcji i nazw urządzeń. Pobierz go przed restartem lub przeładowaniem.\n\nDalej lub Wróć prowadzi do głównego menu i nie zmienia ustawień.",
+        "data": {
+          "back": "Wstecz (tryb zgodności)"
+        },
+        "data_description": {
+          "back": "Powrót do głównego menu bez zmiany ustawień."
+        }
+      },
+      "content": {
+        "title": "Treści — Stoic i wyszukiwanie mediów",
+        "description": "Czytaj istniejący sensor Daily Stoic i wyszukuj w podłączonych katalogach Music Assistant. Konta i biblioteki pozostają skonfigurowane w MA. Głośniki wybierzesz osobno w „Wybierz głośniki muzyki”; ten formularz nie zmienia wyjścia TTS ani udostępnienia encji w Assist.",
+        "data": {
+          "back": "Wróć (tryb zgodności)",
+          "stoic_entity_id": "Sensor Daily Stoic (opcjonalnie)",
+          "media_search_enabled": "Wyszukuj w Music Assistant po tytule lub twórcy",
+          "media_search_library_first": "Najpierw szukaj w bibliotece MA",
+          "media_search_username": "Użytkownik Music Assistant (opcjonalnie)"
+        },
+        "data_description": {
+          "back": "Przycisk Wróć na dole odrzuca ten formularz. Awaryjnie: zaznacz to pole i kliknij Dalej.",
+          "stoic_entity_id": "Puste pole oznacza standardową encję lub pojedynczy sensor Daily Stoic. Wybierz sensor, jeśli jest ich kilka. Udostępnij go w Assist; cytat, tytuł i omówienie będą czytane z dostępnych atrybutów.",
+          "media_search_enabled": "Obsługuje prośby typu „puść utwór…” lub „puść audiobook…”. Nazwane skróty zachowują pierwszeństwo. Odtwarzanie korzysta z głośnika MA przypisanego do pokoju.",
+          "media_search_library_first": "Najpierw sprawdź pozycje w bibliotece MA, a przy braku dopasowania szerszy katalog. Nie oznacza to filtra tylko Plex: biblioteka może zawierać kilka źródeł.",
+          "media_search_username": "Istniejący użytkownik MA dla dostępu do źródeł i postępu audiobooków. To nazwa użytkownika, nie hasło. Puste pole pozostawia zwykły wybór użytkownika w MA; nie rozpoznaje osoby mówiącej."
+        }
+      },
+      "voice_trial": {
+        "title": "Wypróbuj polecenie",
+        "description": "Wpisz polecenie dla urządzenia w domu, np. „zapal światło”. Wybierz pokój, z którego mówisz, jeśli polecenie korzysta z lokalizacji. Podgląd czyta konfigurację HA i pokazuje plan sterowania bez uruchamiania urządzeń.",
+        "data": {
+          "text": "Polecenie",
+          "area": "Pokój, z którego mówisz",
+          "back": "Wróć (tryb zgodności)"
+        },
+        "data_description": {
+          "text": "Wystarczy jedna wypowiedź po polsku.",
+          "area": "Pole opcjonalne. Pokój wskazany w poleceniu ma pierwszeństwo.",
+          "back": "Wróć do menu ustawień."
+        }
+      },
+      "voice_trial_result": {
+        "title": "Wynik próby",
+        "description": "{speech}\n\n**Urządzenia w planie**\n\n{targets}\n\n**Pomieszczenia planu**\n\n{areas}\n\n**Akcje HA w planie**\n\n{actions}\n\n**Dlaczego taki wynik**\n\n{explanation}\n\nUżyj Wróć, aby zmienić polecenie.",
+        "data": {
+          "back": "Wróć (tryb zgodności)",
+          "next": "Co dalej"
+        },
+        "data_description": {
+          "back": "Wróć do wpisanego polecenia.",
+          "next": "Wybierz, czy chcesz zakończyć próbę, opisać pomyłkę lub zaproponować funkcję."
+        }
+      },
+      "voice_feedback_example": {
+        "title": "Odtwórz pomyłkę na fikcyjnym przykładzie",
+        "description": "Ten przykład używa dwóch fikcyjnych pokoi. W kuchni jest światło sufitowe i lampka przy blacie, a w salonie żyrandol i lampka nad stołem. Obie lampki mają alias „lampka”. Lampka nad stołem wymaga potwierdzenia. Wpisz nowe zdanie bez danych domu. Podgląd pokaże dokładnie to, co można skopiować.",
+        "data": {
+          "back": "Wróć (tryb zgodności)",
+          "text": "Fikcyjne polecenie",
+          "source_area": "Pokój symulujący satelitę",
+          "expected_status": "Oczekiwany wynik",
+          "operation": "Oczekiwana czynność",
+          "targets": "Oczekiwane światła",
+          "brightness_pct": "Jasność w procentach"
+        },
+        "data_description": {
+          "back": "Wróć do podglądu polecenia.",
+          "text": "Zachowaj sformułowanie, które sprawia kłopot. Użyj przykładowych nazw.",
+          "source_area": "Zostaw puste, jeśli polecenie nie ma kontekstu pokoju.",
+          "expected_status": "Wybierz zachowanie, które byłoby prawidłowe.",
+          "operation": "Wybierz przy planie lub potwierdzeniu.",
+          "targets": "Wskaż dokładnie światła, które ma objąć plan lub pytanie o potwierdzenie.",
+          "brightness_pct": "Wypełnij tylko przy ustawianiu jasności."
+        }
+      },
+      "voice_feedback_idea": {
+        "title": "Zaproponuj funkcję",
+        "description": "Opisz, co użytkownik chce osiągnąć i jak Bociek powinien odpowiedzieć. Użyj fikcyjnych nazw. Tekst możesz przejrzeć przed skopiowaniem.",
+        "data": {
+          "back": "Wróć (tryb zgodności)",
+          "idea": "Pomysł"
+        },
+        "data_description": {
+          "back": "Wróć do podglądu polecenia.",
+          "idea": "Wystarczy krótkie użycie i oczekiwane zachowanie. Od 10 do 400 znaków."
+        }
+      },
+      "voice_feedback_review": {
+        "title": "Sprawdź zgłoszenie",
+        "description": "Sprawdź poniższe dane przed skopiowaniem do pliku JSON. Bociek wyświetla je tylko w tym formularzu. Zgłoszenie możesz przekazać samodzielnie.\n\n```json\n{report}\n```",
+        "data": {
+          "back": "Wróć (tryb zgodności)"
+        },
+        "data_description": {
+          "back": "Wróć do edycji zgłoszenia."
+        }
+      },
+      "voice_feedback_dialogue": {
+        "title": "Przykład rozmowy",
+        "description": "Przykład rozmowy, wypowiedź {turn} z maksymalnie {maximum}. Ten przykład używa dwóch fikcyjnych pokoi. W kuchni jest światło sufitowe i lampka przy blacie, a w salonie żyrandol i lampka nad stołem. Obie lampki mają alias „lampka”. Lampka nad stołem wymaga potwierdzenia. Wpisz nowe zdanie bez danych domu. Podgląd pokaże dokładnie to, co można skopiować. Pokój satelity wybrany przy pierwszej wypowiedzi obowiązuje w całym przykładzie. Fikcyjne lampy początkowo świecą. Zmiany stanu wpisz przed wypowiedzią, przy której mają obowiązywać.",
+        "data": {
+          "back": "Wróć (tryb zgodności)",
+          "text": "Fikcyjne polecenie",
+          "source_area": "Pokój symulujący satelitę",
+          "expected_status": "Oczekiwany wynik",
+          "operation": "Oczekiwana czynność",
+          "targets": "Oczekiwane światła",
+          "brightness_pct": "Jasność w procentach",
+          "lights_on": "Świecą przed tą wypowiedzią",
+          "lights_off": "Są zgaszone przed tą wypowiedzią",
+          "advance_seconds": "Upływ czasu w sekundach",
+          "followup": "Dalsza rozmowa",
+          "turn_action": "Następny krok"
+        },
+        "data_description": {
+          "back": "Wróć do poprzedniej wypowiedzi lub podglądu polecenia.",
+          "text": "Zachowaj sformułowanie, które sprawia kłopot. Użyj przykładowych nazw.",
+          "source_area": "Zostaw puste, jeśli polecenie nie ma kontekstu pokoju.",
+          "expected_status": "Wybierz zachowanie, które byłoby prawidłowe.",
+          "operation": "Wybierz przy planie lub potwierdzeniu.",
+          "targets": "Wskaż dokładnie światła, które ma objąć plan lub pytanie o potwierdzenie.",
+          "brightness_pct": "Wypełnij tylko przy ustawianiu jasności.",
+          "lights_on": "Opcjonalnie wskaż lampy, które właśnie zostały włączone.",
+          "lights_off": "Opcjonalnie wskaż lampy, które właśnie zostały zgaszone.",
+          "advance_seconds": "Opcjonalnie. Do 600 sekund od poprzedniej wypowiedzi.",
+          "followup": "Zostaw puste, jeśli dalsze nasłuchiwanie nie ma znaczenia dla próby.",
+          "turn_action": "Dodaj kolejną wypowiedź lub przejdź do podglądu zgłoszenia."
+        }
+      }
+    },
+    "error": {
+      "invalid_endpoint": "Podaj adres HTTP(S) i nazwę modelu albo pozostaw adres pusty.",
+      "invalid_quiet_time": "Podaj godziny w formacie HH:MM, np. 20:00 i 08:00.",
+      "invalid_battery_threshold": "Podaj całkowity próg od 1 do 50 procent.",
+      "invalid_music_name": "Podaj nazwę i aliasy długości 1–100 znaków.",
+      "music_limit": "Maksymalnie 64 skróty i 16 dodatkowych aliasów na skrót.",
+      "reserved_music_name": "Użyj konkretnej nazwy, np. muzyka z Plex, zamiast samego „muzyka”.",
+      "duplicate_music_alias": "Ta nazwa lub alias należy już do innego skrótu.",
+      "invalid_music_media": "Wybierz konkretną treść z przeglądarki mediów z poprawnym URI.",
+      "youtube_page": "To strona YouTube. Najpierw skonfiguruj działające odtwarzanie w HA/MA, następnie wybierz obsługiwaną treść.",
+      "invalid_music_backend": "Wybierz system odtwarzania.",
+      "invalid_ma_media": "Wybierz utwór, album, playlistę lub radio z odtwarzacza Music Assistant.",
+      "choose_ma_player": "Wybierz odtwarzacz z tej samej integracji Music Assistant co treść skrótu.",
+      "music_player_area": "Wybierz odtwarzacz przypisany w HA do wybranego pokoju.",
+      "music_selection_missing": "Wybrany element już nie istnieje. Otwórz konfigurację ponownie.",
+      "voice_conflict": "Rola zestawu koliduje z blokadą lub wykluczeniem encji, urządzenia albo pokoju. Usuń kolidujący wybór lub sprawdź odziedziczone ograniczenia.",
+      "voice_invalid_selection": "Wybierz pozycję dostępną w tym formularzu.",
+      "voice_empty_selection": "Wybierz co najmniej jedną lampę z tego pokoju.",
+      "voice_invalid_profile": "Wybierz co najmniej jedną z dostępnych ról oświetlenia.",
+      "music_media_required": "Wybierz treść do odtworzenia albo użyj Wstecz.",
+      "calendar_kiosk_name": "Podaj nazwę Kiosk (1–100 znaków).",
+      "calendar_kiosk_ambiguous": "Nazwy przypisanych kiosków nakładają się. Użyj rozłącznych, jednoznacznych nazw.",
+      "calendar_satellite_required": "Wybierz satelitę lub użyj Wróć.",
+      "self_test_busy": "Test już trwa. Poczekaj chwilę i spróbuj ponownie.",
+      "self_test_unavailable": "Integracja nie jest załadowana. Uruchom ją ponownie przed testem.",
+      "content_sensor_missing": "Wybierz istniejący sensor albo pozostaw puste pole, aby użyć wyboru automatycznego.",
+      "content_username_invalid": "Podaj nazwę użytkownika MA do 128 znaków, bez nowych wierszy i znaków sterujących.",
+      "voice_trial_text": "Wpisz polecenie od 1 do 400 znaków.",
+      "voice_trial_area": "Wybierz dostępny pokój.",
+      "voice_feedback_text": "Wpisz fikcyjne polecenie od 1 do 400 znaków.",
+      "voice_feedback_source_area": "Wybierz przykładowy pokój lub pozostaw pole puste.",
+      "voice_feedback_expected_status": "Wybierz oczekiwany wynik.",
+      "voice_feedback_operation": "Wybierz czynność przy planie lub potwierdzeniu. Przy pozostałych wynikach usuń wybór.",
+      "voice_feedback_targets": "Wybierz światła tylko przy planie lub potwierdzeniu.",
+      "voice_feedback_brightness_pct": "Podaj całkowitą jasność od 1 do 100 tylko dla regulacji jasności.",
+      "voice_feedback_idea": "Opisz pomysł w 10–400 znakach.",
+      "voice_feedback_versions": "Brakuje prawidłowego numeru wersji integracji lub HA.",
+      "voice_feedback_lights_on": "Wybierz fikcyjne światła.",
+      "voice_feedback_lights_off": "Jedna lampa może mieć tylko jeden stan przed daną wypowiedzią.",
+      "voice_feedback_advance_seconds": "Podaj całkowitą liczbę od 0 do 600.",
+      "voice_feedback_followup": "Wybierz oczekiwane zachowanie rozmowy.",
+      "voice_feedback_turns": "Rozmowa powinna zawierać od 2 do 6 wypowiedzi."
+    },
+    "abort": {
+      "music_selection_missing": "Wybrany element już nie istnieje. Otwórz konfigurację ponownie.",
+      "voice_stale": "Dane HA zmieniły się podczas edycji. Niczego nie zapisano. Otwórz kreator ponownie i sprawdź aktualne role.",
+      "voice_conflict": "Rola zestawu koliduje z blokadą lub wykluczeniem encji, urządzenia albo pokoju. Usuń kolidujący wybór lub sprawdź odziedziczone ograniczenia.",
+      "voice_invalid_selection": "Wybierz pozycję dostępną w tym formularzu.",
+      "voice_label_name": "Istnieje etykieta z inną wielkością liter lub pisownią. Sprawdź nazwy voice_* w etykietach HA; kreator nie będzie ich sam zmieniał.",
+      "voice_write_failed": "Nie udało się zapisać wszystkich zmian. Zapisane encje: {completed}. Sprawdź aktualne etykiety przed ponowną edycją; mogły powstać nieprzypisane definicje etykiet.",
+      "voice_finished": "Kreator zakończony. Zachowano wyłącznie wcześniej zapisane zmiany."
+    }
+  },
+  "services": {
+    "preview": {
+      "name": "Podgląd polskiego polecenia",
+      "description": "Zwraca plan działania bez sterowania urządzeniami. Zawsze działa w trybie podglądu.",
+      "fields": {
+        "text": {
+          "name": "Polecenie",
+          "description": "Polska wypowiedź do sprawdzenia."
+        },
+        "source_area": {
+          "name": "Pomieszczenie źródłowe",
+          "description": "Pomieszczenie rozmówcy. Miejsce podane wprost w wypowiedzi ma pierwszeństwo."
+        },
+        "satellite_id": {
+          "name": "Satelita",
+          "description": "Opcjonalny satelita Assist określający pomieszczenie źródłowe."
+        },
+        "device_id": {
+          "name": "Urządzenie źródłowe",
+          "description": "Opcjonalne urządzenie używane przy braku pomieszczenia i satelity."
+        },
+        "conversation_id": {
+          "name": "ID rozmowy",
+          "description": "Opcjonalny identyfikator poprzedniej rozmowy w trybie podglądu."
+        }
+      }
+    }
+  },
+  "selector": {
+    "voice_light_action": {
+      "options": {
+        "review": "Przejdź do podsumowania",
+        "suggest": "Najpierw dodaj podpowiedzi do zaznaczeń",
+        "back": "← Wstecz — menu świateł"
+      }
+    },
+    "voice_review_action": {
+      "options": {
+        "apply": "Zapisz pokazane zmiany",
+        "edit": "Wróć do edycji",
+        "cancel": "Odrzuć zmiany"
+      }
+    },
+    "voice_saved_action": {
+      "options": {
+        "room": "Skonfiguruj kolejne urządzenia",
+        "done": "Zakończ konfigurację"
+      }
+    },
+    "trial_next": {
+      "options": {
+        "done": "Wróć do ustawień",
+        "example": "Opisz pomyłkę na przykładzie",
+        "idea": "Zaproponuj funkcję",
+        "dialogue": "Opisz problem w rozmowie"
+      }
+    },
+    "feedback_status": {
+      "options": {
+        "dry_run": "Bociek ma przygotować plan",
+        "confirm": "Bociek ma poprosić o potwierdzenie",
+        "clarify": "Bociek ma dopytać",
+        "unsupported": "Bociek ma uznać polecenie za nieobsługiwane",
+        "answered": "Informacja bez działania",
+        "cancelled": "Anulowanie"
+      }
+    },
+    "feedback_operation": {
+      "options": {
+        "turn_on": "Włącz światło",
+        "turn_off": "Zgaś światło",
+        "brightness": "Ustaw jasność"
+      }
+    },
+    "feedback_followup": {
+      "options": {
+        "yes": "Ma słuchać dalej",
+        "no": "Ma zakończyć"
+      }
+    },
+    "feedback_turn_action": {
+      "options": {
+        "add": "Dodaj następną wypowiedź",
+        "review": "Sprawdź zgłoszenie"
+      }
+    }
+  }
+}

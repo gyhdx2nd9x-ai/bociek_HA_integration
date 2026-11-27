@@ -1,0 +1,29 @@
+self_test:
+  name: Test diagnostyczny Boćka
+  description: >-
+    Uruchamia bezpieczny zestaw prób programu oraz odczyt konfiguracji domu.
+    Nie steruje urządzeniami i nie korzysta z dostawców ani LLM.
+    Ostatni wynik trafi również do standardowego pliku diagnostyki HA.
+preview:
+  fields:
+    text:
+      required: true
+      example: "zapal światła"
+      selector:
+        text:
+    source_area:
+      example: living_room
+      selector:
+        area:
+    satellite_id:
+      example: assist_satellite.salon
+      selector:
+        entity:
+          filter:
+            domain: assist_satellite
+    device_id:
+      selector:
+        device:
+    conversation_id:
+      selector:
+        text:

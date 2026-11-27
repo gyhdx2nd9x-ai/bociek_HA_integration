@@ -1,0 +1,2067 @@
+[
+  {
+    "id": "DLG-001",
+    "split": "regression",
+    "family": "dialogue-named-reference-chain",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampkę stołową",
+          "dry_run": false,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "salon"
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Ustaw ją na czterdzieści procent",
+          "dry_run": false,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {
+                "brightness_pct": 40
+              }
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {
+                "brightness_pct": 40
+              }
+            }
+          ],
+          "area_ids": [
+            "salon"
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś ją",
+          "dry_run": false,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "salon"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "DLG-002",
+    "split": "regression",
+    "family": "dialogue-pronoun-versus-aggregate",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "duplex_en",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "Reference preserves exactly the last set; generic off deliberately selects the broader all-off role.",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": false,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Wyłącz światła",
+          "dry_run": false,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main",
+            "light.table",
+            "light.ambient"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "DLG-003",
+    "split": "regression",
+    "family": "dialogue-area-ellipsis-reference",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "mixed",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": false,
+          "satellite_id": "assist_satellite.room"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "A w kuchni?",
+          "dry_run": false,
+          "satellite_id": "assist_satellite.room"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "cook"
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "satellite_id": "assist_satellite.room"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "cook"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "DLG-004",
+    "split": "regression",
+    "family": "dialogue-unknown-ellipsis",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": false,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "A w piwnicy?",
+          "dry_run": false,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "unknown_location"
+        }
+      }
+    ]
+  },
+  {
+    "id": "DLG-005",
+    "split": "regression",
+    "family": "dialogue-missing-area-answer",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "duplex_en",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "missing_area",
+          "continue_conversation": true
+        }
+      },
+      {
+        "request": {
+          "text": "W kuchni",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "kitchen_up"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "DLG-006",
+    "split": "regression",
+    "family": "dialogue-alias-choice-reference",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz panel",
+          "dry_run": false,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "ambiguous_target",
+          "continue_conversation": true
+        }
+      },
+      {
+        "request": {
+          "text": "Żyrandol",
+          "dry_run": false,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Wyłącz go",
+          "dry_run": false,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "DLG-007",
+    "split": "regression",
+    "family": "dialogue-global-alias-area-answer",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "mixed",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz panel",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "ambiguous_target",
+          "continue_conversation": true
+        },
+        "mutations": [
+          {
+            "entity_id": "light.kitchen",
+            "changes": {
+              "aliases": [
+                "panel"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "request": {
+          "text": "W kuchni",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "DLG-008",
+    "split": "regression",
+    "family": "dialogue-reference-expiry-boundary",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": false,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "no_reference"
+        },
+        "advance_seconds": 60
+      }
+    ]
+  },
+  {
+    "id": "DLG-009",
+    "split": "regression",
+    "family": "dialogue-clarification-expiry-boundary",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "duplex_en",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz panel",
+          "dry_run": false,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "ambiguous_target",
+          "continue_conversation": true
+        }
+      },
+      {
+        "request": {
+          "text": "Żyrandol",
+          "dry_run": false,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "no_intent"
+        },
+        "advance_seconds": 30
+      }
+    ]
+  },
+  {
+    "id": "DLG-010",
+    "split": "regression",
+    "family": "dialogue-user-isolation",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": false,
+          "source_area": "salon",
+          "user_id": "person-a"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "source_area": "salon",
+          "user_id": "person-b"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "source_area": "salon",
+          "user_id": "person-a"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "DLG-011",
+    "split": "regression",
+    "family": "dialogue-satellite-isolation",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "mixed",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": false,
+          "satellite_id": "assist_satellite.room"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "satellite_id": "assist_satellite.kitchen"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "satellite_id": "assist_satellite.room"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "DLG-012",
+    "split": "regression",
+    "family": "dialogue-conversation-isolation",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "duplex_en",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": false,
+          "source_area": "lounge",
+          "conversation_id": "first-dialogue"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "source_area": "lounge",
+          "conversation_id": "another-dialogue"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "source_area": "lounge",
+          "conversation_id": "first-dialogue"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "DLG-013",
+    "split": "regression",
+    "family": "dialogue-preview-live-isolation",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": []
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "DLG-014",
+    "split": "regression",
+    "family": "dialogue-device-isolation",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "mixed",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": false,
+          "device_id": "satellite_device"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "device_id": "kitchen_device"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "device_id": "satellite_device"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "DLG-015",
+    "split": "regression",
+    "family": "dialogue-explicit-location-reference",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "duplex_en",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła w kuchni",
+          "dry_run": false,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "kitchen_up"
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "kitchen_up"
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": false,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "lounge"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "DLG-016",
+    "split": "regression",
+    "family": "dialogue-reference-exposure-revalidation",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": false,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "context_changed"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.main",
+            "changes": {
+              "exposed": false
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DLG-017",
+    "split": "regression",
+    "family": "dialogue-choice-availability-revalidation",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "mixed",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz panel",
+          "dry_run": false,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "ambiguous_target",
+          "continue_conversation": true
+        }
+      },
+      {
+        "request": {
+          "text": "Żyrandol",
+          "dry_run": false,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "plan_changed"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.main",
+            "changes": {
+              "available": false,
+              "state": "unavailable"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DLG-018",
+    "split": "regression",
+    "family": "dialogue-reference-moved-entity",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "duplex_en",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": false,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "context_changed"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.main",
+            "changes": {
+              "area_id": "study"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DLG-019",
+    "split": "regression",
+    "family": "dialogue-choice-policy-revalidation",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz panel",
+          "dry_run": false,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "ambiguous_target",
+          "continue_conversation": true
+        }
+      },
+      {
+        "request": {
+          "text": "Żyrandol",
+          "dry_run": false,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "plan_changed"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.main",
+            "changes": {
+              "labels": [
+                "voice_block",
+                "voice_default_on",
+                "voice_all_off",
+                "voice_main"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DLG-020",
+    "split": "regression",
+    "family": "dialogue-reference-new-default-member",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "mixed",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "Adding another default entity must not silently broaden a remembered target set.",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": false,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "context_changed"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.plain",
+            "changes": {
+              "labels": [
+                "voice_default_on",
+                "voice_all_off"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DLG-021",
+    "split": "regression",
+    "family": "dialogue-reference-group-membership",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "duplex_en",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz zestaw sypialni",
+          "dry_run": false,
+          "source_area": "bedroom_up"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.group_one",
+            "light.group_two"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_one"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_two"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_one"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_two"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "source_area": "bedroom_up"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "context_changed"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.bedroom",
+            "changes": {
+              "attributes": {
+                "entity_id": [
+                  "light.group_one"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DLG-022",
+    "split": "regression",
+    "family": "dialogue-confirmation-single-use",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampę kontrolną",
+          "dry_run": false,
+          "source_area": "kuchnia"
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.confirm"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.confirm"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "reason": "confirmation_required"
+        }
+      },
+      {
+        "request": {
+          "text": "Tak",
+          "dry_run": false,
+          "source_area": "kuchnia"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.confirm"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.confirm"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.confirm"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Tak",
+          "dry_run": false,
+          "source_area": "kuchnia"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "no_pending"
+        }
+      }
+    ]
+  },
+  {
+    "id": "DLG-023",
+    "split": "regression",
+    "family": "dialogue-rejected-confirmation-cleared",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "mixed",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampę kontrolną",
+          "dry_run": false,
+          "source_area": "cook"
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.confirm"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.confirm"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "reason": "confirmation_required"
+        }
+      },
+      {
+        "request": {
+          "text": "Nie",
+          "dry_run": false,
+          "source_area": "cook"
+        },
+        "expected": {
+          "status": "cancelled",
+          "targets": [],
+          "calls": [],
+          "executor_calls": []
+        }
+      },
+      {
+        "request": {
+          "text": "Potwierdzam",
+          "dry_run": false,
+          "source_area": "cook"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "no_pending"
+        }
+      }
+    ]
+  },
+  {
+    "id": "DLG-024",
+    "split": "regression",
+    "family": "dialogue-confirmation-expiry-boundary",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "duplex_en",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampę kontrolną",
+          "dry_run": false,
+          "source_area": "kitchen_up"
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.confirm"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.confirm"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "reason": "confirmation_required"
+        }
+      },
+      {
+        "request": {
+          "text": "Dobrze",
+          "dry_run": false,
+          "source_area": "kitchen_up"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "no_pending"
+        },
+        "advance_seconds": 30
+      }
+    ]
+  },
+  {
+    "id": "DLG-025",
+    "split": "regression",
+    "family": "dialogue-confirmation-metadata-revalidation",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampę kontrolną",
+          "dry_run": false,
+          "source_area": "kuchnia"
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.confirm"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.confirm"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "reason": "confirmation_required"
+        }
+      },
+      {
+        "request": {
+          "text": "Potwierdzam",
+          "dry_run": false,
+          "source_area": "kuchnia"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "plan_changed"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.confirm",
+            "changes": {
+              "exposed": false
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DLG-026",
+    "split": "regression",
+    "family": "dialogue-interruption-clears-reference",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "mixed",
+    "origin": "Authored from documented source-bound dialogue and policy contracts before execution; fictional HA fixtures.",
+    "note": "",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": false,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Nie zgaś światła",
+          "dry_run": false,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "no_intent"
+        }
+      },
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": false,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "reason": "no_reference"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,1563 @@
+[
+  {
+    "id": "D01-001",
+    "split": "regression",
+    "family": "d01-orphan-off-alias",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "An orphan pronoun asks once; a bare known alias supplies the target and preserves OFF.",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "area_ids": [
+            "salon"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "D01-002",
+    "split": "regression",
+    "family": "d01-orphan-on-alias",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "duplex_en",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "The clarification preserves ON without asking the user to repeat the operation.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz je",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "D01-003",
+    "split": "regression",
+    "family": "d01-orphan-brightness-alias",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "mixed",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "A missing target must not discard the requested brightness value.",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw je na czterdzieści procent",
+          "dry_run": true,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": true,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {
+                "brightness_pct": 40
+              }
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "D01-004",
+    "split": "regression",
+    "family": "d01-unresolved-retry",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "Two unknown replies keep the original question; a known alias still resolves within its first TTL.",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Nie wiem które",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "clarification_unresolved"
+        },
+        "advance_seconds": 10
+      },
+      {
+        "request": {
+          "text": "To tutaj",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "clarification_unresolved"
+        },
+        "advance_seconds": 10
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        },
+        "advance_seconds": 5
+      }
+    ]
+  },
+  {
+    "id": "D01-005",
+    "split": "regression",
+    "family": "d01-retry-original-expiry",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "duplex_en",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "A reply at 29 seconds cannot extend the original 30 second clarification window.",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "To tutaj",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "clarification_unresolved"
+        },
+        "advance_seconds": 29
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "no_intent"
+        },
+        "advance_seconds": 1
+      }
+    ]
+  },
+  {
+    "id": "D01-006",
+    "split": "regression",
+    "family": "d01-expired-draft",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "mixed",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "At the exact TTL boundary the bare alias cannot execute the expired operation.",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": true,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "no_intent"
+        },
+        "advance_seconds": 30
+      }
+    ]
+  },
+  {
+    "id": "D01-007",
+    "split": "regression",
+    "family": "d01-complete-command-replaces-draft",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "A new complete ON command replaces the orphan OFF draft; its target becomes the next reference.",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Włącz lampkę stołową",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "D01-008",
+    "split": "regression",
+    "family": "d01-cancel-clears-draft",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "duplex_en",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "Cancelling the question leaves no executable operation for a later bare alias.",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Anuluj",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "cancelled",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "D01-009",
+    "split": "regression",
+    "family": "d01-alias-collision",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "mixed",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "A shared alias never expands into both lights; a second precise alias selects exactly one.",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Panel",
+          "dry_run": true,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "ambiguous_target"
+        }
+      },
+      {
+        "request": {
+          "text": "Żyrandol",
+          "dry_run": true,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "D01-010",
+    "split": "regression",
+    "family": "d01-reference-exposure-revalidated",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "The remembered lamp loses Assist exposure before the OFF continuation; no write plan is allowed.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampkę stołową",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "context_changed"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.table",
+            "changes": {
+              "exposed": false
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D01-011",
+    "split": "regression",
+    "family": "d01-reference-group-revalidated",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "duplex_en",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "Changing a group membership invalidates the reference instead of switching a newly resolved subset.",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła w sypialni",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.group_one",
+            "light.group_two"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_one"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_two"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "area_ids": [
+            "bedroom_up"
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "context_changed"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.bedroom",
+            "changes": {
+              "attributes": {
+                "entity_id": [
+                  "light.group_one"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D01-012",
+    "split": "regression",
+    "family": "d01-draft-user-isolation",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "mixed",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "One user cannot answer another user’s question even with the same conversation and area.",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "common",
+          "user_id": "person-a"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": true,
+          "source_area": "common",
+          "user_id": "person-b"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "no_intent"
+        }
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": true,
+          "source_area": "common",
+          "user_id": "person-a"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "D01-013",
+    "split": "regression",
+    "family": "d01-draft-satellite-isolation",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "A bare alias from a different satellite does not consume the original satellite’s draft.",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "satellite_id": "assist_satellite.room"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": true,
+          "satellite_id": "assist_satellite.kitchen"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "no_intent"
+        }
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": true,
+          "satellite_id": "assist_satellite.room"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "D01-014",
+    "split": "regression",
+    "family": "d01-draft-conversation-isolation",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "duplex_en",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "The missing-target operation remains bound to its conversation.",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "lounge",
+          "conversation_id": "draft-a"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": true,
+          "source_area": "lounge",
+          "conversation_id": "draft-b"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "no_intent"
+        }
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": true,
+          "source_area": "lounge",
+          "conversation_id": "draft-a"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "D01-015",
+    "split": "regression",
+    "family": "d01-draft-preview-isolation",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "mixed",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "A live-mode alias cannot execute a preview draft; the preview can still be answered without executor calls.",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": false,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "no_intent"
+        }
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": true,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "D01-016",
+    "split": "regression",
+    "family": "d01-draft-source-area-isolation",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "Changing the explicit source area creates a separate session and cannot consume a pending target question.",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": true,
+          "source_area": "kuchnia"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "no_intent"
+        }
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "D01-017",
+    "split": "regression",
+    "family": "d01-recent-named-lamp-exact-set",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "Immediately after a specific lamp ON, OFF-pronoun targets that lamp; generic lights OFF deliberately targets the wider all-off set.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampkę stołową",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        },
+        "advance_seconds": 2
+      },
+      {
+        "request": {
+          "text": "Wyłącz światła",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main",
+            "light.table",
+            "light.ambient"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "D01-018",
+    "split": "regression",
+    "family": "d01-recent-group-exact-set",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "duplex_en",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "A successfully selected group is remembered as its exact eligible member set.",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła w sypialni",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.group_one",
+            "light.group_two"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_one"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_two"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "area_ids": [
+            "bedroom_up"
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.group_one",
+            "light.group_two"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.group_one"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.group_two"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "area_ids": [
+            "bedroom_up"
+          ]
+        },
+        "advance_seconds": 2
+      }
+    ]
+  },
+  {
+    "id": "D01-019",
+    "split": "regression",
+    "family": "d01-recent-explicit-other-area",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "mixed",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "Explicit kitchen ON from the living-room satellite followed by OFF-pronoun still controls the kitchen target.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła w kuchni",
+          "dry_run": true,
+          "satellite_id": "assist_satellite.room"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "area_ids": [
+            "cook"
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "satellite_id": "assist_satellite.room"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "area_ids": [
+            "cook"
+          ]
+        },
+        "advance_seconds": 2
+      }
+    ]
+  },
+  {
+    "id": "D01-020",
+    "split": "regression",
+    "family": "d01-recent-default-on-exact-set",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "duplex_en",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "The default ON subset remains the reference for OFF-pronoun even though generic lights OFF has a broader label.",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        },
+        "advance_seconds": 2
+      },
+      {
+        "request": {
+          "text": "Wyłącz światła",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main",
+            "light.table",
+            "light.ambient"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "D01-021",
+    "split": "regression",
+    "family": "d01-resolved-question-reference",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "mixed",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "The target selected after a missing-reference question becomes usable immediately without another clarification.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz je",
+          "dry_run": true,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "no_reference"
+        }
+      },
+      {
+        "request": {
+          "text": "Nad stołem",
+          "dry_run": true,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        },
+        "advance_seconds": 1
+      }
+    ]
+  },
+  {
+    "id": "D01-022",
+    "split": "regression",
+    "family": "d01-recent-brightness-exact-set",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored before execution from the D01 clarification and exact-target continuation contracts; fictional HA fixtures only.",
+    "note": "Brightness targets the remembered lamp; the following OFF neither expands the target set nor carries brightness data.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampkę stołową",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Ustaw ją na czterdzieści procent",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {
+                "brightness_pct": 40
+              }
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Wyłącz je",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false
+        },
+        "advance_seconds": 1
+      }
+    ]
+  }
+]

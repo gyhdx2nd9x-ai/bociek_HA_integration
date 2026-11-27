@@ -1,0 +1,2784 @@
+[
+  {
+    "id": "EVAL-001",
+    "split": "evaluation",
+    "family": "eval.local_polite_imperative",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światło, proszę.",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-002",
+    "split": "evaluation",
+    "family": "eval.completed_activity_suffix",
+    "category": "command",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś światło, już skończyłem gotować.",
+          "dry_run": true,
+          "source_area": "kitchen_up"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-003",
+    "split": "evaluation",
+    "family": "eval.local_adjectival_reference",
+    "category": "command",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz tutejsze światło.",
+          "dry_run": true,
+          "source_area": "studio"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.office"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.office"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-004",
+    "split": "evaluation",
+    "family": "eval.explicit_room_overrides_source",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Daj światło w salonie.",
+          "dry_run": true,
+          "source_area": "kuchnia"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-005",
+    "split": "evaluation",
+    "family": "eval.formal_infinitive_request",
+    "category": "command",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Proszę wyłączyć oświetlenie w gabinecie.",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.office"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.office"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-006",
+    "split": "evaluation",
+    "family": "eval.guest_room_alias_group",
+    "category": "command",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Zaświeć światło w pokoju gościnnym.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.group_one",
+            "light.group_two"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_one"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_two"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-007",
+    "split": "evaluation",
+    "family": "eval.room_off_includes_labeled_roles",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś światła w salonie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient",
+            "light.main",
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-008",
+    "split": "evaluation",
+    "family": "eval.local_all_off_filters_unavailable",
+    "category": "command",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Tutaj zgaś wszystkie światła.",
+          "dry_run": true,
+          "source_area": "study"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.office"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.office"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-009",
+    "split": "evaluation",
+    "family": "eval.annex_alias_remote_off",
+    "category": "command",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz oświetlenie w aneksie.",
+          "dry_run": true,
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-010",
+    "split": "evaluation",
+    "family": "eval.relational_device_alias",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampę przy stole w salonie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-011",
+    "split": "evaluation",
+    "family": "eval.decorative_device_alias",
+    "category": "command",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś taśmę LED w pokoju dziennym.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-012",
+    "split": "evaluation",
+    "family": "eval.individual_group_member",
+    "category": "command",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal lewy kinkiet w sypialni.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.group_one"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_one"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-013",
+    "split": "evaluation",
+    "family": "eval.absolute_brightness_word_unit",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw lampę główną w salonie na 40 procent.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {
+                "brightness_pct": 40
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-014",
+    "split": "evaluation",
+    "family": "eval.brightness_dative_device",
+    "category": "command",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Daj 25% jasności lampie biurowej.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.office"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.office"
+              ],
+              "data": {
+                "brightness_pct": 25
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-015",
+    "split": "evaluation",
+    "family": "eval.patio_named_light_brightness",
+    "category": "command",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw girlandę na tarasie na 60 procent.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.patio"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.patio"
+              ],
+              "data": {
+                "brightness_pct": 60
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-016",
+    "split": "evaluation",
+    "family": "eval.satellite_local_default",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światło.",
+          "dry_run": true,
+          "satellite_id": "assist_satellite.room"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-017",
+    "split": "evaluation",
+    "family": "eval.capability_question_as_request",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Możesz zapalić światło w kuchni?",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-018",
+    "split": "evaluation",
+    "family": "eval.colloquial_make_light",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Zrób mi światło w salonie, proszę.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-019",
+    "split": "evaluation",
+    "family": "eval.reading_task_role",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal coś do czytania w salonie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-020",
+    "split": "evaluation",
+    "family": "eval.hortative_niech",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Niech zgaśnie główne oświetlenie w salonie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-021",
+    "split": "evaluation",
+    "family": "eval.conditional_polite_suggestion",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Przydałoby się włączyć lampę nad stołem.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-022",
+    "split": "evaluation",
+    "family": "eval.nominal_poprosze",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Poproszę światło w kuchni.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-023",
+    "split": "evaluation",
+    "family": "eval.ability_question_off",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Czy dasz radę zgasić światło w gabinecie?",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.office"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.office"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-024",
+    "split": "evaluation",
+    "family": "eval.request_preface_colon",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Mam prośbę: zapal prawy kinkiet w sypialni.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.group_two"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_two"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-025",
+    "split": "evaluation",
+    "family": "eval.exclusive_ambient_role",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "W pokoju dziennym zapal tylko nastrojowe oświetlenie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-026",
+    "split": "evaluation",
+    "family": "eval.brightness_nominal_fragment",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jasność żyrandola: 75 procent, proszę.",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {
+                "brightness_pct": 75
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-027",
+    "split": "evaluation",
+    "family": "eval.absolute_rozjasnij",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Rozjaśnij lampę stołową do 80 procent.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {
+                "brightness_pct": 80
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-028",
+    "split": "evaluation",
+    "family": "eval.absolute_przygas",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Przygaś oświetlenie biura do 15%.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.office"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.office"
+              ],
+              "data": {
+                "brightness_pct": 15
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-029",
+    "split": "evaluation",
+    "family": "eval.desired_brightness_state",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "W kuchni ma być 100 procent jasności światła.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {
+                "brightness_pct": 100
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-030",
+    "split": "evaluation",
+    "family": "eval.group_absolute_brightness",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw zestaw sypialni na 35 procent.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.group_one",
+            "light.group_two"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_one"
+              ],
+              "data": {
+                "brightness_pct": 35
+              }
+            },
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_two"
+              ],
+              "data": {
+                "brightness_pct": 35
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-031",
+    "split": "evaluation",
+    "family": "eval.extinguish_all_lights",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Wygaś wszystkie światła w pokoju dziennym.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient",
+            "light.main",
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-032",
+    "split": "evaluation",
+    "family": "eval.permission_form_as_off",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Światło nad stołem może już zgasnąć.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-033",
+    "split": "evaluation",
+    "family": "eval.need_for_lit_room",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Potrzebuję zapalonego światła w kuchni.",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-034",
+    "split": "evaluation",
+    "family": "eval.local_make_bright",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Zrób tu jasno.",
+          "dry_run": true,
+          "satellite_id": "assist_satellite.kitchen"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-035",
+    "split": "evaluation",
+    "family": "eval.feminine_object_anaphora",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampę stołową w salonie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "A teraz ją zgaś.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-036",
+    "split": "evaluation",
+    "family": "eval.brightness_predicate_ellipsis",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światło w gabinecie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.office"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.office"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "I jeszcze na 55 procent.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.office"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.office"
+              ],
+              "data": {
+                "brightness_pct": 55
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-037",
+    "split": "evaluation",
+    "family": "eval.new_room_tez_repeats_on",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światło w kuchni.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "W salonie też.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-038",
+    "split": "evaluation",
+    "family": "eval.new_room_tak_samo_repeats_off",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś światło w kuchni.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "W biurze tak samo.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.office"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.office"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-039",
+    "split": "evaluation",
+    "family": "eval.possessive_brightness_anaphora",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampę nad stołem.",
+          "dry_run": true,
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Zmniejsz jej jasność do 20 procent.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {
+                "brightness_pct": 20
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-040",
+    "split": "evaluation",
+    "family": "eval.plural_group_anaphora",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz zestaw sypialni.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.group_one",
+            "light.group_two"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_one"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_two"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Teraz wyłącz te lampy.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.group_one",
+            "light.group_two"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.group_one"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.group_two"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-041",
+    "split": "evaluation",
+    "family": "eval.paired_member_ellipsis",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal lewy kinkiet w sypialni.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.group_one"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_one"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Prawy też, poproszę.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.group_two"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_two"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-042",
+    "split": "evaluation",
+    "family": "eval.new_room_and_numeric_ellipsis",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw lampę główną w salonie na 65 procent.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {
+                "brightness_pct": 65
+              }
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "A w kuchni na 30.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {
+                "brightness_pct": 30
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-043",
+    "split": "evaluation",
+    "family": "eval.opposite_action_same_device",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś lampę biurową.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.office"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.office"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Teraz ją zapal.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.office"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.office"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-044",
+    "split": "evaluation",
+    "family": "eval.current_source_beats_previous_room",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światło w salonie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "text": "Teraz zgaś tutaj światło.",
+          "dry_run": true,
+          "source_area": "gabinet"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.office"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.office"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-045",
+    "split": "evaluation",
+    "family": "eval.negative_imperfective_imperative",
+    "category": "negation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Nie zapalaj światła.",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-046",
+    "split": "evaluation",
+    "family": "eval.tylko_nie_prohibition",
+    "category": "negation",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Tylko nie gaś światła.",
+          "dry_run": true,
+          "source_area": "kitchen_up"
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-047",
+    "split": "evaluation",
+    "family": "eval.negative_desire_subordinate_clause",
+    "category": "negation",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Nie chcę, żebyś włączał światło w gabinecie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-048",
+    "split": "evaluation",
+    "family": "eval.negative_attempt_prohibition",
+    "category": "negation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Nawet nie próbuj zgasić lampy nad stołem.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-049",
+    "split": "evaluation",
+    "family": "eval.leave_unchanged_negative_quantifier",
+    "category": "negation",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Zostaw światło w salonie w spokoju; niczego nie wyłączaj.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-050",
+    "split": "evaluation",
+    "family": "eval.neither_group_member",
+    "category": "negation",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Nie włączaj ani lewej, ani prawej lampki w sypialni.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-051",
+    "split": "evaluation",
+    "family": "eval.metalinguistic_denial_of_command",
+    "category": "negation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "To nie jest polecenie, żeby zgasić światło w kuchni.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-052",
+    "split": "evaluation",
+    "family": "eval.negative_need_without_request",
+    "category": "negation",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Nie potrzebuję teraz światła.",
+          "dry_run": true,
+          "source_area": "common"
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-053",
+    "split": "evaluation",
+    "family": "eval.interrupted_room_repair",
+    "category": "correction",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz w salonie... nie, czekaj, w kuchni.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-054",
+    "split": "evaluation",
+    "family": "eval.action_retracted_by_leaving_on",
+    "category": "correction",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś światło w gabinecie, a właściwie zostaw je włączone.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-055",
+    "split": "evaluation",
+    "family": "eval.numeric_self_repair",
+    "category": "correction",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw żyrandol na 20, przepraszam, na 70 procent.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-056",
+    "split": "evaluation",
+    "family": "eval.device_repair_after_dash",
+    "category": "correction",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal lampę przy stole — poprawka: tylko taśmę LED.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-057",
+    "split": "evaluation",
+    "family": "eval.explicit_revocation",
+    "category": "correction",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światło w kuchni. Cofam, nie rób tego.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-058",
+    "split": "evaluation",
+    "family": "eval.postposed_member_repair",
+    "category": "correction",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś prawy kinkiet, lewy miałem na myśli.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-059",
+    "split": "evaluation",
+    "family": "eval.abandoned_desired_state",
+    "category": "correction",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "W salonie ma być jasno... chwila, jednak nie włączaj światła.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-060",
+    "split": "evaluation",
+    "family": "eval.opposed_actions_two_rooms",
+    "category": "compound",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światło w kuchni i zgaś w salonie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-061",
+    "split": "evaluation",
+    "family": "eval.opposed_actions_two_devices",
+    "category": "compound",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampę przy stole, a żyrandol wyłącz.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-062",
+    "split": "evaluation",
+    "family": "eval.two_brightness_values",
+    "category": "compound",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw światło w gabinecie na 40 procent i taśmę LED na 10.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-063",
+    "split": "evaluation",
+    "family": "eval.room_all_off_plus_member_on",
+    "category": "compound",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś światła w salonie oraz zapal lewy kinkiet w sypialni.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-064",
+    "split": "evaluation",
+    "family": "eval.sequenced_room_metonymy",
+    "category": "compound",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Najpierw włącz kuchnię, potem zgaś gabinet.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-065",
+    "split": "evaluation",
+    "family": "eval.same_action_two_nonadjacent_rooms",
+    "category": "compound",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal girlandę na tarasie i światło w pralni.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-066",
+    "split": "evaluation",
+    "family": "eval.immediate_and_delayed_action",
+    "category": "compound",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światło w salonie i za pięć minut je zgaś.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-067",
+    "split": "evaluation",
+    "family": "eval.reported_film_quotation",
+    "category": "background",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "W filmie aktor powiedział: «zgaś światło w salonie».",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-068",
+    "split": "evaluation",
+    "family": "eval.past_request_recollection",
+    "category": "background",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Pamiętasz, jak wczoraj prosiłem, żeby zapalić lampę w kuchni?",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-069",
+    "split": "evaluation",
+    "family": "eval.linguistic_example_question",
+    "category": "background",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Czy zdanie «włącz światło w gabinecie» brzmi naturalnie?",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-070",
+    "split": "evaluation",
+    "family": "eval.hypothetical_future_automation",
+    "category": "background",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Kiedyś zrobię automatykę: gdy będzie ciemno, zapal światło w salonie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-071",
+    "split": "evaluation",
+    "family": "eval.quoted_announcement_payload",
+    "category": "background",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Powiedz dzieciom słowa: włącz światło w sypialni.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-072",
+    "split": "evaluation",
+    "family": "eval.explicit_other_addressee",
+    "category": "background",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Mówię do telefonu, nie do domu: zgaś światło w salonie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-073",
+    "split": "evaluation",
+    "family": "eval.missing_area_for_generic_light",
+    "category": "unsupported",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światło.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-074",
+    "split": "evaluation",
+    "family": "eval.missing_anaphora_antecedent",
+    "category": "unsupported",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś je.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-075",
+    "split": "evaluation",
+    "family": "eval.unknown_explicit_area_no_local_fallback",
+    "category": "unsupported",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światło w oranżerii.",
+          "dry_run": true,
+          "source_area": "studio"
+        },
+        "expected": {
+          "status_in": [
+            "clarify"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-076",
+    "split": "evaluation",
+    "family": "eval.brightness_on_onoff_only_device",
+    "category": "unsupported",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw lampę przy oknie na 50 procent.",
+          "dry_run": true,
+          "source_area": "salon"
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-077",
+    "split": "evaluation",
+    "family": "eval.color_outside_low_risk_contract",
+    "category": "unsupported",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Zmień kolor taśmy LED w salonie na niebieski.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-078",
+    "split": "evaluation",
+    "family": "eval.delayed_action_without_scheduler",
+    "category": "unsupported",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Za pół godziny włącz lampę stołową.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-079",
+    "split": "evaluation",
+    "family": "eval.unquantified_relative_brightness",
+    "category": "unsupported",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Rozjaśnij żyrandol jeszcze trochę.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-080",
+    "split": "evaluation",
+    "family": "eval.shared_area_alias",
+    "category": "unsupported",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal lampę w strefie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-081",
+    "split": "evaluation",
+    "family": "eval.explicit_unexposed_entity",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz ukrytą lampę w salonie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-082",
+    "split": "evaluation",
+    "family": "eval.explicit_unavailable_entity",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampę awaryjną w gabinecie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-083",
+    "split": "evaluation",
+    "family": "eval.shared_entity_alias",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś panel w salonie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-084",
+    "split": "evaluation",
+    "family": "eval.self_referential_group",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz zestaw zapętlony w biurze.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-085",
+    "split": "evaluation",
+    "family": "eval.missing_group_child",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal zestaw niepełny w gabinecie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "EVAL-086",
+    "split": "evaluation",
+    "family": "eval.group_child_wrong_domain",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz zestaw błędny w gabinecie.",
+          "dry_run": true
+        },
+        "expected": {
+          "status_in": [
+            "clarify",
+            "unsupported",
+            "blocked"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  }
+]

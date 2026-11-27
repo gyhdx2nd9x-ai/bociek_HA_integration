@@ -1,0 +1,161 @@
+blueprint:
+  name: "Polish Context Voice — cicha odpowiedź satelity"
+  description: >-
+    Obniża głośność na czas rozmowy 20:00–08:00 lub przy sygnale ciszy.
+    Przywraca poprzednią wartość po zakończeniu, chyba że zmieniono ją ręcznie.
+    Wybierz satelitę i jego odtwarzacz z TEGO SAMEGO urządzenia HA.
+    To wspólna głośność sprzętu, nie osobny kanał TTS; inne dźwięki w trakcie
+    rozmowy też mogą być ciszej. Jedna automatyzacja na urządzenie.
+  domain: automation
+  homeassistant:
+    min_version: "2026.10.0"
+  input:
+    satellite:
+      name: Satelita
+      selector:
+        entity:
+          domain: assist_satellite
+    player:
+      name: Odtwarzacz tego samego urządzenia
+      selector:
+        entity:
+          domain: media_player
+    quiet_start:
+      name: Początek ciszy
+      default: "20:00:00"
+      selector:
+        time: {}
+    quiet_end:
+      name: Koniec ciszy (równe godziny wyłączają harmonogram)
+      default: "08:00:00"
+      selector:
+        time: {}
+    quiet_volume:
+      name: Maksymalna głośność w ciszy
+      description: Procent skali urządzenia, nie pomiar głośności w dB. Dobierz odsłuchem.
+      default: 20
+      selector:
+        number:
+          min: 1
+          max: 100
+          step: 1
+          unit_of_measurement: "%"
+    quiet_signals:
+      name: Opcjonalne sygnały ciszy (on = cicho)
+      default: []
+      selector:
+        entity:
+          domain: [input_boolean, binary_sensor]
+          multiple: true
+    protect_music:
+      name: Nie zmieniaj głośności, jeżeli odtwarzacz już gra
+      default: true
+      selector:
+        boolean: {}
+    restore_timeout:
+      name: Limit oczekiwania na zakończenie rozmowy
+      description: Po przekroczeniu limitu pozostawia ciszej, aby nie podgłośnić trwającej wypowiedzi.
+      default: 180
+      selector:
+        number:
+          min: 10
+          max: 600
+          step: 1
+          unit_of_measurement: s
+mode: single
+max_exceeded: silent
+triggers:
+  - trigger: state
+    entity_id: !input satellite
+    to: listening
+    not_from: [unknown, unavailable]
+variables:
+  satellite: !input satellite
+  player: !input player
+  quiet_start: !input quiet_start
+  quiet_end: !input quiet_end
+  quiet_signals: !input quiet_signals
+  quiet_volume: !input quiet_volume
+  protect_music: !input protect_music
+  restore_timeout: !input restore_timeout
+  quiet_active: >-
+    {% set t = now().strftime('%H:%M:%S') %}
+    {% set scheduled = (quiet_start <= t < quiet_end) if quiet_start < quiet_end
+       else (t >= quiet_start or t < quiet_end) if quiet_start > quiet_end else false %}
+    {{ scheduled or (quiet_signals | select('is_state', 'on') | list | count > 0) }}
+  original_volume: "{{ state_attr(player, 'volume_level') }}"
+  desired_volume: "{{ quiet_volume | float / 100 }}"
+conditions:
+  - condition: template
+    value_template: "{{ quiet_active }}"
+  - condition: template
+    value_template: >-
+      {{ device_id(satellite) is not none and device_id(satellite) == device_id(player) }}
+  - condition: template
+    value_template: >-
+      {{ not protect_music or not is_state(player, 'playing') }}
+  - condition: template
+    value_template: >-
+      {{ has_value(player) and is_number(original_volume)
+         and 0 <= original_volume | float <= 1
+         and original_volume | float > desired_volume
+         and not state_attr(player, 'is_volume_muted')
+         and (state_attr(player, 'supported_features') | int(0) | bitwise_and(4)) != 0 }}
+actions:
+  - action: media_player.volume_set
+    target:
+      entity_id: !input player
+    data:
+      volume_level: "{{ desired_volume }}"
+  - wait_template: >-
+      {{ is_number(state_attr(player, 'volume_level'))
+         and (state_attr(player, 'volume_level') | float - desired_volume) | abs < 0.005 }}
+    timeout: "00:00:05"
+    continue_on_timeout: false
+  - variables:
+      deadline: "{{ as_timestamp(now()) + restore_timeout | float }}"
+  - repeat:
+      sequence:
+        - if:
+            - condition: template
+              value_template: "{{ is_state(satellite, 'idle') }}"
+          then:
+            - delay: "00:00:01"
+          else:
+            - wait_for_trigger:
+                - trigger: state
+                  entity_id: !input satellite
+                  to: idle
+                  for: "00:00:01"
+                - trigger: state
+                  entity_id: !input satellite
+                  to: [unknown, unavailable]
+                - trigger: state
+                  entity_id: !input player
+                  attribute: volume_level
+              timeout: "{{ [0, deadline - as_timestamp(now())] | max }}"
+              continue_on_timeout: true
+        - if:
+            - condition: template
+              value_template: >-
+                {{ not has_value(player) or not has_value(satellite)
+                   or not is_number(state_attr(player, 'volume_level'))
+                   or (state_attr(player, 'volume_level') | float(-1) - desired_volume) | abs >= 0.005
+                   or state_attr(player, 'is_volume_muted') }}
+          then:
+            - stop: "Zmieniono głośność/wyciszenie albo utracono urządzenie; bez przywracania."
+      until:
+        - condition: template
+          value_template: "{{ is_state(satellite, 'idle') or as_timestamp(now()) >= deadline }}"
+  - condition: template
+    value_template: >-
+      {{ is_state(satellite, 'idle') and has_value(player)
+         and is_number(state_attr(player, 'volume_level'))
+         and (state_attr(player, 'volume_level') | float - desired_volume) | abs < 0.005
+         and not state_attr(player, 'is_volume_muted')
+         and device_id(satellite) is not none and device_id(satellite) == device_id(player) }}
+  - action: media_player.volume_set
+    target:
+      entity_id: !input player
+    data:
+      volume_level: "{{ original_volume }}"

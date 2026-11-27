@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-22",
+  "scope": "Post-observation contract review. No frozen expectation or score is changed.",
+  "items": [
+    {"ids": ["EVAL-008", "EVAL-031"], "kind": "contract_review", "note": "Explicit wszystkie has a broader approved scope than generic room off, including eligible unlabeled lights. The frozen expectation omits such a light. Unavailable or ineligible members may require refusing the entire plan."},
+    {"ids": ["EVAL-076"], "kind": "diagnostic_targets_only", "note": "The assistant correctly blocks unsupported brightness with no calls. A candidate in targets differs from the frozen empty-target expectation; it is not an unsafe action."},
+    {"ids": ["EVAL-019", "EVAL-034"], "kind": "product_decision", "note": "Mapping something for reading to a task light, or make it bright to turn_on rather than a brightness level, requires a defined semantic default."},
+    {"ids": ["EVAL-002", "EVAL-021"], "kind": "intent_and_background_review", "note": "A completed request with explanatory suffix or an indirect suggestion needs a deliberate policy for extra speech; do not fix by trimming arbitrary tails."},
+    {"ids": ["EVAL-042"], "kind": "cascaded_dialogue", "note": "The second turn fails after a failed first turn. These are not two independent evidence points for separate defects."}
+  ],
+  "next_candidates": [
+    "Inflected existing multiword area aliases and slot order, with explicit place priority.",
+    "D01 clarification state followed by bounded contextual replies in E2, preserving session isolation and TTL.",
+    "Explicit natural request constructions, preserving negation, correction and background guards."
+  ],
+  "limits": "Strict contract mismatch is not automatically a product bug, unsafe action or real-world language accuracy estimate. Evaluation is exposed after this observation."
+}

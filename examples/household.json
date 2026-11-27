@@ -1,0 +1,25 @@
+{
+  "floors": [{"id": "ground_floor", "name": "Parter", "aliases": ["dół"]}],
+  "areas": [
+    {"id": "living_room", "name": "Living Room", "aliases": ["salon"], "floor_id": "ground_floor"},
+    {"id": "kitchen", "name": "Kitchen", "aliases": ["kuchnia"], "floor_id": "ground_floor"},
+    {"id": "office", "name": "Office", "aliases": ["biuro"]}
+  ],
+  "satellites": {"assist_satellite.living_room": "living_room", "assist_satellite.kitchen": "kitchen"},
+  "devices": {"satellite_device_living_room": "living_room"},
+  "entities": [
+    {"id": "light.living_room_main", "name": "Main Lights", "aliases": ["główne oświetlenie"], "area_id": "living_room", "labels": ["voice_default_on", "voice_main", "voice_all_off", "voice_safe_all"], "exposed": true, "state": "off", "attributes": {"supported_color_modes": ["brightness"]}},
+    {"id": "light.living_room_table", "name": "Table Light", "aliases": ["lampa przy stole", "lampka stołowa"], "area_id": "living_room", "labels": ["voice_task", "voice_all_off", "voice_safe_all"], "exposed": true, "state": "on", "attributes": {"supported_color_modes": ["brightness"]}},
+    {"id": "light.living_room_ambient", "name": "Ambient", "aliases": ["taśma led"], "area_id": "living_room", "labels": ["voice_ambient", "voice_all_off", "voice_safe_all"], "exposed": true, "state": "on", "attributes": {"supported_color_modes": ["rgb"]}},
+    {"id": "light.living_room_hidden", "name": "Ukryte światło", "area_id": "living_room", "labels": ["voice_default_on", "voice_all_off"], "exposed": false, "state": "off"},
+    {"id": "light.kitchen_main", "name": "Kitchen Main", "aliases": ["lampa sufitowa"], "area_id": "kitchen", "labels": ["voice_default_on", "voice_all_off"], "exposed": true, "state": "off", "attributes": {"supported_color_modes": ["brightness"]}},
+    {"id": "light.office_main", "name": "Office Main", "area_id": "office", "labels": ["voice_default_on", "voice_all_off"], "exposed": true, "state": "off"},
+    {"id": "switch.fridge", "name": "Lodówka", "area_id": "living_room", "labels": ["voice_safe_all", "voice_exclude_all"], "exposed": true, "state": "on"},
+    {"id": "switch.router", "name": "Router", "area_id": "living_room", "labels": ["voice_block"], "exposed": true, "state": "on"},
+    {"id": "sensor.living_room_temperature", "name": "Temperatura", "area_id": "living_room", "labels": ["voice_primary"], "exposed": true, "device_class": "temperature", "state": "21.5", "attributes": {"unit_of_measurement": "°C"}},
+    {"id": "media_player.tv", "name": "Telewizor", "area_id": "living_room", "labels": ["voice_media"], "exposed": true, "state": "off"},
+    {"id": "cover.blind", "name": "Roleta", "area_id": "living_room", "labels": ["voice_primary"], "exposed": true, "device_class": "blind", "state": "open", "attributes": {"supported_features": 3}},
+    {"id": "cover.garage", "name": "Brama", "area_id": "kitchen", "labels": ["voice_high_risk"], "exposed": true, "device_class": "garage", "state": "closed", "attributes": {"supported_features": 3}},
+    {"id": "climate.living_room", "name": "Ogrzewanie", "area_id": "living_room", "labels": ["voice_primary"], "exposed": true, "state": "heat", "attributes": {"supported_features": 1, "min_temp": 7, "max_temp": 30, "temperature_unit": "°C"}}
+  ]
+}

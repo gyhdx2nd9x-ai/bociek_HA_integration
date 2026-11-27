@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "corpus_version": 3,
+  "source_file": "engine.json",
+  "source_sha256": "23c251d406cf1bcf92c1adb488d807b9b08873c66521205f1aa595c7fd556673",
+  "not_independent_evaluation": true,
+  "authorization": "D02 development following the user's acceptance of E3-01 through E3-04: a bounded LOW-risk light ON/OFF prefix may become a question, never an immediate action. This explicitly revises one existing regression expectation; it is not a new independent evaluation result.",
+  "updates": [
+    {
+      "id": "E121",
+      "split": "regression",
+      "turn_index": 0,
+      "reason": "D02 changes an unconsumed background suffix from no_targets to a confirmation proposal. In dry-run mode the main-light call is visible only as a plan: no executor calls, no armed pending operation and no spoken continuation. The original engine.json and all frozen evaluation cases remain unchanged.",
+      "before": {
+        "status": "clarify",
+        "targets": [],
+        "calls": [],
+        "reason": "no_targets"
+      },
+      "after": {
+        "status": "confirm",
+        "targets": ["light.main"],
+        "calls": [
+          {"domain": "light", "service": "turn_on", "entity_ids": ["light.main"], "data": {}}
+        ],
+        "reason": "background_confirmation",
+        "continue_conversation": false,
+        "executor_calls": []
+      }
+    }
+  ]
+}

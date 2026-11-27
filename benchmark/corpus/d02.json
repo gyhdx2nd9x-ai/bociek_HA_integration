@@ -1,0 +1,989 @@
+[
+  {
+    "id": "D02-001",
+    "split": "regression",
+    "family": "d02-affirmative-single-use",
+    "category": "background",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from the approved bounded D02 confirmation contract before executing these new scenarios; synthetic fixtures and recording executor only, not independent held-out evaluation.",
+    "note": "Only a whole affirmative executes the frozen proposal, once.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła wow jaka figura",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "area_ids": [
+            "salon"
+          ],
+          "risk": "low",
+          "continue_conversation": true,
+          "reason": "background_confirmation"
+        }
+      },
+      {
+        "request": {
+          "text": "Tak. Tak",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "salon"
+          ],
+          "risk": "low",
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Potwierdzam",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "clarify",
+          "reason": "no_pending",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "D02-002",
+    "split": "regression",
+    "family": "d02-explicit-kitchen-off",
+    "category": "background",
+    "layer": "engine",
+    "home": "duplex_en",
+    "origin": "Authored from the approved bounded D02 confirmation contract before executing these new scenarios; synthetic fixtures and recording executor only, not independent held-out evaluation.",
+    "note": "Explicit area wins over the source room.",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz światła w kuchni wow jaka figura",
+          "source_area": "lounge",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "area_ids": [
+            "kitchen_up"
+          ],
+          "risk": "low",
+          "continue_conversation": true,
+          "reason": "background_confirmation"
+        }
+      },
+      {
+        "request": {
+          "text": "Dobrze",
+          "source_area": "lounge",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "kitchen_up"
+          ],
+          "risk": "low",
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "D02-003",
+    "split": "regression",
+    "family": "d02-reject-without-execution",
+    "category": "background",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from the approved bounded D02 confirmation contract before executing these new scenarios; synthetic fixtures and recording executor only, not independent held-out evaluation.",
+    "note": "Rejecting a proposed command does not operate any light.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła wow jaka figura",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "area_ids": [
+            "salon"
+          ],
+          "risk": "low",
+          "continue_conversation": true,
+          "reason": "background_confirmation"
+        }
+      },
+      {
+        "request": {
+          "text": "Nie",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "cancelled",
+          "reason": "",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Tak",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "clarify",
+          "reason": "no_pending",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "D02-004",
+    "split": "regression",
+    "family": "d02-fixed-ttl-after-unclear",
+    "category": "background",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from the approved bounded D02 confirmation contract before executing these new scenarios; synthetic fixtures and recording executor only, not independent held-out evaluation.",
+    "note": "An unclear reply repeats the plan without extending the original 30-second TTL.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła wow jaka figura",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "area_ids": [
+            "salon"
+          ],
+          "risk": "low",
+          "continue_conversation": true,
+          "reason": "background_confirmation"
+        }
+      },
+      {
+        "request": {
+          "text": "Chyba",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "area_ids": [
+            "salon"
+          ],
+          "risk": "low",
+          "continue_conversation": true,
+          "reason": "background_confirmation"
+        },
+        "advance_seconds": 20
+      },
+      {
+        "request": {
+          "text": "Tak",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "clarify",
+          "reason": "no_pending",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false
+        },
+        "advance_seconds": 11
+      }
+    ]
+  },
+  {
+    "id": "D02-005",
+    "split": "regression",
+    "family": "d02-source-user-conversation-mode-isolation",
+    "category": "background",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from the approved bounded D02 confirmation contract before executing these new scenarios; synthetic fixtures and recording executor only, not independent held-out evaluation.",
+    "note": "A proposal belongs to one exact source, user, conversation and transport mode.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła wow jaka figura",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "area_ids": [
+            "salon"
+          ],
+          "risk": "low",
+          "continue_conversation": true,
+          "reason": "background_confirmation"
+        }
+      },
+      {
+        "request": {
+          "text": "Tak",
+          "source_area": "kuchnia",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "clarify",
+          "reason": "no_pending",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Tak",
+          "source_area": "salon",
+          "dry_run": false,
+          "user_id": "other-synthetic-user"
+        },
+        "expected": {
+          "status": "clarify",
+          "reason": "no_pending",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Tak",
+          "source_area": "salon",
+          "dry_run": false,
+          "conversation_id": "other-synthetic-conversation"
+        },
+        "expected": {
+          "status": "clarify",
+          "reason": "no_pending",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Tak",
+          "source_area": "salon",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "clarify",
+          "reason": "no_pending",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Potwierdzam",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "salon"
+          ],
+          "risk": "low",
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "D02-006",
+    "split": "regression",
+    "family": "d02-preview-does-not-arm",
+    "category": "background",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from the approved bounded D02 confirmation contract before executing these new scenarios; synthetic fixtures and recording executor only, not independent held-out evaluation.",
+    "note": "A dry run displays planned calls but never arms authorization.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła wow jaka figura",
+          "source_area": "salon",
+          "dry_run": true
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "area_ids": [
+            "salon"
+          ],
+          "risk": "low",
+          "continue_conversation": false,
+          "reason": "background_confirmation"
+        }
+      },
+      {
+        "request": {
+          "text": "Tak",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "clarify",
+          "reason": "no_pending",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "D02-007",
+    "split": "regression",
+    "family": "d02-fresh-exposure",
+    "category": "background",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from the approved bounded D02 confirmation contract before executing these new scenarios; synthetic fixtures and recording executor only, not independent held-out evaluation.",
+    "note": "Revoked Assist exposure invalidates the original plan.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła wow jaka figura",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "area_ids": [
+            "salon"
+          ],
+          "risk": "low",
+          "continue_conversation": true,
+          "reason": "background_confirmation"
+        }
+      },
+      {
+        "request": {
+          "text": "Tak",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "clarify",
+          "reason": "plan_changed",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false
+        },
+        "mutations": [
+          {
+            "entity_id": "light.main",
+            "changes": {
+              "exposed": false
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D02-008",
+    "split": "regression",
+    "family": "d02-fresh-role",
+    "category": "background",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from the approved bounded D02 confirmation contract before executing these new scenarios; synthetic fixtures and recording executor only, not independent held-out evaluation.",
+    "note": "Removing a default role cannot silently redirect a pending ON.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła wow jaka figura",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "area_ids": [
+            "salon"
+          ],
+          "risk": "low",
+          "continue_conversation": true,
+          "reason": "background_confirmation"
+        }
+      },
+      {
+        "request": {
+          "text": "Tak",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "clarify",
+          "reason": "plan_changed",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false
+        },
+        "mutations": [
+          {
+            "entity_id": "light.main",
+            "changes": {
+              "labels": [
+                "voice_all_off"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D02-009",
+    "split": "regression",
+    "family": "d02-fresh-group-members",
+    "category": "background",
+    "layer": "engine",
+    "home": "duplex_en",
+    "origin": "Authored from the approved bounded D02 confirmation contract before executing these new scenarios; synthetic fixtures and recording executor only, not independent held-out evaluation.",
+    "note": "Changed group membership invalidates rather than narrows the pending plan.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła w sypialni wow jaka figura",
+          "source_area": "lounge",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.group_one",
+            "light.group_two"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_one"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_two"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "area_ids": [
+            "bedroom_up"
+          ],
+          "risk": "low",
+          "continue_conversation": true,
+          "reason": "background_confirmation"
+        }
+      },
+      {
+        "request": {
+          "text": "Tak",
+          "source_area": "lounge",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "clarify",
+          "reason": "plan_changed",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false
+        },
+        "mutations": [
+          {
+            "entity_id": "light.bedroom",
+            "changes": {
+              "attributes": {
+                "entity_id": [
+                  "light.group_one"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D02-010",
+    "split": "regression",
+    "family": "d02-meaningful-suffixes-remain-rejected",
+    "category": "background",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from the approved bounded D02 confirmation contract before executing these new scenarios; synthetic fixtures and recording executor only, not independent held-out evaluation.",
+    "note": "No compound, correction, unknown location or brightness can become a D02 execution.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła i wyłącz lampę stołową wow jaka figura",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "unsupported",
+          "reason": "no_intent",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Włącz światła nie jednak wcale wow jaka figura",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "unsupported",
+          "reason": "no_intent",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Włącz światła w garażu wow jaka figura",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "clarify",
+          "reason": "unknown_location",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Ustaw światła na 35 procent wow jaka figura",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "unsupported",
+          "reason": "no_intent",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "D02-011",
+    "split": "regression",
+    "family": "d02-complete-known-alias-wins",
+    "category": "background",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from the approved bounded D02 confirmation contract before executing these new scenarios; synthetic fixtures and recording executor only, not independent held-out evaluation.",
+    "note": "A valid complete alias uses the existing full-utterance path without D02 shortening.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła wow jaka figura",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "salon"
+          ],
+          "risk": "low",
+          "continue_conversation": false
+        },
+        "mutations": [
+          {
+            "entity_id": "light.table",
+            "changes": {
+              "aliases": [
+                "światła wow jaka figura"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D02-012",
+    "split": "regression",
+    "family": "d02-foreign-reply-is-not-consent",
+    "category": "background",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Authored from the approved bounded D02 confirmation contract before executing these new scenarios; synthetic fixtures and recording executor only, not independent held-out evaluation.",
+    "note": "Cyrillic STT is an unclear reply; only subsequent whole Polish consent can execute.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła wow jaka figura",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "area_ids": [
+            "salon"
+          ],
+          "risk": "low",
+          "continue_conversation": true,
+          "reason": "background_confirmation"
+        }
+      },
+      {
+        "request": {
+          "text": "Так",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "area_ids": [
+            "salon"
+          ],
+          "risk": "low",
+          "continue_conversation": true,
+          "reason": "background_confirmation"
+        }
+      },
+      {
+        "request": {
+          "text": "Tak",
+          "source_area": "salon",
+          "dry_run": false
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "salon"
+          ],
+          "risk": "low",
+          "continue_conversation": false
+        }
+      }
+    ]
+  }
+]

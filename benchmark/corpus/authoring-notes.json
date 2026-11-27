@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-22",
+  "regression_review": [
+    {"id": "E080", "correction": "The fixture explicitly names the on/off-only light Lampa okienna. Brightness must be blocked for capability, not treated as an unknown alias."},
+    {"id": "E096", "correction": "The fixture deliberately gives two lights the alias panel. The correct diagnosis is ambiguous_target, not no_targets."},
+    {"id": "E110", "correction": "For an unresolved alternative the contract requires no action; either unsupported or clarify is a safe response. An exact unsupported/no_intent diagnosis was unjustified."}
+  ],
+  "evaluator_review": "Numeric JSON 40 and 40.0 are equivalent service parameters; booleans are distinct. Corrections are in the evaluator, not in assistant behavior or evaluation expectations.",
+  "evaluation_overlap": "Four authored evaluation scenarios share at least one normalized utterance/layer with regressions. They were excluded before execution and remain untouched in the frozen file. The full authored set is not claimed disjoint or unseen.",
+  "production_changes": false
+}

@@ -1,0 +1,109 @@
+# Isolated synthetic household: no restored secrets, hardware or discovery.
+homeassistant:
+  name: Polish Context Voice Lab
+  latitude: 0
+  longitude: 0
+  elevation: 0
+  unit_system: metric
+  time_zone: Europe/London
+  country: PL
+  language: pl
+http:
+  server_host: 127.0.0.1
+  server_port: 18123
+api: {}
+websocket_api: {}
+conversation: {}
+config: {}
+logger:
+  default: warning
+  logs:
+    custom_components.polish_context_voice: info
+input_boolean:
+  lab_main:
+    initial: false
+  lab_table:
+    initial: true
+  lab_ambient:
+    initial: true
+  lab_hidden:
+    initial: false
+  lab_kitchen:
+    initial: false
+  lab_switch:
+    initial: false
+template:
+  - light:
+      - name: Lab Main Lights
+        unique_id: pcv_lab_main
+        state: "{{ is_state('input_boolean.lab_main', 'on') }}"
+        turn_on:
+          action: input_boolean.turn_on
+          target:
+            entity_id: input_boolean.lab_main
+        turn_off:
+          action: input_boolean.turn_off
+          target:
+            entity_id: input_boolean.lab_main
+      - name: Lab Table Light
+        unique_id: pcv_lab_table
+        state: "{{ is_state('input_boolean.lab_table', 'on') }}"
+        turn_on:
+          action: input_boolean.turn_on
+          target:
+            entity_id: input_boolean.lab_table
+        turn_off:
+          action: input_boolean.turn_off
+          target:
+            entity_id: input_boolean.lab_table
+      - name: Lab Ambient Light
+        unique_id: pcv_lab_ambient
+        state: "{{ is_state('input_boolean.lab_ambient', 'on') }}"
+        turn_on:
+          action: input_boolean.turn_on
+          target:
+            entity_id: input_boolean.lab_ambient
+        turn_off:
+          action: input_boolean.turn_off
+          target:
+            entity_id: input_boolean.lab_ambient
+      - name: Lab Hidden Light
+        unique_id: pcv_lab_hidden
+        state: "{{ is_state('input_boolean.lab_hidden', 'on') }}"
+        turn_on:
+          action: input_boolean.turn_on
+          target:
+            entity_id: input_boolean.lab_hidden
+        turn_off:
+          action: input_boolean.turn_off
+          target:
+            entity_id: input_boolean.lab_hidden
+      - name: Lab Kitchen Light
+        unique_id: pcv_lab_kitchen
+        state: "{{ is_state('input_boolean.lab_kitchen', 'on') }}"
+        turn_on:
+          action: input_boolean.turn_on
+          target:
+            entity_id: input_boolean.lab_kitchen
+        turn_off:
+          action: input_boolean.turn_off
+          target:
+            entity_id: input_boolean.lab_kitchen
+  - switch:
+      - name: Lab Test Switch
+        unique_id: pcv_lab_switch
+        state: "{{ is_state('input_boolean.lab_switch', 'on') }}"
+        turn_on:
+          action: input_boolean.turn_on
+          target:
+            entity_id: input_boolean.lab_switch
+        turn_off:
+          action: input_boolean.turn_off
+          target:
+            entity_id: input_boolean.lab_switch
+  - sensor:
+      - name: Lab Temperature
+        unique_id: pcv_lab_temperature
+        state: "21.5"
+        device_class: temperature
+        unit_of_measurement: "°C"

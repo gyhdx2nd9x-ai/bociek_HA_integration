@@ -1,0 +1,5 @@
+# Podmień satellite_id na swój. Nie uruchamia ani nie zmienia minutnika.
+action: polish_context_voice.preview
+data:
+  text: "Odlicz dziesięć sekund"
+  satellite_id: assist_satellite.TWOJ_SATELITA

@@ -1,0 +1,898 @@
+[
+  {
+    "id": "CTX-001",
+    "split": "regression",
+    "family": "numbered-choice-context",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Synthetic Polish regression using announced option order.",
+    "note": "Complete reply after a noisy selection attempt.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz panel",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "ambiguous_target"
+        }
+      },
+      {
+        "request": {
+          "text": "druga да",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "clarification_unresolved"
+        }
+      },
+      {
+        "request": {
+          "text": "Nie, ta druga",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "CTX-002",
+    "split": "regression",
+    "family": "numbered-choice-context",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Synthetic Polish regression using announced option order.",
+    "note": "The same reply without a pending list.",
+    "turns": [
+      {
+        "request": {
+          "text": "Nie, ta druga",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "no_numbered_options"
+        }
+      }
+    ]
+  },
+  {
+    "id": "CTX-003",
+    "split": "regression",
+    "family": "numbered-choice-context",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Synthetic Polish regression using announced option order.",
+    "note": "The same reply after exactly thirty seconds.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz panel",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "ambiguous_target"
+        }
+      },
+      {
+        "request": {
+          "text": "Nie, ta druga",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "no_numbered_options"
+        },
+        "advance_seconds": 30
+      }
+    ]
+  },
+  {
+    "id": "CTX-004",
+    "split": "regression",
+    "family": "numbered-choice-context",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Synthetic Polish regression using announced option order.",
+    "note": "Another satellite cannot consume the original choice.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz panel",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "ambiguous_target"
+        }
+      },
+      {
+        "request": {
+          "text": "Nie, ta druga",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-b"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "no_numbered_options"
+        }
+      },
+      {
+        "request": {
+          "text": "Nie, ta druga",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "CTX-005",
+    "split": "regression",
+    "family": "numbered-choice-context",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Synthetic Polish regression using announced option order.",
+    "note": "Exposure is checked again after selecting a visible position.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz panel",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "ambiguous_target"
+        }
+      },
+      {
+        "request": {
+          "text": "Nie, ta druga",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "plan_changed"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.main",
+            "changes": {
+              "exposed": false
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "CTX-006",
+    "split": "regression",
+    "family": "numbered-choice-context",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Synthetic Polish regression using announced option order.",
+    "note": "A new explicit command supersedes the previously announced list.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz panel",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "ambiguous_target"
+        }
+      },
+      {
+        "request": {
+          "text": "Włącz światło w kuchni",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "ta druga",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "no_numbered_options"
+        }
+      }
+    ]
+  },
+  {
+    "id": "CTX-007",
+    "split": "regression",
+    "family": "pending-room-correction",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Synthetic paired verification of the current confirmation context.",
+    "note": "A pending command changes room only after renewed consent.",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal oświetlenie w salonie, proszę.",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "confirmation_required"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.main",
+            "changes": {
+              "labels": [
+                "voice_default_on",
+                "voice_main",
+                "voice_all_off",
+                "voice_safe_all",
+                "voice_confirm"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "request": {
+          "text": "Nie tutaj tylko w kuchni",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "room_correction_confirmation"
+        }
+      },
+      {
+        "request": {
+          "text": "Tak",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "CTX-008",
+    "split": "regression",
+    "family": "pending-room-correction",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Synthetic paired verification of the current confirmation context.",
+    "note": "Changing rooms shortly before expiry keeps the original deadline.",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal oświetlenie w salonie, proszę.",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "confirmation_required"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.main",
+            "changes": {
+              "labels": [
+                "voice_default_on",
+                "voice_main",
+                "voice_all_off",
+                "voice_safe_all",
+                "voice_confirm"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "request": {
+          "text": "Nie tutaj tylko w kuchni",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "room_correction_confirmation"
+        },
+        "advance_seconds": 29
+      },
+      {
+        "request": {
+          "text": "Tak",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "no_pending"
+        },
+        "advance_seconds": 1
+      }
+    ]
+  },
+  {
+    "id": "CTX-009",
+    "split": "regression",
+    "family": "numbered-choice-context",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Synthetic replay of an explicit correction to an announced light option.",
+    "note": "Approval changes the second light only once while preserving the first action.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz panel",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "ambiguous_target"
+        }
+      },
+      {
+        "request": {
+          "text": "pierwsza",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.ambient"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            }
+          ],
+          "continue_conversation": false
+        }
+      },
+      {
+        "request": {
+          "text": "Nie, tę drugą",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "light_choice_correction_confirmation"
+        }
+      },
+      {
+        "request": {
+          "text": "Tak",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-b"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": false,
+          "reason": "no_pending"
+        }
+      },
+      {
+        "request": {
+          "text": "Tak",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "CTX-010",
+    "split": "regression",
+    "family": "numbered-choice-context",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Synthetic pair for explicit lighting preferences.",
+    "note": "One explicit preference is available after the user hears the available options.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz panel",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "ambiguous_target"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.main",
+            "changes": {
+              "labels": [
+                "voice_default_on",
+                "voice_main",
+                "voice_all_off",
+                "voice_safe_all",
+                "voice_primary"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "request": {
+          "text": "Tę domyślną",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "continue_conversation": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "CTX-011",
+    "split": "regression",
+    "family": "numbered-choice-context",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "origin": "Synthetic pair for explicit lighting preferences.",
+    "note": "Two preferences leave the choice open and require a distinctive reply.",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz panel",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "ambiguous_target"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.main",
+            "changes": {
+              "labels": [
+                "voice_default_on",
+                "voice_main",
+                "voice_all_off",
+                "voice_safe_all",
+                "voice_primary"
+              ]
+            }
+          },
+          {
+            "entity_id": "light.ambient",
+            "changes": {
+              "labels": [
+                "voice_ambient",
+                "voice_all_off",
+                "voice_primary"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "request": {
+          "text": "Tę domyślną",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "executor_calls": [],
+          "continue_conversation": true,
+          "reason": "clarification_unresolved"
+        }
+      },
+      {
+        "request": {
+          "text": "ta druga",
+          "dry_run": false,
+          "source_area": "salon",
+          "satellite_id": "synthetic-a"
+        },
+        "expected": {
+          "status": "executed",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "executor_calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "continue_conversation": false
+        }
+      }
+    ]
+  }
+]

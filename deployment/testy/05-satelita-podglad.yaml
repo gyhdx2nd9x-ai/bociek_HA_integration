@@ -1,0 +1,6 @@
+# Zastąp ID poniżej encją satelity rzeczywiście przypisanego do Living Room.
+# Pomijamy source_area, aby sprawdzić kontekst satelity. Tylko podgląd.
+action: polish_context_voice.preview
+data:
+  text: "zapal światła"
+  satellite_id: assist_satellite.WSTAW_ID_SATELITY_SALONU

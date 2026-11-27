@@ -1,0 +1,7 @@
+# Włącza prawdziwe urządzenia. Najpierw zweryfikuj targets w podglądzie 01.
+# W razie innego ID wybierz agenta HA Polish Context Voice z formularza.
+action: conversation.process
+data:
+  agent_id: conversation.ha_polish_context_voice
+  language: pl
+  text: "zapal światła w salonie"

@@ -1,0 +1,23 @@
+.venv/
+.ha-venv/
+.ha-lab/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.env
+dist/
+ha-snapshot.json
+local/
+examples/user_inventory*.json
+lab/ui-session.json
+.DS_Store
+*.py[cod]
+*.bundle
+build/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# These are generated locally. Original releases are in releases/archives/.
+*.log

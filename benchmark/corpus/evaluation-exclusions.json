@@ -1,0 +1,6 @@
+[
+  {"id": "EVAL-016", "reason": "exact_utterance_overlap", "detected_before_first_scored_run": true},
+  {"id": "EVAL-039", "reason": "exact_utterance_overlap", "detected_before_first_scored_run": true},
+  {"id": "EVAL-040", "reason": "exact_utterance_overlap", "detected_before_first_scored_run": true},
+  {"id": "EVAL-074", "reason": "exact_utterance_overlap", "detected_before_first_scored_run": true}
+]

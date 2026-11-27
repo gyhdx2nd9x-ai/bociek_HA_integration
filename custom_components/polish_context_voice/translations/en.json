@@ -1,0 +1,629 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "HA Polish Context Voice",
+        "description": "Local Polish semantic voice control. Leave both fields empty to disable the optional LLM fallback.",
+        "data": {
+          "llm_endpoint": "Optional OpenAI-compatible base URL ending in /v1",
+          "llm_model": "Optional model name"
+        }
+      }
+    },
+    "error": {
+      "invalid_endpoint": "Enter an HTTP(S) base URL without credentials/query and a model name, or leave the endpoint empty.",
+      "invalid_quiet_time": "Enter times as HH:MM, for example 20:00 and 08:00."
+    },
+    "abort": {
+      "already_configured": "This integration is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "general": {
+        "title": "Communication, maintenance and LLM",
+        "description": "Quiet mode silences successful local light acknowledgements. Errors, questions and timers remain audible. Empty areas means all rooms; any on signal also activates quiet mode outside hours. Empty endpoint disables LLM. Maintenance reviews exposed entities throughout the home unless an area is specified. The threshold applies to percentage battery sensors.",
+        "data": {
+          "llm_endpoint": "OpenAI-compatible base URL ending in /v1",
+          "llm_model": "Model name",
+          "quiet_ack_enabled": "Silent local light acknowledgements during quiet mode",
+          "quiet_start": "Quiet hours start HH:MM, HA local time",
+          "quiet_end": "Quiet hours end HH:MM (same time disables schedule)",
+          "quiet_areas": "Quiet mode areas (empty = all)",
+          "quiet_signals": "Optional quiet signals (on = quiet)",
+          "maintenance_battery_threshold": "Low battery threshold (1–50%)",
+          "back": "Back (compatibility mode)"
+        },
+        "data_description": {
+          "back": "If the Back button is missing below, refresh HA. As a fallback, select this field and click Next."
+        }
+      },
+      "init": {
+        "title": "Assistant settings",
+        "description": "**Start with voice roles** to choose the devices used by your commands. Music and spoken responses have separate settings.",
+        "menu_options": {
+          "voice_roles": "Set up devices and lights",
+          "music_shortcuts": "Add music and playlists",
+          "music_rooms": "Choose music speakers",
+          "general": "Set responses and quiet hours",
+          "calendar": "Calendar — events",
+          "calendar_kiosk": "Calendar — Kiosk screens",
+          "self_test": "Self-test and support report",
+          "content": "Content — Stoic and media search",
+          "voice_trial": "Try a command"
+        },
+        "menu_option_descriptions": {
+          "voice_roles": "Room by room: choose what turns on, what turns off and which roles to assign.",
+          "music_shortcuts": "Give names and aliases to playable content from HA or Music Assistant.",
+          "music_rooms": "Choose where music plays when you speak in each room.",
+          "general": "Quiet hours, battery threshold and an optional language model.",
+          "calendar": "Choose the default calendar, duration and write access. Changes require confirmation.",
+          "calendar_kiosk": "Optionally link a satellite to a screen for showing a day or week.",
+          "self_test": "Check the program and home configuration without controlling devices, then download one results file.",
+          "content": "Choose the Daily Stoic sensor and how to search music and audiobooks through MA.",
+          "voice_trial": "Enter a control command to see how Bociek interprets it."
+        }
+      },
+      "music_shortcuts": {
+        "title": "Music shortcuts",
+        "description": "Choose an existing shortcut to edit it, or add a new one. A shortcut links your spoken name (for example “moja muzyka”) to specific media in HA or Music Assistant.",
+        "data": {
+          "shortcut": "Shortcut",
+          "back": "Back (compatibility mode)"
+        },
+        "data_description": {
+          "back": "If the Back button is missing below, refresh HA. As a fallback, select this field and click Next."
+        }
+      },
+      "music_shortcut": {
+        "title": "Music shortcut",
+        "description": "Choose playable content in the media browser. Add a name and aliases, one per line. The browser player selects content; room preferences determine playback. Configure Plex in Music Assistant. A YouTube web page is not an audio stream.",
+        "data": {
+          "name": "Name",
+          "aliases": "Aliases — one per line",
+          "backend": "Playback system",
+          "media": "Media to play",
+          "delete": "Remove this shortcut",
+          "back": "Back (compatibility mode)"
+        },
+        "data_description": {
+          "back": "If the Back button is missing below, refresh HA. As a fallback, select this field and click Next."
+        }
+      },
+      "music_rooms": {
+        "title": "Room player",
+        "data": {
+          "area": "Area",
+          "back": "Back (compatibility mode)"
+        },
+        "description": "Choose a room, then the speaker that should play music there. It can be different from the voice satellite.",
+        "data_description": {
+          "area": "Next, choose the player and an optional default playlist.",
+          "back": "If the Back button is missing below, refresh HA. As a fallback, select this field and click Next."
+        }
+      },
+      "music_room": {
+        "title": "Speaker and default music",
+        "description": "**Room: {area}.**\n\nChoose a single player assigned to this area in HA and exposed to Assist. For Music Assistant use its MA entity. The default shortcut is used for play music; otherwise say a shortcut name. This does not change TTS output.",
+        "data": {
+          "player": "Music player",
+          "default_shortcut": "Default shortcut",
+          "delete": "Remove this room mapping",
+          "back": "Back (compatibility mode)"
+        },
+        "data_description": {
+          "back": "If the Back button is missing below, refresh HA. As a fallback, select this field and click Next."
+        }
+      },
+      "voice_roles": {
+        "title": "Step 1 of 3 — choose a room",
+        "description": "Configure one room, then move to the next. **You do not have to label everything.** Existing settings will be loaded; nothing is saved before the review.",
+        "data": {
+          "area": "Room to configure",
+          "include_hidden": "Also show devices not exposed to Assist",
+          "back": "Back (compatibility mode)"
+        },
+        "data_description": {
+          "area": "Choose an area from your HA. Shopping lists and similar entities may be under “Bez przypisanego pomieszczenia” (no area assigned).",
+          "include_hidden": "Use this if something is missing. It does not expose devices; voice access is managed in Assist.",
+          "back": "If the Back button is missing below, refresh HA. As a fallback, select this field and click Next."
+        }
+      },
+      "voice_room": {
+        "title": "Room — choose a category",
+        "description": "**Room: {room}.**\n\nVisible entities: {count}. Default on lights: {on_count}; shared off lights: {off_count}.\n\nChoose a category or return to assistant settings.",
+        "menu_options": {
+          "voice_lighting": "Lighting and behavior presets",
+          "voice_entity": "Other devices and permissions",
+          "voice_roles": "← Back — choose another room",
+          "init": "← Assistant settings",
+          "voice_done": "Finish configuration"
+        },
+        "menu_option_descriptions": {
+          "voice_lighting": "On/off sets and three categories: main, task, and decorative / mood.",
+          "voice_entity": "Sensors, lists, weather and other entities; restrictions and confirmations.",
+          "voice_roles": "Change room or which entities are shown.",
+          "init": "Return to music, speakers and communication settings.",
+          "voice_done": "Keep previously saved changes and close."
+        }
+      },
+      "voice_lights": {
+        "title": "Step 2 of 3 — choose lights",
+        "description": "**Room: {room}.**\n\nSelect the lights for each command. Your current selections are already loaded. **The on and off sets can contain different lights.**",
+        "data": {
+          "voice_default_on": "What should “zapal światła” turn on?",
+          "voice_all_off": "What should “wyłącz światła” turn off?",
+          "action": "Next step"
+        },
+        "data_description": {
+          "voice_default_on": "For example, select your main lighting. An empty selection removes the displayed lights from the default on set.",
+          "voice_all_off": "Select all lights that should turn off together, including ambient lights. An empty selection removes them from this set.",
+          "action": "Choose review or add suggestions first. Back discards this draft."
+        }
+      },
+      "voice_entity": {
+        "title": "Step 2 of 3 — choose an entity",
+        "description": "One device can have several entities in HA, such as a light and a battery sensor. **Choose the element whose voice behaviour you want to change.**",
+        "data": {
+          "entity": "Device / entity",
+          "back": "Back (compatibility mode)"
+        },
+        "data_description": {
+          "entity": "Next you will see roles suitable for this entity type, along with any roles it already has.",
+          "back": "If the Back button is missing below, refresh HA. As a fallback, select this field and click Next."
+        }
+      },
+      "voice_entity_roles": {
+        "title": "Step 2 of 3 — entity roles",
+        "description": "**{entity}**\n\n{exposure}. Checked roles are already assigned. Uncheck a role to remove it.\n\n**Restrictions inherited from the device or room:**\n{inherited}",
+        "data": {
+          "roles": "Which roles should it have?",
+          "back": "Back (compatibility mode)"
+        },
+        "data_description": {
+          "roles": "Choose only the roles you need. No role does not mean no Assist access. Inherited restrictions are edited on the parent device or area.",
+          "back": "If the Back button is missing below, refresh HA. As a fallback, select this field and click Next."
+        }
+      },
+      "voice_review": {
+        "title": "Step 3 of 3 — review and save",
+        "description": "**Nothing has been saved yet.** Check exactly what will change below.\n\n{changes}\n\nOther labels and Assist access are preserved. This step does not operate devices.",
+        "data": {
+          "action": "What should happen to these changes?"
+        },
+        "data_description": {
+          "action": "Choose “Save these changes” to apply them, or go back to edit or discard the draft."
+        }
+      },
+      "voice_saved": {
+        "title": "Done — changes saved",
+        "description": "**Updated entities:**\n{completed}\n\nThese roles are now active. You can configure more devices or finish.",
+        "data": {
+          "action": "What next?"
+        },
+        "data_description": {
+          "action": "To check command targets without operating devices, use the polish_context_voice.preview action."
+        }
+      },
+      "voice_empty": {
+        "title": "No matching entities",
+        "description": "There are no entities to configure in this view. Return to room selection and check the scope or include entities outside Assist. You can skip this room."
+      },
+      "voice_lighting": {
+        "title": "Lighting — choose what to configure",
+        "description": "**Room: {room}.**\n\nConfigure roles separately or apply a preset. Main lighting and the default “turn on lights” set are separate roles; a preset can combine them.",
+        "menu_options": {
+          "voice_lights": "Default turn on / turn off commands",
+          "voice_light_types": "Main, task, and decorative / mood",
+          "voice_preset": "Apply a preset to selected lights",
+          "voice_profiles": "Edit this room’s presets and rules",
+          "voice_room": "← Back — room categories",
+          "init": "← Assistant settings"
+        },
+        "menu_option_descriptions": {
+          "voice_lights": "Choose two independent sets of lights.",
+          "voice_light_types": "Assign light categories without changing default on/off sets.",
+          "voice_preset": "For example: main + default on + shared off.",
+          "voice_profiles": "Edit the labels each preset assigns. Existing lights are unchanged.",
+          "voice_room": "Return to other devices in this room.",
+          "init": "Return to integration settings."
+        }
+      },
+      "voice_light_types": {
+        "title": "Light categories",
+        "description": "**Room: {room}.**\n\nChoose main, task, and decorative / mood lights. Decoration and mood share one category. A light may have multiple roles. Default ON and collective OFF remain unchanged. Older decorative labels appear in the combined category; any conversion is shown in the review.",
+        "data": {
+          "back": "Back (compatibility mode)",
+          "voice_main": "Main lights",
+          "voice_task": "Task lights",
+          "voice_ambient": "Decorative and mood lights"
+        },
+        "data_description": {
+          "back": "If the Back button is missing below, refresh HA. As a fallback, select this field and click Next.",
+          "voice_main": "Respond to main light commands. This category alone does not add default on behavior.",
+          "voice_task": "Lighting for work, such as a desk or kitchen counter.",
+          "voice_ambient": "Decoration, ambience and relaxation — a single set."
+        }
+      },
+      "voice_preset": {
+        "title": "Choose a behavior preset",
+        "description": "**Room: {room}.**\n\nA preset assigns several roles at once to lights you select. Nothing is written before review.",
+        "data": {
+          "back": "Back (compatibility mode)",
+          "profile": "Preset"
+        },
+        "data_description": {
+          "back": "If the Back button is missing below, refresh HA. As a fallback, select this field and click Next.",
+          "profile": "Three presets: main, task, and decorative / mood."
+        }
+      },
+      "voice_profiles": {
+        "title": "Edit this room’s preset",
+        "description": "**Room: {room}.**\n\nA preset is a recipe for assigning labels. Editing it does not relabel existing lights. Each room can have its own rules.",
+        "data": {
+          "back": "Back (compatibility mode)",
+          "profile": "Preset"
+        },
+        "data_description": {
+          "back": "If the Back button is missing below, refresh HA. As a fallback, select this field and click Next.",
+          "profile": "Three presets: main, task, and decorative / mood."
+        }
+      },
+      "voice_preset_apply": {
+        "title": "Select lights for the preset",
+        "description": "**Room: {room}. Preset: {profile}.**\n\nThis preset assigns: {roles}. Select lights; the next step shows the exact changes.",
+        "data": {
+          "back": "Back (compatibility mode)",
+          "entities": "Lights to configure",
+          "replace": "Replace existing lighting roles"
+        },
+        "data_description": {
+          "back": "If the Back button is missing below, refresh HA. As a fallback, select this field and click Next.",
+          "entities": "Choose at least one light or existing light group. Other entities are not changed.",
+          "replace": "By default only missing roles are added. If selected, existing lighting roles on selected lights are replaced. Restrictions, confirmations and custom labels are preserved."
+        }
+      },
+      "voice_profile_edit": {
+        "title": "Labels assigned by this preset",
+        "description": "**Room: {room}. Preset: {profile}.**\n\nChoose roles for the next time this preset is applied in this room. Saving changes only the recipe, not existing lights.",
+        "data": {
+          "back": "Back (compatibility mode)",
+          "roles": "Roles in this preset",
+          "reset": "Restore the default recipe"
+        },
+        "data_description": {
+          "back": "If the Back button is missing below, refresh HA. As a fallback, select this field and click Next.",
+          "roles": "Choose at least one role. Permissions and restrictions are edited per entity.",
+          "reset": "Removes only this room’s override for this preset. Entity labels are not changed."
+        }
+      },
+      "voice_profile_saved": {
+        "title": "Preset recipe saved",
+        "description": "Saved preset **{profile}** for **{room}**. Existing lights are unchanged. To use these rules, select lights and approve the review.",
+        "menu_options": {
+          "voice_preset": "Apply a preset to lights",
+          "voice_profiles": "Edit another preset",
+          "voice_lighting": "← Back — lighting",
+          "init": "← Assistant settings"
+        },
+        "menu_option_descriptions": {
+          "voice_preset": "Choose specific lights and review changes.",
+          "voice_profiles": "Adjust another recipe for this room.",
+          "voice_lighting": "Return to lighting categories.",
+          "init": "Return to integration settings."
+        }
+      },
+      "calendar": {
+        "title": "Calendar — events",
+        "description": "Calendars come from HA and must be exposed to Assist. **General questions read all accessible calendars.** A name or alias narrows the query to one calendar. The default calendar is used for adding, moving and cancelling events without an explicit calendar name. Each change requires voice confirmation. These settings do not change events.",
+        "data": {
+          "back": "Back",
+          "calendar_default": "Default calendar for changes",
+          "calendar_write_enabled": "Allow event changes after confirmation",
+          "calendar_default_duration": "Default event duration"
+        },
+        "data_description": {
+          "back": "Return without saving.",
+          "calendar_default": "For adding, moving and cancelling. If empty: use a single entity, voice_primary, or ask which calendar. General overviews still read all calendars accessible to Assist.",
+          "calendar_write_enabled": "Off by default. The provider must support the change; Assist exposure and HA permissions still apply.",
+          "calendar_default_duration": "Used when no duration is spoken, and stated in the confirmation question."
+        }
+      },
+      "calendar_kiosk": {
+        "title": "Calendar — Kiosk screens",
+        "description": "Optional Kiosk Satellite screen. Select a satellite and enter its **exact, unique Kiosk Device name**. Requests always have a named target; calendar writes are never sent to kiosks. Use “pokaż kalendarz na przyszły tydzień”. Saving an event does not open a screen automatically. Kiosk requires its own HA connection with an administrator token for this protocol. **Existing mappings:**\n\n{mappings}\n\nSelect the same satellite again to update or remove its mapping.",
+        "data": {
+          "back": "Back",
+          "satellite": "Satellite you speak to",
+          "kiosk_name": "Device name in Kiosk Satellite",
+          "delete": "Remove this satellite mapping"
+        },
+        "data_description": {
+          "back": "Return without saving.",
+          "satellite": "Choose its assist_satellite entity, not a music player.",
+          "kiosk_name": "Avoid overlapping names: Kitchen and Kitchen 2 may both respond to the same request.",
+          "delete": "Calendar events and Kiosk configuration are preserved."
+        }
+      },
+      "self_test": {
+        "title": "Bociek self-test",
+        "description": "**Click Next to run the safe checks.**\n\nThe test checks Polish commands and context against a synthetic house, plus readiness of your HA configuration. It does not change devices or settings, start timers, contact an LLM, play music or read calendar events. It does not test the microphone or STT/TTS.\n\nYou will see a summary and instructions to download one file. The latest report is retained until integration reload or HA restart. Back leaves without running the test.",
+        "data": {
+          "back": "Back (compatibility mode)"
+        },
+        "data_description": {
+          "back": "Use the Back button below to return without starting the test."
+        }
+      },
+      "self_test_result": {
+        "title": "Test complete — download the report",
+        "description": "**Passed: {pass} · Failed: {fail} · Warnings: {warn} · Skipped: {skip}.**\n\nWarnings concern home configuration; skips mean an optional source is missing. Passing does not prove physical device responses or speech recognition quality.\n\n**Share the results:** close this window, open the integration entry ⋮ menu and select **Download diagnostics**. Attach the downloaded JSON file in your Bociek conversation. It includes the test, versions and timings, without transcripts or device names. Download it before a restart or reload.\n\nNext or Back returns to the main menu without changing settings.",
+        "data": {
+          "back": "Back (compatibility mode)"
+        },
+        "data_description": {
+          "back": "Return to the main menu without changing settings."
+        }
+      },
+      "content": {
+        "title": "Content — Stoic and media search",
+        "description": "Read the existing Daily Stoic sensor and search your connected Music Assistant catalogs. Accounts and libraries stay configured in MA. Choose playback speakers separately under “Choose music speakers”; this form does not change TTS output or Assist exposure.",
+        "data": {
+          "back": "Back (compatibility mode)",
+          "stoic_entity_id": "Daily Stoic sensor (optional)",
+          "media_search_enabled": "Search Music Assistant by title or creator",
+          "media_search_library_first": "Search the MA library before the wider catalog",
+          "media_search_username": "Music Assistant user (optional)"
+        },
+        "data_description": {
+          "back": "Use the Back button below to discard this form. Compatibility fallback: select this field and click Next.",
+          "stoic_entity_id": "Leave empty for the standard entity or a single Daily Stoic sensor. Choose one if several exist. The sensor must be exposed to Assist; quote, title and commentary are read from its attributes when available.",
+          "media_search_enabled": "Use requests such as “puść utwór…” or “puść audiobook…”. Existing named shortcuts keep their priority. Playback uses the room’s configured MA player.",
+          "media_search_library_first": "Try items in the MA library first, then the wider catalog if nothing matches. This is not a Plex-only filter: the library may contain several sources.",
+          "media_search_username": "Optional existing MA user for provider access and audiobook progress. This is a username, not a password. Empty uses MA’s normal user selection; it does not identify the speaker."
+        }
+      },
+      "voice_trial": {
+        "title": "Try a command",
+        "description": "Enter a command for a device, for example “zapal światło”. Select the room you are speaking from if the command needs a location. The preview reads your HA configuration and shows the plan without operating any devices.",
+        "data": {
+          "text": "Command",
+          "area": "Room you are speaking from",
+          "back": "Back (compatibility mode)"
+        },
+        "data_description": {
+          "text": "Enter one utterance in Polish.",
+          "area": "Optional. A room named in the command takes precedence.",
+          "back": "Return to the settings menu."
+        }
+      },
+      "voice_trial_result": {
+        "title": "Trial result",
+        "description": "{speech}\n\n**Devices in the plan**\n\n{targets}\n\n**Rooms in the plan**\n\n{areas}\n\n**HA actions in the plan**\n\n{actions}\n\n**Why this result**\n\n{explanation}\n\nUse Back to change the command.",
+        "data": {
+          "back": "Back (compatibility mode)",
+          "next": "Next action"
+        },
+        "data_description": {
+          "back": "Return to the command you entered.",
+          "next": "Choose whether to finish the trial, describe a mistake or suggest a feature."
+        }
+      },
+      "voice_feedback_example": {
+        "title": "Reproduce a mistake with a synthetic example",
+        "description": "This example uses two fictional rooms. The kitchen has a ceiling light and a counter lamp, and the living room has a ceiling light and a table lamp. Both lamps use the Polish alias “lampka”. The table lamp requires confirmation. Enter a new sentence using fictional details. The preview shows exactly what you can copy.",
+        "data": {
+          "back": "Back (compatibility mode)",
+          "text": "Synthetic command",
+          "source_area": "Simulated satellite room",
+          "expected_status": "Expected outcome",
+          "operation": "Expected operation",
+          "targets": "Expected lights",
+          "brightness_pct": "Brightness percent"
+        },
+        "data_description": {
+          "back": "Return to the command trial.",
+          "text": "Keep the wording that caused the problem and use the example names.",
+          "source_area": "Leave blank if the command has no room context.",
+          "expected_status": "Choose the intended behaviour.",
+          "operation": "Choose this for a plan or confirmation.",
+          "targets": "Pick the exact lights the plan or confirmation should affect.",
+          "brightness_pct": "Fill in only when setting brightness."
+        }
+      },
+      "voice_feedback_idea": {
+        "title": "Suggest a feature",
+        "description": "Describe what someone wants to do and how Bociek should respond. Use fictional names. You can review the text before copying it.",
+        "data": {
+          "back": "Back (compatibility mode)",
+          "idea": "Feature idea"
+        },
+        "data_description": {
+          "back": "Return to the command trial.",
+          "idea": "Include a short use case and the intended behaviour. Use 10–400 characters."
+        }
+      },
+      "voice_feedback_review": {
+        "title": "Review feedback",
+        "description": "Check the data below before copying it to a JSON file. Bociek displays it only in this form. You can share the report yourself.\n\n```json\n{report}\n```",
+        "data": {
+          "back": "Back (compatibility mode)"
+        },
+        "data_description": {
+          "back": "Return to editing the feedback."
+        }
+      },
+      "voice_feedback_dialogue": {
+        "title": "Conversation example",
+        "description": "Conversation example, turn {turn} of at most {maximum}. This example uses two fictional rooms. The kitchen has a ceiling light and a counter lamp, and the living room has a ceiling light and a table lamp. Both lamps use the Polish alias “lampka”. The table lamp requires confirmation. Enter a new sentence using fictional details. The preview shows exactly what you can copy. The satellite room chosen on the first turn applies throughout. The fictional lights start on. Enter any state changes before the turn they should affect.",
+        "data": {
+          "back": "Back (compatibility mode)",
+          "text": "Synthetic command",
+          "source_area": "Simulated satellite room",
+          "expected_status": "Expected outcome",
+          "operation": "Expected operation",
+          "targets": "Expected lights",
+          "brightness_pct": "Brightness percent",
+          "lights_on": "Lights on before this turn",
+          "lights_off": "Lights off before this turn",
+          "advance_seconds": "Elapsed seconds",
+          "followup": "Continue the conversation",
+          "turn_action": "Next step"
+        },
+        "data_description": {
+          "back": "Return to the previous turn or the command trial.",
+          "text": "Keep the wording that caused the problem and use the example names.",
+          "source_area": "Leave blank if the command has no room context.",
+          "expected_status": "Choose the intended behaviour.",
+          "operation": "Choose this for a plan or confirmation.",
+          "targets": "Pick the exact lights the plan or confirmation should affect.",
+          "brightness_pct": "Fill in only when setting brightness.",
+          "lights_on": "Optionally choose lights that have just been turned on.",
+          "lights_off": "Optionally choose lights that have just been turned off.",
+          "advance_seconds": "Optional. Up to 600 seconds since the previous turn.",
+          "followup": "Leave blank if listening for a follow-up does not matter to the test.",
+          "turn_action": "Add another turn or review the report."
+        }
+      }
+    },
+    "error": {
+      "invalid_endpoint": "Enter an HTTP(S) base URL and a model name, or leave the endpoint empty.",
+      "invalid_quiet_time": "Enter times as HH:MM, for example 20:00 and 08:00.",
+      "invalid_battery_threshold": "Enter an integer threshold from 1 to 50 percent.",
+      "invalid_music_name": "Use a name and aliases of 1–100 characters.",
+      "music_limit": "Maximum 64 shortcuts and 16 additional aliases each.",
+      "reserved_music_name": "Use a specific name rather than a generic command.",
+      "duplicate_music_alias": "This name or alias belongs to another shortcut.",
+      "invalid_music_media": "Select concrete media with a valid URI from the media browser.",
+      "youtube_page": "This is a YouTube web page. Configure playback in HA/MA first, then select playable content.",
+      "invalid_music_backend": "Choose a playback system.",
+      "invalid_ma_media": "Select playable content from a Music Assistant player.",
+      "choose_ma_player": "Choose a player from the same Music Assistant integration as the shortcut content.",
+      "music_player_area": "Choose a player assigned to the selected HA area.",
+      "music_selection_missing": "The selected item no longer exists. Reopen configuration.",
+      "voice_conflict": "A collective role conflicts with an exclusion or block on the entity, its device or its room.",
+      "voice_invalid_selection": "Choose an item available in this form.",
+      "voice_empty_selection": "Choose at least one light from this room.",
+      "voice_invalid_profile": "Choose at least one of the available lighting roles.",
+      "music_media_required": "Choose media to play or use Back.",
+      "calendar_kiosk_name": "Enter a Kiosk name (1–100 characters).",
+      "calendar_kiosk_ambiguous": "Kiosk names overlap. Use distinct, unambiguous names.",
+      "calendar_satellite_required": "Choose a satellite or use Back.",
+      "self_test_busy": "A test is already running. Wait briefly and try again.",
+      "self_test_unavailable": "The integration is not loaded. Reload it before running the test.",
+      "content_sensor_missing": "Choose an existing sensor or leave the field empty for automatic selection.",
+      "content_username_invalid": "Enter an MA username of up to 128 characters, without line breaks or control characters.",
+      "voice_trial_text": "Enter a command of 1–400 characters.",
+      "voice_trial_area": "Choose an available room.",
+      "voice_feedback_text": "Enter a synthetic command of 1–400 characters.",
+      "voice_feedback_source_area": "Choose an example room or leave it blank.",
+      "voice_feedback_expected_status": "Choose the expected outcome.",
+      "voice_feedback_operation": "Choose an operation for plans or confirmations. Clear it for other outcomes.",
+      "voice_feedback_targets": "Select lights only for plans or confirmations.",
+      "voice_feedback_brightness_pct": "Enter a whole number from 1 to 100 only when setting brightness.",
+      "voice_feedback_idea": "Describe the idea in 10–400 characters.",
+      "voice_feedback_versions": "A valid integration or HA version is unavailable.",
+      "voice_feedback_lights_on": "Choose fictional lights.",
+      "voice_feedback_lights_off": "Each light can have only one state before a turn.",
+      "voice_feedback_advance_seconds": "Use a whole number between 0 and 600.",
+      "voice_feedback_followup": "Choose the expected dialogue behaviour.",
+      "voice_feedback_turns": "A conversation example needs 2 to 6 turns."
+    },
+    "abort": {
+      "music_selection_missing": "The selected item no longer exists. Reopen configuration.",
+      "voice_stale": "HA data changed while you were editing. Nothing was saved. Reopen the wizard to review the current settings.",
+      "voice_conflict": "A collective role conflicts with an exclusion or block on the entity, its device or its room.",
+      "voice_invalid_selection": "Choose an item available in this form.",
+      "voice_label_name": "A label exists with different spelling or letter case. Check the voice_* names in HA; the wizard will not rename them automatically.",
+      "voice_write_failed": "Some changes could not be saved. Updated entities: {completed}. Check the current labels before trying again. Unassigned label definitions may remain.",
+      "voice_finished": "Configuration finished. Only previously saved changes were kept."
+    }
+  },
+  "services": {
+    "preview": {
+      "name": "Preview Polish command",
+      "description": "Return the semantic plan without executing device actions. Always uses dry-run.",
+      "fields": {
+        "text": {
+          "name": "Command",
+          "description": "Polish command to preview."
+        },
+        "source_area": {
+          "name": "Source area",
+          "description": "Area of the speaker. An area explicitly named in the command has priority."
+        },
+        "satellite_id": {
+          "name": "Satellite",
+          "description": "Optional Assist satellite used to determine the source area."
+        },
+        "device_id": {
+          "name": "Source device",
+          "description": "Optional source device when no source area or satellite is provided."
+        },
+        "conversation_id": {
+          "name": "Conversation ID",
+          "description": "Optional ID of an earlier preview conversation."
+        }
+      }
+    }
+  },
+  "selector": {
+    "voice_light_action": {
+      "options": {
+        "review": "Review changes",
+        "suggest": "First add suggested selections",
+        "back": "← Back — lighting menu"
+      }
+    },
+    "voice_review_action": {
+      "options": {
+        "apply": "Save these changes",
+        "edit": "Back to editing",
+        "cancel": "Discard changes"
+      }
+    },
+    "voice_saved_action": {
+      "options": {
+        "room": "Configure more devices",
+        "done": "Finish configuration"
+      }
+    },
+    "trial_next": {
+      "options": {
+        "done": "Return to settings",
+        "example": "Describe a mistake with an example",
+        "idea": "Suggest a feature",
+        "dialogue": "Describe a dialogue issue"
+      }
+    },
+    "feedback_status": {
+      "options": {
+        "dry_run": "Prepare a plan",
+        "confirm": "Ask for confirmation",
+        "clarify": "Ask for clarification",
+        "unsupported": "Treat the command as unsupported",
+        "answered": "Answer without an action",
+        "cancelled": "Cancellation"
+      }
+    },
+    "feedback_operation": {
+      "options": {
+        "turn_on": "Turn lights on",
+        "turn_off": "Turn lights off",
+        "brightness": "Set brightness"
+      }
+    },
+    "feedback_followup": {
+      "options": {
+        "yes": "Listen for a follow-up",
+        "no": "End the conversation"
+      }
+    },
+    "feedback_turn_action": {
+      "options": {
+        "add": "Add another turn",
+        "review": "Review the report"
+      }
+    }
+  }
+}

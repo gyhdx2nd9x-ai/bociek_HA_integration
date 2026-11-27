@@ -1,0 +1,4 @@
+action: polish_context_voice.preview
+data:
+  text: "ustaw głośność na 30 procent"
+  source_area: living_room

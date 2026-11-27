@@ -1,0 +1,18 @@
+{
+  "domain": "polish_context_voice",
+  "name": "HA Polish Context Voice",
+  "version": "0.10.0b30",
+  "config_flow": true,
+  "integration_type": "service",
+  "iot_class": "local_push",
+  "dependencies": [
+    "conversation",
+    "websocket_api"
+  ],
+  "requirements": [],
+  "codeowners": [
+    "@gyhdx2nd9x-ai"
+  ],
+  "documentation": "https://github.com/gyhdx2nd9x-ai/bociek_HA_integration",
+  "issue_tracker": "https://github.com/gyhdx2nd9x-ai/bociek_HA_integration/issues"
+}

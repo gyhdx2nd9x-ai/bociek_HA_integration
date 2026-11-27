@@ -1,0 +1,899 @@
+[
+  {
+    "id": "CAP-001",
+    "split": "regression",
+    "family": "capability.clock.time",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Która jest godzina?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "time",
+            "domain": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-002",
+    "split": "regression",
+    "family": "capability.clock.date",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jaki dzisiaj dzień?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "date",
+            "domain": ""
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-003",
+    "split": "regression",
+    "family": "capability.state.openings",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Czy okna są otwarte w salonie?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "state",
+            "domain": "binary_sensor",
+            "kind": "window",
+            "location": "salonie",
+            "query": "open"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-004",
+    "split": "regression",
+    "family": "capability.state.openings",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Czy wszystkie drzwi są zamknięte?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "state",
+            "domain": "binary_sensor",
+            "kind": "door",
+            "query": "closed"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-005",
+    "split": "regression",
+    "family": "capability.state.which",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Które drzwi są otwarte?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "state",
+            "domain": "binary_sensor",
+            "kind": "door",
+            "query": "which_open"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-006",
+    "split": "regression",
+    "family": "capability.state.all_open",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Czy wszystkie okna są otwarte?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "state",
+            "domain": "binary_sensor",
+            "kind": "window",
+            "query": "all_open"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-007",
+    "split": "regression",
+    "family": "capability.state.light",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Które światła są włączone na piętrze?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "state",
+            "domain": "light",
+            "kind": "on",
+            "location": "pietrze"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-008",
+    "split": "regression",
+    "family": "capability.state.named",
+    "category": "configuration",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jaki jest stan lampa przy stole?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "state",
+            "domain": "",
+            "name": "lampa przy stole"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-009",
+    "split": "regression",
+    "family": "capability.sensor.humidity",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jaka jest wilgotność w łazience?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "sensor",
+            "domain": "sensor",
+            "kind": "humidity",
+            "location": "lazience"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-010",
+    "split": "regression",
+    "family": "capability.media.transport",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wstrzymaj muzykę w kuchni",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "media_pause",
+            "domain": "media_player",
+            "location": "kuchni"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-011",
+    "split": "regression",
+    "family": "capability.media.transport",
+    "category": "paraphrase",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zatrzymaj muzykę",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "media_pause",
+            "domain": "media_player",
+            "location": null
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-012",
+    "split": "regression",
+    "family": "capability.media.transport",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wznów muzykę",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "media_play",
+            "domain": "media_player"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-013",
+    "split": "regression",
+    "family": "capability.media.track",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Następny utwór",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "media_next_track",
+            "domain": "media_player"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-014",
+    "split": "regression",
+    "family": "capability.media.track",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Poprzedni utwór",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "media_previous_track",
+            "domain": "media_player"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-015",
+    "split": "regression",
+    "family": "capability.media.volume_relative",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ciszej na odtwarzaczu Wieża",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "volume_down",
+            "domain": "media_player",
+            "name": "wieza"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-016",
+    "split": "regression",
+    "family": "capability.media.volume_absolute",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw głośność na 30 procent w salonie",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "volume_set",
+            "domain": "media_player",
+            "location": "salonie",
+            "value": 30
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-017",
+    "split": "regression",
+    "family": "capability.media.mute",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wycisz muzykę",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "mute",
+            "domain": "media_player"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-018",
+    "split": "regression",
+    "family": "capability.media.mute",
+    "category": "paraphrase",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Przywróć dźwięk",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "unmute",
+            "domain": "media_player"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-019",
+    "split": "regression",
+    "family": "capability.todo.literal_payload",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Dodaj Żółty ser i chleb do listy zakupów",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "todo_add",
+            "domain": "todo",
+            "name": null,
+            "kind": "shopping",
+            "payload": "Żółty ser i chleb"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-020",
+    "split": "regression",
+    "family": "capability.todo.named",
+    "category": "configuration",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Dodaj Wymienić filtr do listy Warsztat",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "todo_add",
+            "domain": "todo",
+            "name": "warsztat",
+            "kind": "",
+            "payload": "Wymienić filtr"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-021",
+    "split": "regression",
+    "family": "capability.todo.read",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Przeczytaj listę zakupów",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "todo_read",
+            "domain": "todo",
+            "kind": "shopping"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-022",
+    "split": "regression",
+    "family": "capability.maintenance.global",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Czy wszystkie urządzenia są sprawne?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "maintenance",
+            "kind": "health",
+            "location": null
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-023",
+    "split": "regression",
+    "family": "capability.maintenance.room",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Czy trzeba gdzieś wymienić baterie w sypialni?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "maintenance",
+            "kind": "battery",
+            "location": "sypialni"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-024",
+    "split": "regression",
+    "family": "capability.weather.current",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jaka jest pogoda teraz?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "weather",
+            "domain": "weather",
+            "kind": "current",
+            "day": 0
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-025",
+    "split": "regression",
+    "family": "capability.weather.overview",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jaka dziś pogoda?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "weather",
+            "domain": "weather",
+            "kind": "",
+            "day": 0
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-026",
+    "split": "regression",
+    "family": "capability.weather.forecast",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jaka będzie dziś pogoda?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "forecast",
+            "domain": "weather",
+            "day": 0
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-027",
+    "split": "regression",
+    "family": "capability.weather.forecast",
+    "category": "paraphrase",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jaka będzie jutro pogoda?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "forecast",
+            "domain": "weather",
+            "day": 1
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-028",
+    "split": "regression",
+    "family": "capability.weather.rain",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Czy jutro będzie padać?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "forecast",
+            "domain": "weather",
+            "day": 1
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-029",
+    "split": "regression",
+    "family": "capability.weather.rain_end",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Kiedy przestanie padać deszcz?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "weather",
+            "domain": "weather",
+            "kind": "rain_end"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-030",
+    "split": "regression",
+    "family": "capability.routine.approved_target",
+    "category": "configuration",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Uruchom scenę Kino",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "routine",
+            "domain": "scene",
+            "name": "kino"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-031",
+    "split": "regression",
+    "family": "capability.announce.literal_payload",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ogłoś w kuchni: Proszę zamknąć drzwi",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "announce",
+            "domain": "assist_satellite",
+            "location": "kuchni",
+            "payload": "Proszę zamknąć drzwi"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-032",
+    "split": "regression",
+    "family": "capability.ask.literal_payload",
+    "category": "command",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapytaj w salonie czy herbata gotowa",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": {
+            "operation": "ask",
+            "domain": "assist_satellite",
+            "location": "salonie",
+            "payload": "czy herbata gotowa"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-033",
+    "split": "regression",
+    "family": "capability.unsupported.negation",
+    "category": "negation",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Nie wstrzymuj muzyki",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-034",
+    "split": "regression",
+    "family": "capability.unsupported.compound",
+    "category": "compound",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wstrzymaj muzykę i włącz światła",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-035",
+    "split": "regression",
+    "family": "capability.unsupported.correction",
+    "category": "correction",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Głośniej ale nie teraz",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-036",
+    "split": "regression",
+    "family": "capability.unsupported.background",
+    "category": "background",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Która godzina wyłącz światła",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-037",
+    "split": "regression",
+    "family": "capability.unsupported.condition",
+    "category": "unsupported",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jeśli jutro będzie padać zamknij okno",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-038",
+    "split": "regression",
+    "family": "capability.unsupported.lock_state",
+    "category": "unsupported",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Czy drzwi są zamknięte na klucz?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-039",
+    "split": "regression",
+    "family": "capability.unsupported.weather_location",
+    "category": "unsupported",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jaka dziś pogoda w Warszawie?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "CAP-040",
+    "split": "regression",
+    "family": "capability.unsupported.weather_dates",
+    "category": "correction",
+    "layer": "capability_parse",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Czy jutro będzie padać albo dzisiaj?",
+          "dry_run": true
+        },
+        "expected": {
+          "capability": null
+        }
+      }
+    ]
+  }
+]

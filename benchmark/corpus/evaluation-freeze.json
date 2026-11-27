@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "dataset": "benchmark/corpus/evaluation.json",
+  "sha256": "990536785517899722c8fef6f65d3d74e158719ca7f1b8cbd7f02967fa517230",
+  "case_count": 86,
+  "turn_count": 96,
+  "freeze_date": "2026-10-22",
+  "language": "pl-PL",
+  "homes": {
+    "flat_pl": {
+      "path": "benchmark/corpus/homes/flat_pl.json",
+      "sha256": "f45b28b25dbd3e418d8958412b0b9bf15e212566e378bb26b75989a485eff660"
+    },
+    "duplex_en": {
+      "path": "benchmark/corpus/homes/duplex_en.json",
+      "sha256": "4c4fe920a12117b5d9fd723fbe83ada04d8112f694eba426aa6dc2d6e69ddbb6"
+    },
+    "mixed": {
+      "path": "benchmark/corpus/homes/mixed.json",
+      "sha256": "688996caaf208a0271ac592b991f7909596cb0e3369816fcb503c07112ea8830"
+    }
+  },
+  "category_counts": {
+    "background": 6,
+    "command": 16,
+    "compound": 7,
+    "configuration": 6,
+    "continuation": 10,
+    "correction": 7,
+    "negation": 8,
+    "paraphrase": 18,
+    "unsupported": 8
+  },
+  "home_counts": {
+    "duplex_en": 26,
+    "flat_pl": 32,
+    "mixed": 28
+  },
+  "positive_case_count": 44,
+  "safe_rejection_case_count": 42,
+  "independent_creation": {
+    "authoring_inputs": [
+      "The three fictional home snapshots listed above.",
+      "Parent task normative schema and low-risk-light behavior contract."
+    ],
+    "production_code_read": false,
+    "runner_read": false,
+    "tests_or_regression_cases_read": false,
+    "cases_executed_before_freeze": false,
+    "expectations_defined_before_first_execution": true,
+    "scope": "Independent Polish utterances and normative expectations created without access to implementation or existing benchmark utterances. The home snapshots are synthetic reference fixtures; no real household data was used.",
+    "unseen_claim_limit": "Independent at authoring and freeze time. This metadata does not claim that the dataset remains unseen after any person, model, or runner inspects it.",
+    "post_freeze_policy": "Keep this frozen artifact unchanged after execution. Record failures and proposed follow-up evaluation separately; do not tune these expectations to observed outputs."
+  },
+  "normative_contract": {
+    "positive": "Exact dry_run light targets and service/data semantics. Brightness is an absolute percentage. Bedroom groups expand to the two exposed, available light children.",
+    "calls_representation": "One service-call record per entity. Normalized comparison may combine records only when domain, service, and data are identical; duplicates remain meaningful.",
+    "room_on_off_asymmetry": "Generic room on selects the configured default-on light. Generic room off covers the eligible labeled main/task/ambient lights, excludes unexposed or unavailable entities, and does not include the unlabeled window light.",
+    "context": "A named room overrides source context. A current local source overrides an earlier conversational room. A known satellite supplies local room context.",
+    "safe_rejection": "Negation, unresolved correction, multiple actions, quoted/background speech, unsupported capabilities, and unsafe configuration must emit no calls and no targets.",
+    "strict_clarification": "Missing location or antecedent, unknown explicit location, an ambiguous area/entity alias, and an unquantified relative brightness request require clarification rather than a generic unsupported outcome."
+  },
+  "static_authoring_checks": [
+    "Valid JSON encoding.",
+    "86 unique case IDs.",
+    "Expected entity IDs belong to the referenced fictional home.",
+    "All requests are dry runs.",
+    "All safe-rejection expectations have empty targets and calls."
+  ]
+}

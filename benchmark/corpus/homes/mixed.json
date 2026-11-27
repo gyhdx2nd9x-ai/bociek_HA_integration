@@ -1,0 +1,812 @@
+{
+  "areas": [
+    {
+      "id": "common",
+      "name": "Pokój dzienny",
+      "aliases": [
+        "salon",
+        "pokój dzienny"
+      ]
+    },
+    {
+      "id": "cook",
+      "name": "Aneks kuchenny",
+      "aliases": [
+        "kuchnia",
+        "aneks"
+      ]
+    },
+    {
+      "id": "studio",
+      "name": "Pracownia",
+      "aliases": [
+        "biuro",
+        "gabinet"
+      ]
+    },
+    {
+      "id": "sleep",
+      "name": "Pokój gościnny",
+      "aliases": [
+        "sypialnia",
+        "pokój gościnny"
+      ]
+    },
+    {
+      "id": "patio",
+      "name": "Taras",
+      "aliases": [
+        "taras",
+        "strefa"
+      ]
+    },
+    {
+      "id": "utility",
+      "name": "Pomieszczenie gospodarcze",
+      "aliases": [
+        "pralnia",
+        "strefa"
+      ]
+    }
+  ],
+  "floors": [],
+  "entities": [
+    {
+      "id": "light.main",
+      "name": "Lampa główna",
+      "area_id": "common",
+      "aliases": [
+        "żyrandol",
+        "główne oświetlenie",
+        "panel"
+      ],
+      "labels": [
+        "voice_default_on",
+        "voice_main",
+        "voice_all_off",
+        "voice_safe_all"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "supported_color_modes": [
+          "brightness"
+        ]
+      }
+    },
+    {
+      "id": "light.table",
+      "name": "Lampa stołowa",
+      "area_id": "common",
+      "aliases": [
+        "nad stołem",
+        "lampa przy stole",
+        "lampka stołowa"
+      ],
+      "labels": [
+        "voice_task",
+        "voice_all_off",
+        "voice_safe_all"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "on",
+      "attributes": {
+        "supported_color_modes": [
+          "brightness"
+        ]
+      }
+    },
+    {
+      "id": "light.ambient",
+      "name": "Oświetlenie nastrojowe",
+      "area_id": "common",
+      "aliases": [
+        "taśma led",
+        "panel"
+      ],
+      "labels": [
+        "voice_ambient",
+        "voice_all_off",
+        "voice_safe_all"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "on",
+      "attributes": {
+        "supported_color_modes": [
+          "rgb"
+        ]
+      }
+    },
+    {
+      "id": "light.plain",
+      "name": "Lampa okienna",
+      "area_id": "common",
+      "aliases": [
+        "przy oknie"
+      ],
+      "labels": [],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "supported_color_modes": [
+          "onoff"
+        ]
+      }
+    },
+    {
+      "id": "light.hidden",
+      "name": "Lampa ukryta",
+      "area_id": "common",
+      "aliases": [
+        "ukryta lampa"
+      ],
+      "labels": [
+        "voice_default_on",
+        "voice_main",
+        "voice_all_off",
+        "voice_safe_all"
+      ],
+      "exposed": false,
+      "available": true,
+      "state": "off"
+    },
+    {
+      "id": "light.kitchen",
+      "name": "Sufit kuchenny",
+      "area_id": "cook",
+      "aliases": [
+        "lampa sufitowa"
+      ],
+      "labels": [
+        "voice_default_on",
+        "voice_main",
+        "voice_all_off",
+        "voice_safe_all"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "supported_color_modes": [
+          "brightness"
+        ]
+      }
+    },
+    {
+      "id": "light.office",
+      "name": "Oświetlenie biura",
+      "area_id": "studio",
+      "aliases": [
+        "lampa biurowa"
+      ],
+      "labels": [
+        "voice_default_on",
+        "voice_main",
+        "voice_all_off",
+        "voice_safe_all"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "supported_color_modes": [
+          "brightness"
+        ]
+      }
+    },
+    {
+      "id": "light.unavailable",
+      "name": "Lampa awaryjna",
+      "area_id": "studio",
+      "aliases": [
+        "awaryjna"
+      ],
+      "labels": [],
+      "exposed": true,
+      "available": false,
+      "state": "unavailable",
+      "attributes": {
+        "supported_color_modes": [
+          "brightness"
+        ]
+      }
+    },
+    {
+      "id": "light.bedroom",
+      "name": "Zestaw sypialni",
+      "area_id": "sleep",
+      "aliases": [
+        "zestaw sypialni"
+      ],
+      "labels": [
+        "voice_default_on",
+        "voice_main",
+        "voice_all_off",
+        "voice_safe_all"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "entity_id": [
+          "light.group_one",
+          "light.group_two"
+        ]
+      }
+    },
+    {
+      "id": "light.group_one",
+      "name": "Lewy kinkiet",
+      "area_id": "sleep",
+      "aliases": [
+        "lewy kinkiet"
+      ],
+      "labels": [],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "supported_color_modes": [
+          "brightness"
+        ]
+      }
+    },
+    {
+      "id": "light.group_two",
+      "name": "Prawy kinkiet",
+      "area_id": "sleep",
+      "aliases": [
+        "prawy kinkiet"
+      ],
+      "labels": [],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "supported_color_modes": [
+          "brightness"
+        ]
+      }
+    },
+    {
+      "id": "light.confirm",
+      "name": "Lampa wymagająca zgody",
+      "area_id": "cook",
+      "aliases": [
+        "lampa kontrolna"
+      ],
+      "labels": [
+        "voice_confirm"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "supported_color_modes": [
+          "brightness"
+        ]
+      }
+    },
+    {
+      "id": "switch.router",
+      "name": "Router",
+      "area_id": "common",
+      "aliases": [
+        "router"
+      ],
+      "labels": [
+        "voice_block"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "on"
+    },
+    {
+      "id": "switch.fridge",
+      "name": "Lodówka",
+      "area_id": "common",
+      "aliases": [
+        "lodówka"
+      ],
+      "labels": [
+        "voice_safe_all",
+        "voice_exclude_all"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "on"
+    },
+    {
+      "id": "switch.socket",
+      "name": "Gniazdko",
+      "area_id": "common",
+      "aliases": [
+        "gniazdko"
+      ],
+      "labels": [],
+      "exposed": true,
+      "available": true,
+      "state": "on"
+    },
+    {
+      "id": "cover.blind",
+      "name": "Roleta",
+      "area_id": "common",
+      "aliases": [
+        "roleta"
+      ],
+      "labels": [
+        "voice_primary"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "open",
+      "device_class": "blind",
+      "attributes": {
+        "supported_features": 3
+      }
+    },
+    {
+      "id": "cover.garage",
+      "name": "Brama",
+      "area_id": "cook",
+      "aliases": [
+        "brama"
+      ],
+      "labels": [
+        "voice_high_risk"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "closed",
+      "device_class": "garage",
+      "attributes": {
+        "supported_features": 3
+      }
+    },
+    {
+      "id": "climate.heating",
+      "name": "Ogrzewanie",
+      "area_id": "common",
+      "aliases": [
+        "ogrzewanie"
+      ],
+      "labels": [
+        "voice_primary"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "heat",
+      "attributes": {
+        "supported_features": 1,
+        "min_temp": 7,
+        "max_temp": 30,
+        "temperature_unit": "°C",
+        "temperature": 21
+      }
+    },
+    {
+      "id": "sensor.temperature",
+      "name": "Temperatura",
+      "area_id": "common",
+      "aliases": [
+        "temperatura"
+      ],
+      "labels": [
+        "voice_primary"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "21.5",
+      "device_class": "temperature",
+      "attributes": {
+        "unit_of_measurement": "°C"
+      }
+    },
+    {
+      "id": "sensor.temperature_aux",
+      "name": "Czujnik przy oknie",
+      "area_id": "common",
+      "aliases": [
+        "termometr okienny"
+      ],
+      "labels": [],
+      "exposed": true,
+      "available": true,
+      "state": "19.4",
+      "device_class": "temperature",
+      "attributes": {
+        "unit_of_measurement": "°C"
+      }
+    },
+    {
+      "id": "sensor.humidity",
+      "name": "Wilgotność",
+      "area_id": "common",
+      "aliases": [
+        "wilgotność"
+      ],
+      "labels": [
+        "voice_primary"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "48",
+      "device_class": "humidity",
+      "attributes": {
+        "unit_of_measurement": "%"
+      }
+    },
+    {
+      "id": "sensor.battery",
+      "name": "Bateria czujnika",
+      "area_id": "common",
+      "aliases": [
+        "bateria czujnika"
+      ],
+      "labels": [],
+      "exposed": true,
+      "available": true,
+      "state": "12",
+      "device_class": "battery",
+      "attributes": {
+        "unit_of_measurement": "%"
+      }
+    },
+    {
+      "id": "binary_sensor.window",
+      "name": "Okno salonu",
+      "area_id": "common",
+      "aliases": [
+        "okno"
+      ],
+      "labels": [],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "device_class": "window"
+    },
+    {
+      "id": "binary_sensor.window_kitchen",
+      "name": "Okno kuchni",
+      "area_id": "cook",
+      "aliases": [
+        "okno kuchenne"
+      ],
+      "labels": [],
+      "exposed": true,
+      "available": true,
+      "state": "on",
+      "device_class": "window"
+    },
+    {
+      "id": "binary_sensor.problem",
+      "name": "Problem czujnika",
+      "area_id": "studio",
+      "aliases": [
+        "problem czujnika"
+      ],
+      "labels": [],
+      "exposed": true,
+      "available": true,
+      "state": "on",
+      "device_class": "problem"
+    },
+    {
+      "id": "weather.home",
+      "name": "Pogoda domowa",
+      "area_id": null,
+      "aliases": [
+        "pogoda"
+      ],
+      "labels": [
+        "voice_primary"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "cloudy",
+      "attributes": {
+        "temperature": 17.7,
+        "temperature_unit": "°C",
+        "wind_speed": 26,
+        "wind_speed_unit": "km/h",
+        "supported_features": 3
+      }
+    },
+    {
+      "id": "todo.shopping",
+      "name": "Zakupy",
+      "area_id": null,
+      "aliases": [
+        "zakupy",
+        "lista zakupów"
+      ],
+      "labels": [
+        "voice_shopping"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "2",
+      "attributes": {
+        "supported_features": 3
+      }
+    },
+    {
+      "id": "calendar.family",
+      "name": "Kalendarz rodzinny",
+      "area_id": null,
+      "aliases": [
+        "rodzinny",
+        "kalendarz rodzinny"
+      ],
+      "labels": [
+        "voice_primary"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "supported_features": 1
+      }
+    },
+    {
+      "id": "calendar.work",
+      "name": "Kalendarz pracy",
+      "area_id": null,
+      "aliases": [
+        "praca",
+        "kalendarz pracy"
+      ],
+      "labels": [],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "supported_features": 1
+      }
+    },
+    {
+      "id": "media_player.music",
+      "name": "Głośnik",
+      "area_id": "common",
+      "aliases": [
+        "głośnik"
+      ],
+      "labels": [
+        "voice_media",
+        "voice_primary"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "playing",
+      "attributes": {
+        "supported_features": 17469,
+        "media_title": "Syntetyczna melodia",
+        "media_content_id": "synthetic://track/one",
+        "volume_level": 0.3
+      }
+    },
+    {
+      "id": "media_player.tv",
+      "name": "Telewizor",
+      "area_id": "common",
+      "aliases": [
+        "telewizor"
+      ],
+      "labels": [
+        "voice_media"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "supported_features": 17469
+      }
+    },
+    {
+      "id": "scene.evening",
+      "name": "Wieczór",
+      "area_id": "common",
+      "aliases": [
+        "wieczór"
+      ],
+      "labels": [
+        "voice_routine"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "off"
+    },
+    {
+      "id": "script.relax",
+      "name": "Relaks",
+      "area_id": "common",
+      "aliases": [
+        "relaks"
+      ],
+      "labels": [
+        "voice_routine"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "off"
+    },
+    {
+      "id": "assist_satellite.room",
+      "name": "Satelita salonu",
+      "area_id": "common",
+      "aliases": [
+        "satelita salonu"
+      ],
+      "labels": [
+        "voice_announce"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "idle",
+      "attributes": {
+        "supported_features": 3
+      },
+      "device_id": "satellite_device"
+    },
+    {
+      "id": "assist_satellite.kitchen",
+      "name": "Satelita kuchni",
+      "area_id": "cook",
+      "aliases": [
+        "satelita kuchni"
+      ],
+      "labels": [
+        "voice_announce"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "idle",
+      "attributes": {
+        "supported_features": 3
+      },
+      "device_id": "kitchen_device"
+    },
+    {
+      "id": "light.patio",
+      "name": "Girlanda",
+      "area_id": "patio",
+      "aliases": [
+        "girlanda"
+      ],
+      "labels": [
+        "voice_default_on",
+        "voice_main",
+        "voice_all_off",
+        "voice_safe_all"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "supported_color_modes": [
+          "brightness"
+        ]
+      }
+    },
+    {
+      "id": "light.utility",
+      "name": "Światło gospodarcze",
+      "area_id": "utility",
+      "aliases": [
+        "gospodarcze"
+      ],
+      "labels": [
+        "voice_default_on",
+        "voice_main",
+        "voice_all_off",
+        "voice_safe_all"
+      ],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "supported_color_modes": [
+          "brightness"
+        ]
+      }
+    },
+    {
+      "id": "light.cross_group",
+      "name": "Zestaw przekrojowy",
+      "aliases": [
+        "Zestaw przekrojowy"
+      ],
+      "area_id": "studio",
+      "labels": [],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "entity_id": [
+          "light.main"
+        ]
+      }
+    },
+    {
+      "id": "light.hidden_group",
+      "name": "Zestaw ukryty",
+      "aliases": [
+        "Zestaw ukryty"
+      ],
+      "area_id": "studio",
+      "labels": [],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "entity_id": [
+          "light.hidden"
+        ]
+      }
+    },
+    {
+      "id": "light.cycle_group",
+      "name": "Zestaw zapętlony",
+      "aliases": [
+        "Zestaw zapętlony"
+      ],
+      "area_id": "studio",
+      "labels": [],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "entity_id": [
+          "light.cycle_group"
+        ]
+      }
+    },
+    {
+      "id": "light.missing_group",
+      "name": "Zestaw niepełny",
+      "aliases": [
+        "Zestaw niepełny"
+      ],
+      "area_id": "studio",
+      "labels": [],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "entity_id": [
+          "light.missing"
+        ]
+      }
+    },
+    {
+      "id": "light.wrong_group",
+      "name": "Zestaw błędny",
+      "aliases": [
+        "Zestaw błędny"
+      ],
+      "area_id": "studio",
+      "labels": [],
+      "exposed": true,
+      "available": true,
+      "state": "off",
+      "attributes": {
+        "entity_id": [
+          "switch.fridge"
+        ]
+      }
+    }
+  ],
+  "satellites": {
+    "assist_satellite.room": "common",
+    "assist_satellite.kitchen": "cook"
+  },
+  "devices": {
+    "satellite_device": "common",
+    "kitchen_device": "cook"
+  }
+}

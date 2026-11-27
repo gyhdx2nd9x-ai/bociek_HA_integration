@@ -1,0 +1,4532 @@
+[
+  {
+    "id": "E001",
+    "split": "regression",
+    "family": "generic-on",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": true,
+          "conversation_id": "E001",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E002",
+    "split": "regression",
+    "family": "generic-on",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światło",
+          "dry_run": true,
+          "conversation_id": "E002",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E003",
+    "split": "regression",
+    "family": "generic-on",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zaświeć oświetlenie",
+          "dry_run": true,
+          "conversation_id": "E003",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E004",
+    "split": "regression",
+    "family": "generic-on",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampy",
+          "dry_run": true,
+          "conversation_id": "E004",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E005",
+    "split": "regression",
+    "family": "generic-on",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal lampki",
+          "dry_run": true,
+          "conversation_id": "E005",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E006",
+    "split": "regression",
+    "family": "generic-on",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Czy możesz włączyć światła?",
+          "dry_run": true,
+          "conversation_id": "E006",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E007",
+    "split": "regression",
+    "family": "generic-on",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Czy mogłabyś mi zapalić światła?",
+          "dry_run": true,
+          "conversation_id": "E007",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E010",
+    "split": "regression",
+    "family": "generic-off",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz światła",
+          "dry_run": true,
+          "conversation_id": "E010",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient",
+            "light.main",
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E011",
+    "split": "regression",
+    "family": "generic-off",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś światło",
+          "dry_run": true,
+          "conversation_id": "E011",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient",
+            "light.main",
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E012",
+    "split": "regression",
+    "family": "generic-off",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Powygaszaj oświetlenie",
+          "dry_run": true,
+          "conversation_id": "E012",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient",
+            "light.main",
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E013",
+    "split": "regression",
+    "family": "generic-off",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Czy możesz zgasić światła?",
+          "dry_run": true,
+          "conversation_id": "E013",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient",
+            "light.main",
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E014",
+    "split": "regression",
+    "family": "generic-off",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłączysz mi lampy?",
+          "dry_run": true,
+          "conversation_id": "E014",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient",
+            "light.main",
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E015",
+    "split": "regression",
+    "family": "generic-off",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Światła proszę zgaś",
+          "dry_run": true,
+          "conversation_id": "E015",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient",
+            "light.main",
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E020",
+    "split": "regression",
+    "family": "word-order",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Światła w salonie włącz",
+          "dry_run": true,
+          "conversation_id": "E020",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E021",
+    "split": "regression",
+    "family": "word-order",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "W salonie zapal światła",
+          "dry_run": true,
+          "conversation_id": "E021",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E022",
+    "split": "regression",
+    "family": "word-order",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal w salonie światła",
+          "dry_run": true,
+          "conversation_id": "E022",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E023",
+    "split": "regression",
+    "family": "word-order",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal proszę światła",
+          "dry_run": true,
+          "conversation_id": "E023",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E024",
+    "split": "regression",
+    "family": "word-order",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Światła proszę zapal",
+          "dry_run": true,
+          "conversation_id": "E024",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E025",
+    "split": "regression",
+    "family": "word-order",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "W salonie proszę włącz światła",
+          "dry_run": true,
+          "conversation_id": "E025",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E026",
+    "split": "regression",
+    "family": "word-order",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Światła włącz w salonie",
+          "dry_run": true,
+          "conversation_id": "E026",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E027",
+    "split": "regression",
+    "family": "word-order",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Czy możesz proszę włączyć światła w salonie?",
+          "dry_run": true,
+          "conversation_id": "E027",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E030",
+    "split": "regression",
+    "family": "lighting-role",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz główne światła",
+          "dry_run": true,
+          "conversation_id": "E030",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E031",
+    "split": "regression",
+    "family": "lighting-role",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła główne",
+          "dry_run": true,
+          "conversation_id": "E031",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E032",
+    "split": "regression",
+    "family": "lighting-role",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz robocze oświetlenie",
+          "dry_run": true,
+          "conversation_id": "E032",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E033",
+    "split": "regression",
+    "family": "lighting-role",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz światła robocze",
+          "dry_run": true,
+          "conversation_id": "E033",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E034",
+    "split": "regression",
+    "family": "lighting-role",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal nastrojowe światła",
+          "dry_run": true,
+          "conversation_id": "E034",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E035",
+    "split": "regression",
+    "family": "lighting-role",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz dekoracyjne światła",
+          "dry_run": true,
+          "conversation_id": "E035",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E036",
+    "split": "regression",
+    "family": "lighting-role",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz główne",
+          "dry_run": true,
+          "conversation_id": "E036",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E037",
+    "split": "regression",
+    "family": "lighting-role",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś nastrojowe",
+          "dry_run": true,
+          "conversation_id": "E037",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E038",
+    "split": "regression",
+    "family": "lighting-role",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz wszystkie światła",
+          "dry_run": true,
+          "conversation_id": "E038",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient",
+            "light.main",
+            "light.plain",
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.plain"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E039",
+    "split": "regression",
+    "family": "lighting-role",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś wszystkie światła",
+          "dry_run": true,
+          "conversation_id": "E039",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient",
+            "light.main",
+            "light.plain",
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.plain"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E040",
+    "split": "regression",
+    "family": "lighting-role",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz wszystko",
+          "dry_run": true,
+          "conversation_id": "E040",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient",
+            "light.main",
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E042",
+    "split": "regression",
+    "family": "short-light-alias",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła nad stołem",
+          "dry_run": true,
+          "conversation_id": "E042",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E043",
+    "split": "regression",
+    "family": "short-light-alias",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światło nad stołem",
+          "dry_run": true,
+          "conversation_id": "E043",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E044",
+    "split": "regression",
+    "family": "short-light-alias",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal oświetlenie nad stołem",
+          "dry_run": true,
+          "conversation_id": "E044",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E045",
+    "split": "regression",
+    "family": "short-light-alias",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampę nad stołem",
+          "dry_run": true,
+          "conversation_id": "E045",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E046",
+    "split": "regression",
+    "family": "short-light-alias",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz nad stołem",
+          "dry_run": true,
+          "conversation_id": "E046",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E047",
+    "split": "regression",
+    "family": "short-light-alias",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal lampę przy stole",
+          "dry_run": true,
+          "conversation_id": "E047",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E048",
+    "split": "regression",
+    "family": "short-light-alias",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampkę stołową",
+          "dry_run": true,
+          "conversation_id": "E048",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E049",
+    "split": "regression",
+    "family": "short-light-alias",
+    "category": "paraphrase",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz światła nad stołem",
+          "dry_run": true,
+          "conversation_id": "E049",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E050",
+    "split": "regression",
+    "family": "explicit-room-priority",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła w kuchni",
+          "dry_run": true,
+          "conversation_id": "E050",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "kuchnia"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E051",
+    "split": "regression",
+    "family": "morphological-room",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś światła w biurze",
+          "dry_run": true,
+          "conversation_id": "E051",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.office"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.office"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "gabinet"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E052",
+    "split": "regression",
+    "family": "safe-group",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła w sypialni",
+          "dry_run": true,
+          "conversation_id": "E052",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.group_one",
+            "light.group_two"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_one"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_two"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "sypialnia"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E053",
+    "split": "regression",
+    "family": "satellite-context",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": true,
+          "conversation_id": "E053",
+          "user_id": "synthetic",
+          "satellite_id": "assist_satellite.room"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E054",
+    "split": "regression",
+    "family": "device-context",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": true,
+          "conversation_id": "E054",
+          "user_id": "synthetic",
+          "device_id": "satellite_device"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E055",
+    "split": "regression",
+    "family": "source-area-priority",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": true,
+          "conversation_id": "E055",
+          "user_id": "synthetic",
+          "source_area": "kuchnia",
+          "satellite_id": "assist_satellite.room",
+          "device_id": "satellite_device"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E056",
+    "split": "regression",
+    "family": "explicit-room-priority",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła w salonie",
+          "dry_run": true,
+          "conversation_id": "E056",
+          "user_id": "synthetic",
+          "satellite_id": "assist_satellite.kitchen"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E057",
+    "split": "regression",
+    "family": "unknown-room",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła w piwnicy",
+          "dry_run": true,
+          "conversation_id": "E057",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "unknown_location"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E058",
+    "split": "regression",
+    "family": "missing-context",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": true,
+          "conversation_id": "E058",
+          "user_id": "synthetic"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "missing_area"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E059",
+    "split": "regression",
+    "family": "invalid-context",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": true,
+          "conversation_id": "E059",
+          "user_id": "synthetic",
+          "source_area": "not_a_room"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "invalid_source_area"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E060",
+    "split": "regression",
+    "family": "floor-scope",
+    "category": "command",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła na parterze",
+          "dry_run": true,
+          "conversation_id": "E060",
+          "user_id": "synthetic",
+          "source_area": "study"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.kitchen",
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "kitchen_up",
+            "lounge"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E061",
+    "split": "regression",
+    "family": "floor-scope",
+    "category": "command",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś światła na piętrze",
+          "dry_run": true,
+          "conversation_id": "E061",
+          "user_id": "synthetic",
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.group_one",
+            "light.group_two",
+            "light.office"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.group_one"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.group_two"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.office"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "bedroom_up",
+            "study"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E062",
+    "split": "regression",
+    "family": "english-area-name",
+    "category": "command",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła w Living Area",
+          "dry_run": true,
+          "conversation_id": "E062",
+          "user_id": "synthetic",
+          "source_area": "kitchen_up"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "lounge"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E063",
+    "split": "regression",
+    "family": "english-registry-polish-alias",
+    "category": "command",
+    "layer": "engine",
+    "home": "duplex_en",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła w kuchni",
+          "dry_run": true,
+          "conversation_id": "E063",
+          "user_id": "synthetic",
+          "source_area": "lounge"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.kitchen"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.kitchen"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "kitchen_up"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E064",
+    "split": "regression",
+    "family": "outdoor-area",
+    "category": "command",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła na tarasie",
+          "dry_run": true,
+          "conversation_id": "E064",
+          "user_id": "synthetic",
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.patio"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.patio"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "patio"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E065",
+    "split": "regression",
+    "family": "utility-area",
+    "category": "command",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz światła w pralni",
+          "dry_run": true,
+          "conversation_id": "E065",
+          "user_id": "synthetic",
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.utility"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.utility"
+              ],
+              "data": {}
+            }
+          ],
+          "area_ids": [
+            "utility"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E066",
+    "split": "regression",
+    "family": "unknown-inflection",
+    "category": "command",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła w strefie",
+          "dry_run": true,
+          "conversation_id": "E066",
+          "user_id": "synthetic",
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "unknown_location"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E067",
+    "split": "regression",
+    "family": "ambiguous-room",
+    "category": "command",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła w strefa",
+          "dry_run": true,
+          "conversation_id": "E067",
+          "user_id": "synthetic",
+          "source_area": "common"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "ambiguous_location"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E070",
+    "split": "regression",
+    "family": "brightness-value",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw światła na 30%",
+          "dry_run": true,
+          "conversation_id": "E070",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {
+                "brightness_pct": 30
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E071",
+    "split": "regression",
+    "family": "brightness-value",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw światła na czterdzieści procent",
+          "dry_run": true,
+          "conversation_id": "E071",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {
+                "brightness_pct": 40
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E072",
+    "split": "regression",
+    "family": "brightness-value",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "W salonie ustaw światła na dwadzieścia pięć procent",
+          "dry_run": true,
+          "conversation_id": "E072",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {
+                "brightness_pct": 25
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E073",
+    "split": "regression",
+    "family": "brightness-value",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw proszę światła na dziewięćdziesiąt dziewięć procent w salonie",
+          "dry_run": true,
+          "conversation_id": "E073",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {
+                "brightness_pct": 99
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E074",
+    "split": "regression",
+    "family": "brightness-value",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Światła ustaw na sto procent",
+          "dry_run": true,
+          "conversation_id": "E074",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {
+                "brightness_pct": 100
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E075",
+    "split": "regression",
+    "family": "brightness-value",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Przyciemnij światła do 0 procent",
+          "dry_run": true,
+          "conversation_id": "E075",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {
+                "brightness_pct": 0
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E076",
+    "split": "regression",
+    "family": "brightness-value",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw światła nad stołem na 50 procent",
+          "dry_run": true,
+          "conversation_id": "E076",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {
+                "brightness_pct": 50
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E077",
+    "split": "regression",
+    "family": "brightness-value",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Rozjaśnij lampkę stołową do 80%",
+          "dry_run": true,
+          "conversation_id": "E077",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {
+                "brightness_pct": 80
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E078",
+    "split": "regression",
+    "family": "brightness-range",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw światła na 101%",
+          "dry_run": true,
+          "conversation_id": "E078",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "blocked",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [],
+          "reason": "range"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E079",
+    "split": "regression",
+    "family": "brightness-range",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw światła na sto jeden procent",
+          "dry_run": true,
+          "conversation_id": "E079",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "blocked",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [],
+          "reason": "range"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E080",
+    "split": "regression",
+    "family": "onoff-only-light-brightness",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw lampę okienną na 30%",
+          "dry_run": true,
+          "conversation_id": "E080",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "blocked",
+          "targets": [
+            "light.plain"
+          ],
+          "calls": [],
+          "reason": "capability"
+        }
+      }
+    ],
+    "note": "Oracle correction: fictional fixture names light.plain Lampa okienna; Polish adjective inflection identifies it. Its only onoff mode cannot support brightness. Targets identify the blocked entity; no service is permitted."
+  },
+  {
+    "id": "E081",
+    "split": "regression",
+    "family": "brightness-capability",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw światła przy oknie na 30%",
+          "dry_run": true,
+          "conversation_id": "E081",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "blocked",
+          "targets": [
+            "light.plain"
+          ],
+          "calls": [],
+          "reason": "capability"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E082",
+    "split": "regression",
+    "family": "temperature-primary",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jaka jest temperatura?",
+          "dry_run": true,
+          "conversation_id": "E082",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "answered",
+          "targets": [
+            "sensor.temperature"
+          ],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "E083",
+    "split": "regression",
+    "family": "temperature-query",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ile jest stopni?",
+          "dry_run": true,
+          "conversation_id": "E083",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "answered",
+          "targets": [
+            "sensor.temperature"
+          ],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "E084",
+    "split": "regression",
+    "family": "climate-value",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw temperaturę na dwadzieścia jeden stopni",
+          "dry_run": true,
+          "conversation_id": "E084",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "climate.heating"
+          ],
+          "calls": [
+            {
+              "domain": "climate",
+              "service": "set_temperature",
+              "entity_ids": [
+                "climate.heating"
+              ],
+              "data": {
+                "temperature": 21
+              }
+            }
+          ],
+          "reason": "confirmation_required",
+          "risk": "medium"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E085",
+    "split": "regression",
+    "family": "climate-range-boundary",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw temperaturę na 7 stopni",
+          "dry_run": true,
+          "conversation_id": "E085",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "climate.heating"
+          ],
+          "calls": [
+            {
+              "domain": "climate",
+              "service": "set_temperature",
+              "entity_ids": [
+                "climate.heating"
+              ],
+              "data": {
+                "temperature": 7
+              }
+            }
+          ],
+          "reason": "confirmation_required",
+          "risk": "medium"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E086",
+    "split": "regression",
+    "family": "climate-range-boundary",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw temperaturę na 30 stopni",
+          "dry_run": true,
+          "conversation_id": "E086",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "climate.heating"
+          ],
+          "calls": [
+            {
+              "domain": "climate",
+              "service": "set_temperature",
+              "entity_ids": [
+                "climate.heating"
+              ],
+              "data": {
+                "temperature": 30
+              }
+            }
+          ],
+          "reason": "confirmation_required",
+          "risk": "medium"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E087",
+    "split": "regression",
+    "family": "climate-range",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw temperaturę na 31 stopni",
+          "dry_run": true,
+          "conversation_id": "E087",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "blocked",
+          "targets": [
+            "climate.heating"
+          ],
+          "calls": [],
+          "reason": "range_or_capability",
+          "risk": "medium"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E088",
+    "split": "regression",
+    "family": "cover-confirmation",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Otwórz rolety",
+          "dry_run": true,
+          "conversation_id": "E088",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "cover.blind"
+          ],
+          "calls": [
+            {
+              "domain": "cover",
+              "service": "open_cover",
+              "entity_ids": [
+                "cover.blind"
+              ],
+              "data": {}
+            }
+          ],
+          "reason": "confirmation_required",
+          "risk": "medium"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E089",
+    "split": "regression",
+    "family": "cover-confirmation",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zamknij roletę",
+          "dry_run": true,
+          "conversation_id": "E089",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "cover.blind"
+          ],
+          "calls": [
+            {
+              "domain": "cover",
+              "service": "close_cover",
+              "entity_ids": [
+                "cover.blind"
+              ],
+              "data": {}
+            }
+          ],
+          "reason": "confirmation_required",
+          "risk": "medium"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E090",
+    "split": "regression",
+    "family": "media-confirmation",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz telewizor",
+          "dry_run": true,
+          "conversation_id": "E090",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "media_player.tv"
+          ],
+          "calls": [
+            {
+              "domain": "media_player",
+              "service": "turn_on",
+              "entity_ids": [
+                "media_player.tv"
+              ],
+              "data": {}
+            }
+          ],
+          "reason": "confirmation_required",
+          "risk": "medium"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E091",
+    "split": "regression",
+    "family": "switch-confirmation",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz gniazdko",
+          "dry_run": true,
+          "conversation_id": "E091",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "switch.socket"
+          ],
+          "calls": [
+            {
+              "domain": "switch",
+              "service": "turn_off",
+              "entity_ids": [
+                "switch.socket"
+              ],
+              "data": {}
+            }
+          ],
+          "reason": "confirmation_required",
+          "risk": "medium"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E092",
+    "split": "regression",
+    "family": "security-policy",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Otwórz bramę",
+          "dry_run": true,
+          "conversation_id": "E092",
+          "user_id": "synthetic",
+          "source_area": "kuchnia"
+        },
+        "expected": {
+          "status": "blocked",
+          "targets": [
+            "cover.garage"
+          ],
+          "calls": [],
+          "reason": "high_risk_disabled",
+          "risk": "high"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E093",
+    "split": "regression",
+    "family": "blocked-device",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz router",
+          "dry_run": true,
+          "conversation_id": "E093",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "ineligible_target"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E094",
+    "split": "regression",
+    "family": "assist-exposure",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz ukryta lampa",
+          "dry_run": true,
+          "conversation_id": "E094",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "no_targets"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E095",
+    "split": "regression",
+    "family": "unavailable-device",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz awaryjna",
+          "dry_run": true,
+          "conversation_id": "E095",
+          "user_id": "synthetic",
+          "source_area": "gabinet"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "ineligible_target"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E096",
+    "split": "regression",
+    "family": "type-noun-colliding-alias",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światło panel",
+          "dry_run": true,
+          "conversation_id": "E096",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "ambiguous_target",
+          "continue_conversation": true
+        }
+      }
+    ],
+    "note": "Oracle correction: panel is deliberately assigned to two exposed lights in this room. Stripping a type noun is supported, but a colliding alias must ask for clarification and never execute."
+  },
+  {
+    "id": "E097",
+    "split": "regression",
+    "family": "alias-conflict",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz panel",
+          "dry_run": true,
+          "conversation_id": "E097",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "ambiguous_target"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E098",
+    "split": "regression",
+    "family": "ambiguous-single-light",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampę",
+          "dry_run": true,
+          "conversation_id": "E098",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "ambiguous_target"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E099",
+    "split": "regression",
+    "family": "explicit-confirm-label",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz lampa kontrolna",
+          "dry_run": true,
+          "conversation_id": "E099",
+          "user_id": "synthetic",
+          "source_area": "kuchnia"
+        },
+        "expected": {
+          "status": "confirm",
+          "targets": [
+            "light.confirm"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.confirm"
+              ],
+              "data": {}
+            }
+          ],
+          "reason": "confirmation_required"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E100",
+    "split": "regression",
+    "family": "guard-negation",
+    "category": "negation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Nie włączaj świateł",
+          "dry_run": true,
+          "conversation_id": "E100",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E101",
+    "split": "regression",
+    "family": "guard-negation",
+    "category": "negation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Nie zgaś światła",
+          "dry_run": true,
+          "conversation_id": "E101",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E102",
+    "split": "regression",
+    "family": "guard-negation",
+    "category": "negation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Nigdy nie włączaj lamp",
+          "dry_run": true,
+          "conversation_id": "E102",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E103",
+    "split": "regression",
+    "family": "guard-unsupported",
+    "category": "unsupported",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jeśli zrobi się ciemno, zapal światła",
+          "dry_run": true,
+          "conversation_id": "E103",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E104",
+    "split": "regression",
+    "family": "guard-unsupported",
+    "category": "unsupported",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła jutro",
+          "dry_run": true,
+          "conversation_id": "E104",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E105",
+    "split": "regression",
+    "family": "guard-unsupported",
+    "category": "unsupported",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła za dziesięć minut",
+          "dry_run": true,
+          "conversation_id": "E105",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E106",
+    "split": "regression",
+    "family": "guard-negation",
+    "category": "negation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła oprócz lampki",
+          "dry_run": true,
+          "conversation_id": "E106",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E107",
+    "split": "regression",
+    "family": "guard-negation",
+    "category": "negation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz światła bez lampki",
+          "dry_run": true,
+          "conversation_id": "E107",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E108",
+    "split": "regression",
+    "family": "guard-compound",
+    "category": "compound",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła i zamknij rolety",
+          "dry_run": true,
+          "conversation_id": "E108",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E109",
+    "split": "regression",
+    "family": "guard-compound",
+    "category": "compound",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz telewizor oraz zapal światła",
+          "dry_run": true,
+          "conversation_id": "E109",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E110",
+    "split": "regression",
+    "family": "guard-compound",
+    "category": "compound",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła albo telewizor",
+          "dry_run": true,
+          "conversation_id": "E110",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status_in": [
+            "unsupported",
+            "clarify"
+          ],
+          "targets": [],
+          "calls": []
+        }
+      }
+    ],
+    "note": "Safety expectation: an unresolved alternative must produce no targets or calls. Either unsupported or a clarification is valid; exact parser error wording is outside this contract."
+  },
+  {
+    "id": "E111",
+    "split": "regression",
+    "family": "guard-correction",
+    "category": "correction",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła ale nie nad stołem",
+          "dry_run": true,
+          "conversation_id": "E111",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E112",
+    "split": "regression",
+    "family": "guard-compound",
+    "category": "compound",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś światła potem włącz lampę",
+          "dry_run": true,
+          "conversation_id": "E112",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E113",
+    "split": "regression",
+    "family": "guard-unsupported",
+    "category": "unsupported",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw światła na 20 trzy procent",
+          "dry_run": true,
+          "conversation_id": "E113",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E114",
+    "split": "regression",
+    "family": "guard-unsupported",
+    "category": "unsupported",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Ustaw światła na dwadzieścia trzy cztery procent",
+          "dry_run": true,
+          "conversation_id": "E114",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E115",
+    "split": "regression",
+    "family": "guard-unsupported",
+    "category": "unsupported",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Przyciemnij światła do piętnastu procent",
+          "dry_run": true,
+          "conversation_id": "E115",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E116",
+    "split": "regression",
+    "family": "guard-compound",
+    "category": "compound",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Przerwij muzykę i zamknij bramę",
+          "dry_run": true,
+          "conversation_id": "E116",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E117",
+    "split": "regression",
+    "family": "guard-continuation",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "A jutro?",
+          "dry_run": true,
+          "conversation_id": "E117",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E118",
+    "split": "regression",
+    "family": "guard-unsupported",
+    "category": "unsupported",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jak się masz?",
+          "dry_run": true,
+          "conversation_id": "E118",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E119",
+    "split": "regression",
+    "family": "guard-unsupported",
+    "category": "unsupported",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Czy można to zrobić później?",
+          "dry_run": true,
+          "conversation_id": "E119",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "unsupported",
+          "targets": [],
+          "calls": [],
+          "reason": "no_intent"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E120",
+    "split": "regression",
+    "family": "unconsumed-background",
+    "category": "background",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła nad stołem obok krzesła",
+          "dry_run": true,
+          "conversation_id": "E120",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "no_targets"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E121",
+    "split": "regression",
+    "family": "unconsumed-background",
+    "category": "background",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz światła wow jaka figura",
+          "dry_run": true,
+          "conversation_id": "E121",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "no_targets"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E122",
+    "split": "regression",
+    "family": "pronoun-without-memory",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś je",
+          "dry_run": true,
+          "conversation_id": "E122",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "no_reference"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E123",
+    "split": "regression",
+    "family": "confirmation-without-pending",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Tak",
+          "dry_run": true,
+          "conversation_id": "E123",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "no_pending"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E124",
+    "split": "regression",
+    "family": "cancellation-without-pending",
+    "category": "continuation",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Anuluj",
+          "dry_run": true,
+          "conversation_id": "E124",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "cancelled",
+          "targets": [],
+          "calls": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "E125",
+    "split": "regression",
+    "family": "missing-on-role",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": true,
+          "conversation_id": "E125",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "no_targets"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.main",
+            "changes": {
+              "labels": [
+                "voice_all_off"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "E126",
+    "split": "regression",
+    "family": "unavailable-aggregate",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz światła",
+          "dry_run": true,
+          "conversation_id": "E126",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "ineligible_target"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.main",
+            "changes": {
+              "available": false
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "E127",
+    "split": "regression",
+    "family": "hidden-default",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": true,
+          "conversation_id": "E127",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "no_targets"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.main",
+            "changes": {
+              "exposed": false
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "E128",
+    "split": "regression",
+    "family": "blocked-aggregate-exclusion",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz światła",
+          "dry_run": true,
+          "conversation_id": "E128",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient",
+            "light.table"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.table"
+              ],
+              "data": {}
+            }
+          ]
+        },
+        "mutations": [
+          {
+            "entity_id": "light.main",
+            "changes": {
+              "labels": [
+                "voice_default_on",
+                "voice_all_off",
+                "voice_block"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "E129",
+    "split": "regression",
+    "family": "all-off-exclusion",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Wyłącz światła",
+          "dry_run": true,
+          "conversation_id": "E129",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient",
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        },
+        "mutations": [
+          {
+            "entity_id": "light.table",
+            "changes": {
+              "labels": [
+                "voice_all_off",
+                "voice_exclude_all"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "E130",
+    "split": "regression",
+    "family": "high-risk-light",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz żyrandol",
+          "dry_run": true,
+          "conversation_id": "E130",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "blocked",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [],
+          "reason": "high_risk_disabled",
+          "risk": "high"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.main",
+            "changes": {
+              "labels": [
+                "voice_high_risk"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "E131",
+    "split": "regression",
+    "family": "blocked-named-light",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz żyrandol",
+          "dry_run": true,
+          "conversation_id": "E131",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "ineligible_target"
+        },
+        "mutations": [
+          {
+            "entity_id": "light.main",
+            "changes": {
+              "labels": [
+                "voice_block"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "E132",
+    "split": "regression",
+    "family": "temperature-exposure",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jaka jest temperatura?",
+          "dry_run": true,
+          "conversation_id": "E132",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "answered",
+          "targets": [
+            "sensor.temperature_aux"
+          ],
+          "calls": []
+        },
+        "mutations": [
+          {
+            "entity_id": "sensor.temperature",
+            "changes": {
+              "exposed": false
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "E133",
+    "split": "regression",
+    "family": "temperature-invalid-state",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jaka jest temperatura?",
+          "dry_run": true,
+          "conversation_id": "E133",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [
+            "sensor.temperature"
+          ],
+          "calls": [],
+          "reason": "invalid_state"
+        },
+        "mutations": [
+          {
+            "entity_id": "sensor.temperature",
+            "changes": {
+              "state": "unknown"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "E134",
+    "split": "regression",
+    "family": "temperature-primary-conflict",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Jaka jest temperatura?",
+          "dry_run": true,
+          "conversation_id": "E134",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "ambiguous_target"
+        },
+        "mutations": [
+          {
+            "entity_id": "sensor.temperature_aux",
+            "changes": {
+              "labels": [
+                "voice_primary"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "E135",
+    "split": "regression",
+    "family": "named-safe-group",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz zestaw sypialni",
+          "dry_run": true,
+          "conversation_id": "E135",
+          "user_id": "synthetic",
+          "source_area": "sypialnia"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.group_one",
+            "light.group_two"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_one"
+              ],
+              "data": {}
+            },
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.group_two"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E136",
+    "split": "regression",
+    "family": "unsafe-group",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz zestaw przekrojowy",
+          "dry_run": true,
+          "conversation_id": "E136",
+          "user_id": "synthetic",
+          "source_area": "gabinet"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "cross_area_group"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E137",
+    "split": "regression",
+    "family": "unsafe-group",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz zestaw ukryty",
+          "dry_run": true,
+          "conversation_id": "E137",
+          "user_id": "synthetic",
+          "source_area": "gabinet"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "ineligible_target"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E138",
+    "split": "regression",
+    "family": "unsafe-group",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz zestaw zapętlony",
+          "dry_run": true,
+          "conversation_id": "E138",
+          "user_id": "synthetic",
+          "source_area": "gabinet"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "group_cycle"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E139",
+    "split": "regression",
+    "family": "unsafe-group",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz zestaw niepełny",
+          "dry_run": true,
+          "conversation_id": "E139",
+          "user_id": "synthetic",
+          "source_area": "gabinet"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "unknown_group_member"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E140",
+    "split": "regression",
+    "family": "unsafe-group",
+    "category": "configuration",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz zestaw błędny",
+          "dry_run": true,
+          "conversation_id": "E140",
+          "user_id": "synthetic",
+          "source_area": "gabinet"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "unknown_group_member"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E141",
+    "split": "regression",
+    "family": "globally-unique-name",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz żyrandol",
+          "dry_run": true,
+          "conversation_id": "E141",
+          "user_id": "synthetic"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.main"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.main"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E142",
+    "split": "regression",
+    "family": "all-lights-needs-scope",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz wszystkie światła",
+          "dry_run": true,
+          "conversation_id": "E142",
+          "user_id": "synthetic"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "missing_area"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E143",
+    "split": "regression",
+    "family": "explicit-all-role",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Zgaś wszystkie dekoracyjne światła",
+          "dry_run": true,
+          "conversation_id": "E143",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.ambient"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_off",
+              "entity_ids": [
+                "light.ambient"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "E144",
+    "split": "regression",
+    "family": "alias-role-constraint",
+    "category": "command",
+    "layer": "engine",
+    "home": "flat_pl",
+    "turns": [
+      {
+        "request": {
+          "text": "Włącz główne światła nad stołem",
+          "dry_run": true,
+          "conversation_id": "E144",
+          "user_id": "synthetic",
+          "source_area": "salon"
+        },
+        "expected": {
+          "status": "clarify",
+          "targets": [],
+          "calls": [],
+          "reason": "no_targets"
+        }
+      }
+    ]
+  },
+  {
+    "id": "E145",
+    "split": "regression",
+    "family": "other-house-room-context",
+    "category": "command",
+    "layer": "engine",
+    "home": "mixed",
+    "turns": [
+      {
+        "request": {
+          "text": "Zapal światła",
+          "dry_run": true,
+          "conversation_id": "E145",
+          "user_id": "synthetic",
+          "source_area": "studio"
+        },
+        "expected": {
+          "status": "dry_run",
+          "targets": [
+            "light.office"
+          ],
+          "calls": [
+            {
+              "domain": "light",
+              "service": "turn_on",
+              "entity_ids": [
+                "light.office"
+              ],
+              "data": {}
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
